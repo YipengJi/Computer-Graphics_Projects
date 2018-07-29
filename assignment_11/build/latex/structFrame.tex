@@ -1,0 +1,147 @@
+\hypertarget{structFrame}{}\section{Frame Struct Reference}
+\label{structFrame}\index{Frame@{Frame}}
+
+
+{\ttfamily \#include $<$frame.\+h$>$}
+
+
+
+Collaboration diagram for Frame\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structFrame_ad2e5946cf41d4817e750500acf05d02b}{Frame} ()
+\item 
+void \hyperlink{structFrame_a864ae4085d4ddd24f54cecb185eb74d1}{align\+To} (\hyperlink{classvec3}{vec3} tnew)
+\item 
+void \hyperlink{structFrame_af05752a6a14d36a05c3b764e7cdcff74}{initialize} ()
+\item 
+void \hyperlink{structFrame_ab7273177761d19c6a23c5317ae00e1b5}{draw} (\hyperlink{classShader}{Shader} \&s, const \hyperlink{classmat4}{mat4} \&vp, const \hyperlink{classvec3}{vec3} \&pos)
+\item 
+void \hyperlink{structFrame_adb8f667153eeb3dbc7cdfe9065bcf36c}{toggle\+Parallel\+Transport} ()
+\item 
+bool \hyperlink{structFrame_a35f4f6c081a69a181a2cd25f5114e77a}{using\+Parallel\+Transport} ()
+\item 
+\hyperlink{classmat3}{mat3} \hyperlink{structFrame_a97222e5804e4517f041badba6d68f96c}{xyz\+To\+Frame} () const 
+\item 
+\hyperlink{structFrame_abec8c7bccdfc88cb4da137caae9f73d6}{$\sim$\+Frame} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{structFrame_a9525a4f9bd5830f785dc9479f961a751}{t}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{structFrame_ad9275ea49c9bc78e7631f3275cbfada2}{up}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{structFrame_aca6b9cb1c84d3072c2ba3e761d196b9b}{left}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{structFrame_ab01a8336ba210b2e7a1abe196cc20499}{m\+\_\+arrow\+V\+AO} = 0
+\item 
+G\+Luint \hyperlink{structFrame_a3d2fdf5cd79eb7c1acbad856e0484d6a}{m\+\_\+arrow\+V\+BO} = 0
+\item 
+G\+Luint \hyperlink{structFrame_a3848b64f0279211ab2d5796e06afae40}{m\+\_\+arrow\+I\+BO} = 0
+\item 
+size\+\_\+t \hyperlink{structFrame_a5644a8915f22e4910580c52c37705431}{m\+\_\+nidx} = 0
+\item 
+bool \hyperlink{structFrame_a4b7656aabf42c547a0718c239b99ddbc}{m\+\_\+use\+Parallel\+Transport} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Frame@{Frame}!Frame@{Frame}}
+\index{Frame@{Frame}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Frame()}{Frame()}}]{\setlength{\rightskip}{0pt plus 5cm}Frame\+::\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_ad2e5946cf41d4817e750500acf05d02b}{}\label{structFrame_ad2e5946cf41d4817e750500acf05d02b}
+\index{Frame@{Frame}!````~Frame@{$\sim$\+Frame}}
+\index{````~Frame@{$\sim$\+Frame}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{$\sim$\+Frame()}{~Frame()}}]{\setlength{\rightskip}{0pt plus 5cm}Frame\+::$\sim$\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_abec8c7bccdfc88cb4da137caae9f73d6}{}\label{structFrame_abec8c7bccdfc88cb4da137caae9f73d6}
+
+
+\subsection{Member Function Documentation}
+\index{Frame@{Frame}!align\+To@{align\+To}}
+\index{align\+To@{align\+To}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{align\+To(vec3 tnew)}{alignTo(vec3 tnew)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::align\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3}}]{tnew}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_a864ae4085d4ddd24f54cecb185eb74d1}{}\label{structFrame_a864ae4085d4ddd24f54cecb185eb74d1}
+\index{Frame@{Frame}!draw@{draw}}
+\index{draw@{draw}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{draw(\+Shader \&s, const mat4 \&vp, const vec3 \&pos)}{draw(Shader &s, const mat4 &vp, const vec3 &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Shader} \&}]{s, }
+\item[{const {\bf mat4} \&}]{vp, }
+\item[{const {\bf vec3} \&}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_ab7273177761d19c6a23c5317ae00e1b5}{}\label{structFrame_ab7273177761d19c6a23c5317ae00e1b5}
+\index{Frame@{Frame}!initialize@{initialize}}
+\index{initialize@{initialize}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{initialize()}{initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_af05752a6a14d36a05c3b764e7cdcff74}{}\label{structFrame_af05752a6a14d36a05c3b764e7cdcff74}
+\index{Frame@{Frame}!toggle\+Parallel\+Transport@{toggle\+Parallel\+Transport}}
+\index{toggle\+Parallel\+Transport@{toggle\+Parallel\+Transport}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{toggle\+Parallel\+Transport()}{toggleParallelTransport()}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::toggle\+Parallel\+Transport (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_adb8f667153eeb3dbc7cdfe9065bcf36c}{}\label{structFrame_adb8f667153eeb3dbc7cdfe9065bcf36c}
+\index{Frame@{Frame}!using\+Parallel\+Transport@{using\+Parallel\+Transport}}
+\index{using\+Parallel\+Transport@{using\+Parallel\+Transport}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{using\+Parallel\+Transport()}{usingParallelTransport()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Frame\+::using\+Parallel\+Transport (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_a35f4f6c081a69a181a2cd25f5114e77a}{}\label{structFrame_a35f4f6c081a69a181a2cd25f5114e77a}
+\index{Frame@{Frame}!xyz\+To\+Frame@{xyz\+To\+Frame}}
+\index{xyz\+To\+Frame@{xyz\+To\+Frame}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{xyz\+To\+Frame() const }{xyzToFrame() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} Frame\+::xyz\+To\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structFrame_a97222e5804e4517f041badba6d68f96c}{}\label{structFrame_a97222e5804e4517f041badba6d68f96c}
+
+
+\subsection{Member Data Documentation}
+\index{Frame@{Frame}!left@{left}}
+\index{left@{left}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{left}{left}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Frame\+::left}\hypertarget{structFrame_aca6b9cb1c84d3072c2ba3e761d196b9b}{}\label{structFrame_aca6b9cb1c84d3072c2ba3e761d196b9b}
+\index{Frame@{Frame}!m\+\_\+arrow\+I\+BO@{m\+\_\+arrow\+I\+BO}}
+\index{m\+\_\+arrow\+I\+BO@{m\+\_\+arrow\+I\+BO}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{m\+\_\+arrow\+I\+BO}{m_arrowIBO}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Frame\+::m\+\_\+arrow\+I\+BO = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{structFrame_a3848b64f0279211ab2d5796e06afae40}{}\label{structFrame_a3848b64f0279211ab2d5796e06afae40}
+\index{Frame@{Frame}!m\+\_\+arrow\+V\+AO@{m\+\_\+arrow\+V\+AO}}
+\index{m\+\_\+arrow\+V\+AO@{m\+\_\+arrow\+V\+AO}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{m\+\_\+arrow\+V\+AO}{m_arrowVAO}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Frame\+::m\+\_\+arrow\+V\+AO = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{structFrame_ab01a8336ba210b2e7a1abe196cc20499}{}\label{structFrame_ab01a8336ba210b2e7a1abe196cc20499}
+\index{Frame@{Frame}!m\+\_\+arrow\+V\+BO@{m\+\_\+arrow\+V\+BO}}
+\index{m\+\_\+arrow\+V\+BO@{m\+\_\+arrow\+V\+BO}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{m\+\_\+arrow\+V\+BO}{m_arrowVBO}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Frame\+::m\+\_\+arrow\+V\+BO = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{structFrame_a3d2fdf5cd79eb7c1acbad856e0484d6a}{}\label{structFrame_a3d2fdf5cd79eb7c1acbad856e0484d6a}
+\index{Frame@{Frame}!m\+\_\+nidx@{m\+\_\+nidx}}
+\index{m\+\_\+nidx@{m\+\_\+nidx}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{m\+\_\+nidx}{m_nidx}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Frame\+::m\+\_\+nidx = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{structFrame_a5644a8915f22e4910580c52c37705431}{}\label{structFrame_a5644a8915f22e4910580c52c37705431}
+\index{Frame@{Frame}!m\+\_\+use\+Parallel\+Transport@{m\+\_\+use\+Parallel\+Transport}}
+\index{m\+\_\+use\+Parallel\+Transport@{m\+\_\+use\+Parallel\+Transport}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{m\+\_\+use\+Parallel\+Transport}{m_useParallelTransport}}]{\setlength{\rightskip}{0pt plus 5cm}bool Frame\+::m\+\_\+use\+Parallel\+Transport = false\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{structFrame_a4b7656aabf42c547a0718c239b99ddbc}{}\label{structFrame_a4b7656aabf42c547a0718c239b99ddbc}
+\index{Frame@{Frame}!t@{t}}
+\index{t@{t}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{t}{t}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Frame\+::t}\hypertarget{structFrame_a9525a4f9bd5830f785dc9479f961a751}{}\label{structFrame_a9525a4f9bd5830f785dc9479f961a751}
+\index{Frame@{Frame}!up@{up}}
+\index{up@{up}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{up}{up}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Frame\+::up}\hypertarget{structFrame_ad9275ea49c9bc78e7631f3275cbfada2}{}\label{structFrame_ad9275ea49c9bc78e7631f3275cbfada2}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{frame_8h}{frame.\+h}\end{DoxyCompactItemize}

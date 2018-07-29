@@ -1,0 +1,16 @@
+{
+	"name": "sierpinski_triangle",
+	"stochastic": false,
+	"initial": "R",
+	"angle_deg": 60,
+	"num_iters": 6,
+	"rules": {
+		"R": "L-R-L",
+		"L": "R+L+R"
+	},
+	"rules_old": {
+		"R": "LF-FRF-FL",
+		"L": "RF+FLF+FR"
+	},
+}
+

@@ -1,0 +1,168 @@
+\hypertarget{classSphere}{}\section{Sphere Class Reference}
+\label{classSphere}\index{Sphere@{Sphere}}
+
+
+class that creates a sphere with a desired tessellation degree and renders it  
+
+
+
+
+{\ttfamily \#include $<$sphere.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSphere_aaa85311066ef64357254d1603d03a0d7}{Sphere} (unsigned int resolution=10)
+\item 
+\hyperlink{classSphere_a569c071e50a3e11f678630ee1a17737e}{$\sim$\+Sphere} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \hyperlink{classSphere_a5138903e523dc99982dfe0ef124758b9}{draw} (G\+Lenum mode=G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+ES)
+\begin{DoxyCompactList}\small\item\em render mesh of the sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSphere_a331081d7eabc043356e6d9ade848464f}{initialize} ()
+\begin{DoxyCompactList}\small\item\em generate sphere vertices/triangles and Open\+GL buffers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classSphere_a6d3defa9cb5c35aa6dfb16e60be375b2}{resolution\+\_\+}
+\begin{DoxyCompactList}\small\item\em tessellation resolution \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classSphere_a02c9c6431fbc42d50ed697fa01f454ca}{n\+\_\+indices\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em indices of the triangle vertices \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classSphere_a4e5466159b070fdb71874ef3545fa7d7}{vao\+\_\+} = 0
+\item 
+G\+Luint \hyperlink{classSphere_a6200722a6dc9a6205c05928815baeeb2}{vbo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em vertex buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classSphere_a9b6246e4e88fcf9f17d4e0e6a7cbd74d}{nbo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em normals buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classSphere_a558372e8833a6cccc087c05bd53b318d}{tan\+\_\+bo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em tangents buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classSphere_a37053650f0bf09a5220a813c0deb102a}{bitan\+\_\+bo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em bitangents buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classSphere_aa118703b30e8488d50354ff41a0b9ad7}{tbo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em texture coordinates buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classSphere_a32575aacfd7539df95f889ecca071d5b}{ibo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em index buffer object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class that creates a sphere with a desired tessellation degree and renders it 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{Sphere(unsigned int resolution=10)}{Sphere(unsigned int resolution=10)}}]{\setlength{\rightskip}{0pt plus 5cm}Sphere\+::\+Sphere (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{resolution = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}\hypertarget{classSphere_aaa85311066ef64357254d1603d03a0d7}{}\label{classSphere_aaa85311066ef64357254d1603d03a0d7}
+default constructor 
+\begin{DoxyParams}{Parameters}
+{\em resolution} & the degree of the tessellation of the sphere \\
+\hline
+\end{DoxyParams}
+\index{Sphere@{Sphere}!````~Sphere@{$\sim$\+Sphere}}
+\index{````~Sphere@{$\sim$\+Sphere}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sphere()}{~Sphere()}}]{\setlength{\rightskip}{0pt plus 5cm}Sphere\+::$\sim$\+Sphere (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSphere_a569c071e50a3e11f678630ee1a17737e}{}\label{classSphere_a569c071e50a3e11f678630ee1a17737e}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{Sphere@{Sphere}!draw@{draw}}
+\index{draw@{draw}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{draw(\+G\+Lenum mode=\+G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+S)}{draw(GLenum mode=GL_TRIANGLES)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sphere\+::draw (
+\begin{DoxyParamCaption}
+\item[{G\+Lenum}]{mode = {\ttfamily GL\+\_\+TRIANGLES}}
+\end{DoxyParamCaption}
+)}\hypertarget{classSphere_a5138903e523dc99982dfe0ef124758b9}{}\label{classSphere_a5138903e523dc99982dfe0ef124758b9}
+
+
+render mesh of the sphere 
+
+\index{Sphere@{Sphere}!initialize@{initialize}}
+\index{initialize@{initialize}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{initialize()}{initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sphere\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a331081d7eabc043356e6d9ade848464f}{}\label{classSphere_a331081d7eabc043356e6d9ade848464f}
+
+
+generate sphere vertices/triangles and Open\+GL buffers 
+
+
+
+\subsection{Member Data Documentation}
+\index{Sphere@{Sphere}!bitan\+\_\+bo\+\_\+@{bitan\+\_\+bo\+\_\+}}
+\index{bitan\+\_\+bo\+\_\+@{bitan\+\_\+bo\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{bitan\+\_\+bo\+\_\+}{bitan_bo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::bitan\+\_\+bo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a37053650f0bf09a5220a813c0deb102a}{}\label{classSphere_a37053650f0bf09a5220a813c0deb102a}
+
+
+bitangents buffer object 
+
+\index{Sphere@{Sphere}!ibo\+\_\+@{ibo\+\_\+}}
+\index{ibo\+\_\+@{ibo\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{ibo\+\_\+}{ibo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::ibo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a32575aacfd7539df95f889ecca071d5b}{}\label{classSphere_a32575aacfd7539df95f889ecca071d5b}
+
+
+index buffer object 
+
+\index{Sphere@{Sphere}!n\+\_\+indices\+\_\+@{n\+\_\+indices\+\_\+}}
+\index{n\+\_\+indices\+\_\+@{n\+\_\+indices\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{n\+\_\+indices\+\_\+}{n_indices_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Sphere\+::n\+\_\+indices\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a02c9c6431fbc42d50ed697fa01f454ca}{}\label{classSphere_a02c9c6431fbc42d50ed697fa01f454ca}
+
+
+indices of the triangle vertices 
+
+\index{Sphere@{Sphere}!nbo\+\_\+@{nbo\+\_\+}}
+\index{nbo\+\_\+@{nbo\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{nbo\+\_\+}{nbo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::nbo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a9b6246e4e88fcf9f17d4e0e6a7cbd74d}{}\label{classSphere_a9b6246e4e88fcf9f17d4e0e6a7cbd74d}
+
+
+normals buffer object 
+
+\index{Sphere@{Sphere}!resolution\+\_\+@{resolution\+\_\+}}
+\index{resolution\+\_\+@{resolution\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{resolution\+\_\+}{resolution_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Sphere\+::resolution\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a6d3defa9cb5c35aa6dfb16e60be375b2}{}\label{classSphere_a6d3defa9cb5c35aa6dfb16e60be375b2}
+
+
+tessellation resolution 
+
+\index{Sphere@{Sphere}!tan\+\_\+bo\+\_\+@{tan\+\_\+bo\+\_\+}}
+\index{tan\+\_\+bo\+\_\+@{tan\+\_\+bo\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{tan\+\_\+bo\+\_\+}{tan_bo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::tan\+\_\+bo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a558372e8833a6cccc087c05bd53b318d}{}\label{classSphere_a558372e8833a6cccc087c05bd53b318d}
+
+
+tangents buffer object 
+
+\index{Sphere@{Sphere}!tbo\+\_\+@{tbo\+\_\+}}
+\index{tbo\+\_\+@{tbo\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{tbo\+\_\+}{tbo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::tbo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_aa118703b30e8488d50354ff41a0b9ad7}{}\label{classSphere_aa118703b30e8488d50354ff41a0b9ad7}
+
+
+texture coordinates buffer object 
+
+\index{Sphere@{Sphere}!vao\+\_\+@{vao\+\_\+}}
+\index{vao\+\_\+@{vao\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{vao\+\_\+}{vao_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::vao\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a4e5466159b070fdb71874ef3545fa7d7}{}\label{classSphere_a4e5466159b070fdb71874ef3545fa7d7}
+\index{Sphere@{Sphere}!vbo\+\_\+@{vbo\+\_\+}}
+\index{vbo\+\_\+@{vbo\+\_\+}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{vbo\+\_\+}{vbo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sphere\+::vbo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a6200722a6dc9a6205c05928815baeeb2}{}\label{classSphere_a6200722a6dc9a6205c05928815baeeb2}
+
+
+vertex buffer object 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{sphere_8h}{sphere.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{sphere_8cpp}{sphere.\+cpp}\end{DoxyCompactItemize}

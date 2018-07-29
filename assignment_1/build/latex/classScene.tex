@@ -1,0 +1,213 @@
+\hypertarget{classScene}{}\section{Scene Class Reference}
+\label{classScene}\index{Scene@{Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+
+
+Collaboration diagram for Scene\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classScene_a53cd40de123db36ab62763523ec0fc41}{Scene} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Constructor loads scene from file. \end{DoxyCompactList}\item 
+\hyperlink{classImage}{Image} \hyperlink{classScene_aeaecd6069dfc02986fd04c9a8f905e89}{render} ()
+\begin{DoxyCompactList}\small\item\em Allocate image and raytrace the scene. \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classScene_aee2e562b23da56880ea30e33f9e76e1b}{trace} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, int \+\_\+depth)
+\begin{DoxyCompactList}\small\item\em Determine the color seen by a viewing ray. \end{DoxyCompactList}\item 
+bool \hyperlink{classScene_addfa0f2a14f2593e7f91dab0d5627990}{intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{Object_8h_ad537f5b7b240eca7da458a29bbb47b9e}{Object\+\_\+ptr} \&, \hyperlink{classvec3}{vec3} \&\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+normal, double \&\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Computes the closest intersection point between a ray and all objects in the scene. \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classScene_a8c3c270f36a5e73805d925763450de7c}{lighting} (const \hyperlink{classvec3}{vec3} \&\+\_\+point, const \hyperlink{classvec3}{vec3} \&\+\_\+normal, const \hyperlink{classvec3}{vec3} \&\+\_\+view, const \hyperlink{structMaterial}{Material} \&\+\_\+material)
+\begin{DoxyCompactList}\small\item\em Computes the phong lighting for a given object intersection. \end{DoxyCompactList}\item 
+void \hyperlink{classScene_a15d828d5f43ff11466712b9203082316}{read} (const std\+::string \&filename)
+\item 
+size\+\_\+t \hyperlink{classScene_a27b9b9e915a87fd7736dd82d71da372a}{num\+Objects} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCamera}{Camera} \hyperlink{classScene_afed13ec4ba2d7ab75b273d507911b498}{camera}
+\begin{DoxyCompactList}\small\item\em camera stores eye position, view direction, and can generate primary rays \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structLight}{Light} $>$ \hyperlink{classScene_ab3625e4ac3c6e47156edd23e2421e828}{lights}
+\begin{DoxyCompactList}\small\item\em array for all lights in the scene \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{structObject}{Object} $>$ $>$ \hyperlink{classScene_abbd6f5b3a4639c3b089037519085bf86}{objects}
+\begin{DoxyCompactList}\small\item\em array for all the objects in the scene \end{DoxyCompactList}\item 
+int \hyperlink{classScene_a9150039f4d2c46a617b51c7920142d52}{max\+\_\+depth} = 0
+\begin{DoxyCompactList}\small\item\em max recursion depth for mirroring \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classScene_ab2f20cf753edf2f92fec9b1ad7c9b93e}{background} = \hyperlink{classvec3}{vec3}(0, 0, 0)
+\begin{DoxyCompactList}\small\item\em background color \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classScene_a8809b5fcac40d60ab499e90f8ae592b3}{ambience} = \hyperlink{classvec3}{vec3}(0, 0, 0)
+\begin{DoxyCompactList}\small\item\em global ambient light \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Scene(const std\+::string \&path)}{Scene(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::\+Scene (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classScene_a53cd40de123db36ab62763523ec0fc41}{}\label{classScene_a53cd40de123db36ab62763523ec0fc41}
+
+
+Constructor loads scene from file. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Scene@{Scene}!intersect@{intersect}}
+\index{intersect@{intersect}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{intersect(const Ray \&\+\_\+ray, Object\+\_\+ptr \&, vec3 \&\+\_\+point, vec3 \&\+\_\+normal, double \&\+\_\+t)}{intersect(const Ray &_ray, Object_ptr &, vec3 &_point, vec3 &_normal, double &_t)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Scene\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf Object\+\_\+ptr} \&}]{\+\_\+object, }
+\item[{{\bf vec3} \&}]{\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+normal, }
+\item[{double \&}]{\+\_\+t}
+\end{DoxyParamCaption}
+)}\hypertarget{classScene_addfa0f2a14f2593e7f91dab0d5627990}{}\label{classScene_addfa0f2a14f2593e7f91dab0d5627990}
+
+
+Computes the closest intersection point between a ray and all objects in the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+ray} & \hyperlink{classRay}{Ray} that should be tested for intersections with all objects in the scene. \\
+\hline
+{\em \+\_\+\+Object\+\_\+ptr} & Output parameter which holds the object from the scene, intersected by the {\ttfamily \+\_\+ray}, closest to the {\ttfamily \+\_\+ray}\textquotesingle{}s origin. \\
+\hline
+{\em \+\_\+point} & returns intersection point \\
+\hline
+{\em \+\_\+normal} & returns normal at {\ttfamily \+\_\+point} \\
+\hline
+{\em \+\_\+t} & returns distance between the {\ttfamily \+\_\+ray}\textquotesingle{}s origin and {\ttfamily \+\_\+point} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns {\ttfamily true}, if there is an intersection point between {\ttfamily \+\_\+ray} and at least one object in the scene. 
+\end{DoxyReturn}
+\index{Scene@{Scene}!lighting@{lighting}}
+\index{lighting@{lighting}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{lighting(const vec3 \&\+\_\+point, const vec3 \&\+\_\+normal, const vec3 \&\+\_\+view, const Material \&\+\_\+material)}{lighting(const vec3 &_point, const vec3 &_normal, const vec3 &_view, const Material &_material)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Scene\+::lighting (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{\+\_\+point, }
+\item[{const {\bf vec3} \&}]{\+\_\+normal, }
+\item[{const {\bf vec3} \&}]{\+\_\+view, }
+\item[{const {\bf Material} \&}]{\+\_\+material}
+\end{DoxyParamCaption}
+)}\hypertarget{classScene_a8c3c270f36a5e73805d925763450de7c}{}\label{classScene_a8c3c270f36a5e73805d925763450de7c}
+
+
+Computes the phong lighting for a given object intersection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+point} & the point, whose color should be determined. \\
+\hline
+{\em \+\_\+normal} & {\ttfamily \+\_\+point}\textquotesingle{}s normal \\
+\hline
+{\em \+\_\+view} & normalized direction from the point to the viewer\textquotesingle{}s position. \\
+\hline
+{\em \+\_\+material} & holds material parameters of the {\ttfamily \+\_\+point}, that should be lit. \\
+\hline
+\end{DoxyParams}
+\index{Scene@{Scene}!num\+Objects@{num\+Objects}}
+\index{num\+Objects@{num\+Objects}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{num\+Objects() const }{numObjects() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Scene\+::num\+Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classScene_a27b9b9e915a87fd7736dd82d71da372a}{}\label{classScene_a27b9b9e915a87fd7736dd82d71da372a}
+\index{Scene@{Scene}!read@{read}}
+\index{read@{read}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{read(const std\+::string \&filename)}{read(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::read (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classScene_a15d828d5f43ff11466712b9203082316}{}\label{classScene_a15d828d5f43ff11466712b9203082316}
+\index{Scene@{Scene}!render@{render}}
+\index{render@{render}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Image} Scene\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classScene_aeaecd6069dfc02986fd04c9a8f905e89}{}\label{classScene_aeaecd6069dfc02986fd04c9a8f905e89}
+
+
+Allocate image and raytrace the scene. 
+
+\index{Scene@{Scene}!trace@{trace}}
+\index{trace@{trace}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{trace(const Ray \&\+\_\+ray, int \+\_\+depth)}{trace(const Ray &_ray, int _depth)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Scene\+::trace (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{int}]{\+\_\+depth}
+\end{DoxyParamCaption}
+)}\hypertarget{classScene_aee2e562b23da56880ea30e33f9e76e1b}{}\label{classScene_aee2e562b23da56880ea30e33f9e76e1b}
+
+
+Determine the color seen by a viewing ray. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ray} & passed \hyperlink{classRay}{Ray} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+depth} & holds the information, how many times the {\ttfamily \+\_\+ray} had been reflected. Goes from 0 to max\+\_\+depth. Should be used for recursive function call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+color 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Scene@{Scene}!ambience@{ambience}}
+\index{ambience@{ambience}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{ambience}{ambience}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Scene\+::ambience = {\bf vec3}(0, 0, 0)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classScene_a8809b5fcac40d60ab499e90f8ae592b3}{}\label{classScene_a8809b5fcac40d60ab499e90f8ae592b3}
+
+
+global ambient light 
+
+\index{Scene@{Scene}!background@{background}}
+\index{background@{background}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{background}{background}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Scene\+::background = {\bf vec3}(0, 0, 0)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classScene_ab2f20cf753edf2f92fec9b1ad7c9b93e}{}\label{classScene_ab2f20cf753edf2f92fec9b1ad7c9b93e}
+
+
+background color 
+
+\index{Scene@{Scene}!camera@{camera}}
+\index{camera@{camera}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{camera}{camera}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera} Scene\+::camera\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classScene_afed13ec4ba2d7ab75b273d507911b498}{}\label{classScene_afed13ec4ba2d7ab75b273d507911b498}
+
+
+camera stores eye position, view direction, and can generate primary rays 
+
+\index{Scene@{Scene}!lights@{lights}}
+\index{lights@{lights}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{lights}{lights}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Light}$>$ Scene\+::lights\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classScene_ab3625e4ac3c6e47156edd23e2421e828}{}\label{classScene_ab3625e4ac3c6e47156edd23e2421e828}
+
+
+array for all lights in the scene 
+
+\index{Scene@{Scene}!max\+\_\+depth@{max\+\_\+depth}}
+\index{max\+\_\+depth@{max\+\_\+depth}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{max\+\_\+depth}{max_depth}}]{\setlength{\rightskip}{0pt plus 5cm}int Scene\+::max\+\_\+depth = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classScene_a9150039f4d2c46a617b51c7920142d52}{}\label{classScene_a9150039f4d2c46a617b51c7920142d52}
+
+
+max recursion depth for mirroring 
+
+\index{Scene@{Scene}!objects@{objects}}
+\index{objects@{objects}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{objects}{objects}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::unique\+\_\+ptr$<${\bf Object}$>$ $>$ Scene\+::objects\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classScene_abbd6f5b3a4639c3b089037519085bf86}{}\label{classScene_abbd6f5b3a4639c3b089037519085bf86}
+
+
+array for all the objects in the scene 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Scene_8h}{Scene.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Scene_8cpp}{Scene.\+cpp}\end{DoxyCompactItemize}

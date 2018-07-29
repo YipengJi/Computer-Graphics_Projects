@@ -1,0 +1,65 @@
+This directory contains the framework code that will be used in the four Open\+GL exercises.
+
+\subsection*{Building under Linux/mac\+OS }
+
+Inside the exercise\textquotesingle{}s top-\/level directory, execute the following commands\+: \begin{DoxyVerb}mkdir build
+cd build
+cmake ..
+make
+\end{DoxyVerb}
+
+
+The last command -- i.\+e. {\ttfamily make} -- compiles the application. Rerun it whenever you have added/changed code in order to recompile.
+
+\subsection*{Building under Windows Visual Studio }
+
+
+\begin{DoxyItemize}
+\item Install Visual Studio Community 2013 or later
+\item You will be asked, if you want to install additional packages. Make sure that you check the c++ development option.
+\item Inside the exercise\textquotesingle{}s top-\/level directory create a new {\ttfamily build} folder (C\+T\+RL + S\+H\+I\+FT + N)
+\item Install \href{https://cmake.org/download/}{\tt C\+Make}
+\item Start the cmake-\/gui.\+exe
+\item Click {\ttfamily Browse Source} and select the exercise\textquotesingle{}s top-\/level directory
+\item Click {\ttfamily Browse Build} and select the created {\ttfamily build} folder
+\item Click {\ttfamily Configure} and select your Visual Studio version
+\item Start Configuring.
+\item If no major errors occur, click {\ttfamily Generate}
+\item Start Visual Studio
+\item Use {\ttfamily Open Project} to load your {\ttfamily Solar\+System.\+sln}
+\item On the right, there should be the solution explorer. Find the project {\ttfamily Solar\+Viewer}, right click and choose {\ttfamily Set as Start\+Up Project}
+\item Press C\+T\+RL + F5 to compile and run
+\end{DoxyItemize}
+
+\subsection*{Documentation }
+
+You may build an H\+T\+ML documentation as long as you have \href{www.doxygen.org/}{\tt Doxygen} installed. To do so, still inside the directory {\ttfamily build}, execute the following command\+: \begin{DoxyVerb}make doc
+\end{DoxyVerb}
+
+
+View the documentation by opening the file {\ttfamily html/index.\+html} with any web browser / H\+T\+ML viewer. If you are into La\+TeX, navigate into the directory {\ttfamily latex} and execute the command {\ttfamily make} to create a printable version of the documentation.
+
+\subsection*{Textures and Copyright }
+
+All earth textures are from the \href{http://earthobservatory.nasa.gov/Features/BlueMarble/}{\tt N\+A\+SA Earth Observatory} and have been modified by Prof. Hartmut Schirmacher, Beuth Hochschule für Technik Berlin. The sun texture is from \href{http://www.solarsystemscope.com/textures}{\tt http\+://www.\+solarsystemscope.\+com/textures}. All other textures are from \href{http://textures.forrest.cz/index.php?spgmGal=maps&spgmPic=14}{\tt http\+://textures.\+forrest.\+cz/index.\+php?spgm\+Gal=maps\&spgm\+Pic=14}. The ship model if from \href{https://free3d.com}{\tt https\+://free3d.\+com}.
+
+\subsection*{Keyboard Settings }
+
+
+\begin{DoxyItemize}
+\item arrow keys\+: Navigation Camera
+\item W,A,S,D\+: Navigation \hyperlink{classShip}{Ship}
+\item g\+: toggle greyscale
+\item +/-\/\+: increase/decrease time\+\_\+step
+\item y/z\+: switch mono/stereo view mode
+\item 1-\/6\+: set camera to planets/sun
+\item 7\+: set camera to ship
+\item 8/9\+: change camera\textquotesingle{}s distance to the observed object
+\item space\+: pause
+\item r\+: randomize planets\textquotesingle{} positions
+\item escape\+: exit viewer
+\end{DoxyItemize}
+
+\subsection*{Assignment 6\+: Shaders }
+
+T\+O\+DO 

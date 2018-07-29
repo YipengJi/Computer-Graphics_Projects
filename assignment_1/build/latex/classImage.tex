@@ -1,0 +1,154 @@
+\hypertarget{classImage}{}\section{Image Class Reference}
+\label{classImage}\index{Image@{Image}}
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImage_abe454624b0ed2ecbe6f2bffe76379911}{Image} (unsigned int \+\_\+width=0, unsigned int \+\_\+height=0)
+\item 
+void \hyperlink{classImage_a5692baf9c0f1b389db0cf4f344d585e6}{resize} (unsigned int \+\_\+width, unsigned int \+\_\+height)
+\item 
+unsigned int \hyperlink{classImage_a622448e6a454614d431d5cee77b0a7f2}{width} () const 
+\begin{DoxyCompactList}\small\item\em Returns image width in pixels. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classImage_a755dc7553e45feee69c1c3e208c260ba}{height} () const 
+\begin{DoxyCompactList}\small\item\em Returns image height in pixels. \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \& \hyperlink{classImage_aaea1be59965e893cd4e66f0a66b5b29c}{operator()} (unsigned int \+\_\+x, unsigned int \+\_\+y)
+\item 
+const \hyperlink{classvec3}{vec3} \& \hyperlink{classImage_a6d432ff46ea92a5df6e047eb6a4955be}{operator()} (unsigned int \+\_\+x, unsigned int \+\_\+y) const 
+\begin{DoxyCompactList}\small\item\em Read access to pixel (\+\_\+x,\+\_\+y). \end{DoxyCompactList}\item 
+bool \hyperlink{classImage_a20c73b1670af26168c75e31e8794769d}{write} (const std\+::string \&\+\_\+filename)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classImage_af271f3879d09bcba694164048f94172c}{pixels\+\_\+}
+\begin{DoxyCompactList}\small\item\em vector with all pixels in the image \end{DoxyCompactList}\item 
+unsigned short int \hyperlink{classImage_a8734c4cebb55f81253f34a8474ef52e5}{width\+\_\+}
+\begin{DoxyCompactList}\small\item\em image width in pixels \end{DoxyCompactList}\item 
+unsigned short int \hyperlink{classImage_a61db48547d78218ecc7b1fff35f011c2}{height\+\_\+}
+\begin{DoxyCompactList}\small\item\em image height in pixels \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class stores an image as a big array of colors, which are represented as \hyperlink{classvec3}{vec3} values for R\+GB. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection[{\texorpdfstring{Image(unsigned int \+\_\+width=0, unsigned int \+\_\+height=0)}{Image(unsigned int _width=0, unsigned int _height=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Image\+::\+Image (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+width = {\ttfamily 0}, }
+\item[{unsigned int}]{\+\_\+height = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_abe454624b0ed2ecbe6f2bffe76379911}{}\label{classImage_abe454624b0ed2ecbe6f2bffe76379911}
+Construct an image of size \+\_\+width times \+\_\+height 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+width} & Width of the image in pixels \\
+\hline
+{\em \+\_\+height} & Height of the image in pixels \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Image@{Image}!height@{height}}
+\index{height@{height}!Image@{Image}}
+\subsubsection[{\texorpdfstring{height() const }{height() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Image\+::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_a755dc7553e45feee69c1c3e208c260ba}{}\label{classImage_a755dc7553e45feee69c1c3e208c260ba}
+
+
+Returns image height in pixels. 
+
+\index{Image@{Image}!operator()@{operator()}}
+\index{operator()@{operator()}!Image@{Image}}
+\subsubsection[{\texorpdfstring{operator()(unsigned int \+\_\+x, unsigned int \+\_\+y)}{operator()(unsigned int _x, unsigned int _y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3}\& Image\+::operator() (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+x, }
+\item[{unsigned int}]{\+\_\+y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_aaea1be59965e893cd4e66f0a66b5b29c}{}\label{classImage_aaea1be59965e893cd4e66f0a66b5b29c}
+Read/write access to pixel (\+\_\+x,\+\_\+y). Use this to set the color by image(x,y) = color; \index{Image@{Image}!operator()@{operator()}}
+\index{operator()@{operator()}!Image@{Image}}
+\subsubsection[{\texorpdfstring{operator()(unsigned int \+\_\+x, unsigned int \+\_\+y) const }{operator()(unsigned int _x, unsigned int _y) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3}\& Image\+::operator() (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+x, }
+\item[{unsigned int}]{\+\_\+y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_a6d432ff46ea92a5df6e047eb6a4955be}{}\label{classImage_a6d432ff46ea92a5df6e047eb6a4955be}
+
+
+Read access to pixel (\+\_\+x,\+\_\+y). 
+
+\index{Image@{Image}!resize@{resize}}
+\index{resize@{resize}!Image@{Image}}
+\subsubsection[{\texorpdfstring{resize(unsigned int \+\_\+width, unsigned int \+\_\+height)}{resize(unsigned int _width, unsigned int _height)}}]{\setlength{\rightskip}{0pt plus 5cm}void Image\+::resize (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+width, }
+\item[{unsigned int}]{\+\_\+height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_a5692baf9c0f1b389db0cf4f344d585e6}{}\label{classImage_a5692baf9c0f1b389db0cf4f344d585e6}
+Resize the image 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+width} & New width of the image in pixels \\
+\hline
+{\em \+\_\+height} & New height of the image in pixels \\
+\hline
+\end{DoxyParams}
+\index{Image@{Image}!width@{width}}
+\index{width@{width}!Image@{Image}}
+\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Image\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_a622448e6a454614d431d5cee77b0a7f2}{}\label{classImage_a622448e6a454614d431d5cee77b0a7f2}
+
+
+Returns image width in pixels. 
+
+\index{Image@{Image}!write@{write}}
+\index{write@{write}!Image@{Image}}
+\subsubsection[{\texorpdfstring{write(const std\+::string \&\+\_\+filename)}{write(const std::string &_filename)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Image\+::write (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classImage_a20c73b1670af26168c75e31e8794769d}{}\label{classImage_a20c73b1670af26168c75e31e8794769d}
+Writes the image in T\+GA format to a file. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+filename} & Filename to save the image to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Image@{Image}!height\+\_\+@{height\+\_\+}}
+\index{height\+\_\+@{height\+\_\+}!Image@{Image}}
+\subsubsection[{\texorpdfstring{height\+\_\+}{height_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int Image\+::height\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classImage_a61db48547d78218ecc7b1fff35f011c2}{}\label{classImage_a61db48547d78218ecc7b1fff35f011c2}
+
+
+image height in pixels 
+
+\index{Image@{Image}!pixels\+\_\+@{pixels\+\_\+}}
+\index{pixels\+\_\+@{pixels\+\_\+}!Image@{Image}}
+\subsubsection[{\texorpdfstring{pixels\+\_\+}{pixels_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Image\+::pixels\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classImage_af271f3879d09bcba694164048f94172c}{}\label{classImage_af271f3879d09bcba694164048f94172c}
+
+
+vector with all pixels in the image 
+
+\index{Image@{Image}!width\+\_\+@{width\+\_\+}}
+\index{width\+\_\+@{width\+\_\+}!Image@{Image}}
+\subsubsection[{\texorpdfstring{width\+\_\+}{width_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int Image\+::width\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classImage_a8734c4cebb55f81253f34a8474ef52e5}{}\label{classImage_a8734c4cebb55f81253f34a8474ef52e5}
+
+
+image width in pixels 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Image_8h}{Image.\+h}\end{DoxyCompactItemize}

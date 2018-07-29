@@ -1,0 +1,120 @@
+\hypertarget{structObject}{}\section{Object Class Reference}
+\label{structObject}\index{Object@{Object}}
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+
+
+Inheritance diagram for Object\+:
+% FIG 0
+
+
+Collaboration diagram for Object\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structObject_a40860402e64d8008fb42329df7097cdb}{Object} ()
+\begin{DoxyCompactList}\small\item\em Default (empty) constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{structObject_aa3e791419d84c4c346ef9499513b8e00}{$\sim$\+Object} ()
+\item 
+virtual bool \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const =0
+\item 
+virtual void \hyperlink{structObject_ae7828b080c96e2226f3dc19823161d41}{parse} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em parse object properties from an input stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structMaterial}{Material} \hyperlink{structObject_a2f63d05a9a9264e1b6c388fa4bba4e91}{material}
+\begin{DoxyCompactList}\small\item\em The material of this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \hyperlink{structObject_a68971b3c931312e76077de7f8597a6d4}{N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON} = std\+::numeric\+\_\+limits$<$double$>$\+::\hyperlink{vec3_8h_a88bf317d8d46ef981cc71e72eb77b184}{max}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements an abstract class for an object. Every derived object type will inherit the material property, and it will have to override the virtual function \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\subsubsection[{\texorpdfstring{Object()}{Object()}}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structObject_a40860402e64d8008fb42329df7097cdb}{}\label{structObject_a40860402e64d8008fb42329df7097cdb}
+
+
+Default (empty) constructor. 
+
+\index{Object@{Object}!````~Object@{$\sim$\+Object}}
+\index{````~Object@{$\sim$\+Object}!Object@{Object}}
+\subsubsection[{\texorpdfstring{$\sim$\+Object()}{~Object()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Object\+::$\sim$\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structObject_aa3e791419d84c4c346ef9499513b8e00}{}\label{structObject_aa3e791419d84c4c346ef9499513b8e00}
+Destructor (if a class has virtual functions, then its destructor has to be virtual as well). 
+
+\subsection{Member Function Documentation}
+\index{Object@{Object}!intersect@{intersect}}
+\index{intersect@{intersect}!Object@{Object}}
+\subsubsection[{\texorpdfstring{intersect(const Ray \&\+\_\+ray, vec3 \&\+\_\+intersection\+\_\+point, vec3 \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const =0}{intersect(const Ray &_ray, vec3 &_intersection_point, vec3 &_intersection_normal, double &_intersection_t) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Object\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+normal, }
+\item[{double \&}]{\+\_\+intersection\+\_\+t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{structObject_ac6549d30793a9b3da070234bf10c7e91}{}\label{structObject_ac6549d30793a9b3da070234bf10c7e91}
+Intersect the object with {\ttfamily \+\_\+ray}, return whether there is an intersection. If {\ttfamily \+\_\+ray} intersects the object, provide the following results\+: 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ray} & the ray to intersect the object with \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+point} & the point of intersection \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+normal} & the surface normal at intersection point \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+t} & ray parameter at intersection point \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classCylinder_a0ae732b1b669bbeb9eb83ee7395a5add}{Cylinder}, \hyperlink{classMesh_a3d982c37d43eb5d3929b2de2b263d662}{Mesh}, \hyperlink{classPlane_ab146bb10ad52e8535dad25d531c43b86}{Plane}, and \hyperlink{classSphere_a6650f14281c43b799d9ae0c0b690b1bd}{Sphere}.
+
+\index{Object@{Object}!parse@{parse}}
+\index{parse@{parse}!Object@{Object}}
+\subsubsection[{\texorpdfstring{parse(std\+::istream \&is)}{parse(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Object\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structObject_ae7828b080c96e2226f3dc19823161d41}{}\label{structObject_ae7828b080c96e2226f3dc19823161d41}
+
+
+parse object properties from an input stream 
+
+
+
+Reimplemented in \hyperlink{classCylinder_a15050a6257a624cae1566a949b03b7da}{Cylinder}, \hyperlink{classPlane_af5361222d1aa404fc720d7b4b68a634c}{Plane}, and \hyperlink{classSphere_aa55e3407f148feb451866bc39907f6fb}{Sphere}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Object@{Object}!material@{material}}
+\index{material@{material}!Object@{Object}}
+\subsubsection[{\texorpdfstring{material}{material}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Material} Object\+::material}\hypertarget{structObject_a2f63d05a9a9264e1b6c388fa4bba4e91}{}\label{structObject_a2f63d05a9a9264e1b6c388fa4bba4e91}
+
+
+The material of this object. 
+
+\index{Object@{Object}!N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON@{N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON}}
+\index{N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON@{N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON}!Object@{Object}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON}{NO_INTERSECTION}}]{\setlength{\rightskip}{0pt plus 5cm}constexpr double Object\+::\+N\+O\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+ON = std\+::numeric\+\_\+limits$<$double$>$\+::{\bf max}()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structObject_a68971b3c931312e76077de7f8597a6d4}{}\label{structObject_a68971b3c931312e76077de7f8597a6d4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Object_8h}{Object.\+h}\end{DoxyCompactItemize}

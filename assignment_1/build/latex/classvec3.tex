@@ -1,0 +1,165 @@
+\hypertarget{classvec3}{}\section{vec3 Class Reference}
+\label{classvec3}\index{vec3@{vec3}}
+
+
+{\ttfamily \#include $<$vec3.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3_aea9f3480a6ccd7ce3ab02d0992705d33}{vec3} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classvec3_a9d6f187ab027ca950abcdb723b69466e}{vec3} (double \+\_\+s)
+\item 
+\hyperlink{classvec3_ae1737945802bd8be9574b51a0ff04c0d}{vec3} (double \+\_\+x, double \+\_\+y, double \+\_\+z)
+\begin{DoxyCompactList}\small\item\em construct with x,y,z values \end{DoxyCompactList}\item 
+double \& \hyperlink{classvec3_a7d8b0448cae3b86cc008aede26be5824}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \+\_\+i)
+\begin{DoxyCompactList}\small\item\em read/write the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 2) \end{DoxyCompactList}\item 
+const double \hyperlink{classvec3_a6c1857293ebc424a97d517a217aec037}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \+\_\+i) const 
+\begin{DoxyCompactList}\small\item\em read the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 2) \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \& \hyperlink{classvec3_ab3799a04d6028ec6cc26e4d822fb3480}{operator$\ast$=} (const double s)
+\begin{DoxyCompactList}\small\item\em multiply this vector by a scalar {\ttfamily s} \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \& \hyperlink{classvec3_a12590c923f5839bc9727466fa39b7aa3}{operator/=} (const double s)
+\begin{DoxyCompactList}\small\item\em divide this vector by a scalar {\ttfamily s} \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \& \hyperlink{classvec3_af48643b0cc8c7065df1dd001c50b55a3}{operator$\ast$=} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em component-\/wise multiplication of this vector with vector {\ttfamily v} \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \& \hyperlink{classvec3_aae14957b5530407e22095bfadcb98611}{operator-\/=} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em subtract vector {\ttfamily v} from this vector \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \& \hyperlink{classvec3_a68fcdd8a705437648ee8d3a1e74f6165}{operator+=} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em add vector {\ttfamily v} to this vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classvec3_a3870ed34c802775320f2a3c0739693e4}{data\+\_\+} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple 3D vector, that we use to represent 3D points and 3D color. You can access the individual components either by x,y,z or by r,g,b. The \hyperlink{classvec3}{vec3} class provides all commonly used mathematical operations. \begin{DoxySeeAlso}{See also}
+\hyperlink{vec3_8h}{vec3.\+h} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{vec3@{vec3}!vec3@{vec3}}
+\index{vec3@{vec3}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{vec3()}{vec3()}}]{\setlength{\rightskip}{0pt plus 5cm}vec3\+::vec3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_aea9f3480a6ccd7ce3ab02d0992705d33}{}\label{classvec3_aea9f3480a6ccd7ce3ab02d0992705d33}
+
+
+default constructor 
+
+\index{vec3@{vec3}!vec3@{vec3}}
+\index{vec3@{vec3}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{vec3(double \+\_\+s)}{vec3(double _s)}}]{\setlength{\rightskip}{0pt plus 5cm}vec3\+::vec3 (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classvec3_a9d6f187ab027ca950abcdb723b69466e}{}\label{classvec3_a9d6f187ab027ca950abcdb723b69466e}
+construct with scalar value that is assigned to x, y, and z The \char`\"{}explicit\char`\"{} keyword prevents automatic conversions from double to \hyperlink{classvec3}{vec3}, which generally should indicate bugs. \index{vec3@{vec3}!vec3@{vec3}}
+\index{vec3@{vec3}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{vec3(double \+\_\+x, double \+\_\+y, double \+\_\+z)}{vec3(double _x, double _y, double _z)}}]{\setlength{\rightskip}{0pt plus 5cm}vec3\+::vec3 (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+x, }
+\item[{double}]{\+\_\+y, }
+\item[{double}]{\+\_\+z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_ae1737945802bd8be9574b51a0ff04c0d}{}\label{classvec3_ae1737945802bd8be9574b51a0ff04c0d}
+
+
+construct with x,y,z values 
+
+
+
+\subsection{Member Function Documentation}
+\index{vec3@{vec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator$\ast$=(const double s)}{operator*=(const double s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3}\& vec3\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const double}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_ab3799a04d6028ec6cc26e4d822fb3480}{}\label{classvec3_ab3799a04d6028ec6cc26e4d822fb3480}
+
+
+multiply this vector by a scalar {\ttfamily s} 
+
+\index{vec3@{vec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator$\ast$=(const vec3 \&v)}{operator*=(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3}\& vec3\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_af48643b0cc8c7065df1dd001c50b55a3}{}\label{classvec3_af48643b0cc8c7065df1dd001c50b55a3}
+
+
+component-\/wise multiplication of this vector with vector {\ttfamily v} 
+
+\index{vec3@{vec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator+=(const vec3 \&v)}{operator+=(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3}\& vec3\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_a68fcdd8a705437648ee8d3a1e74f6165}{}\label{classvec3_a68fcdd8a705437648ee8d3a1e74f6165}
+
+
+add vector {\ttfamily v} to this vector 
+
+\index{vec3@{vec3}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator-\/=(const vec3 \&v)}{operator-=(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3}\& vec3\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_aae14957b5530407e22095bfadcb98611}{}\label{classvec3_aae14957b5530407e22095bfadcb98611}
+
+
+subtract vector {\ttfamily v} from this vector 
+
+\index{vec3@{vec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator/=(const double s)}{operator/=(const double s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3}\& vec3\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{const double}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_a12590c923f5839bc9727466fa39b7aa3}{}\label{classvec3_a12590c923f5839bc9727466fa39b7aa3}
+
+
+divide this vector by a scalar {\ttfamily s} 
+
+\index{vec3@{vec3}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator[](unsigned int \+\_\+i)}{operator[](unsigned int _i)}}]{\setlength{\rightskip}{0pt plus 5cm}double\& vec3\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_a7d8b0448cae3b86cc008aede26be5824}{}\label{classvec3_a7d8b0448cae3b86cc008aede26be5824}
+
+
+read/write the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 2) 
+
+\index{vec3@{vec3}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{operator[](unsigned int \+\_\+i) const }{operator[](unsigned int _i) const }}]{\setlength{\rightskip}{0pt plus 5cm}const double vec3\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec3_a6c1857293ebc424a97d517a217aec037}{}\label{classvec3_a6c1857293ebc424a97d517a217aec037}
+
+
+read the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 2) 
+
+
+
+\subsection{Member Data Documentation}
+\index{vec3@{vec3}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!vec3@{vec3}}
+\subsubsection[{\texorpdfstring{data\+\_\+}{data_}}]{\setlength{\rightskip}{0pt plus 5cm}double vec3\+::data\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classvec3_a3870ed34c802775320f2a3c0739693e4}{}\label{classvec3_a3870ed34c802775320f2a3c0739693e4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{vec3_8h}{vec3.\+h}\end{DoxyCompactItemize}

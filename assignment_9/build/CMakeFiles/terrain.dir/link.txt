@@ -1,0 +1,1 @@
+/usr/bin/c++    -fopenmp -O3 -DNDEBUG    CMakeFiles/terrain.dir/src/main_terrain.cpp.o  -o terrain -rdynamic librender_shared.a libglew.a -lGLU libglfw.so.3.1 -lrt -lm -lX11 -lpthread -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lGL -ldl liblodePNG.a -Wl,-rpath,/home/eason/Desktop/EPFL_CG/assignment_9/build 

@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Mesh::Vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMesh_1_1Vertex.html",tooltip="a vertex consists of a position and a normal "];
+}

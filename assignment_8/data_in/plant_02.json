@@ -1,0 +1,10 @@
+{
+	"name": "plant_02",
+	"stochastic": false,
+	"initial": "F",
+	"angle_deg": 20.0,
+	"num_iters": 5,
+	"rules": {
+		"F": "F[+F]F[-F][F]"
+	}
+}

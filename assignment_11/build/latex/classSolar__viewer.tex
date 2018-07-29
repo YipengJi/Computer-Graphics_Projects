@@ -1,0 +1,544 @@
+\hypertarget{classSolar__viewer}{}\section{Solar\+\_\+viewer Class Reference}
+\label{classSolar__viewer}\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+
+
+Open\+GL viewer that handles all the rendering for us.  
+
+
+
+
+{\ttfamily \#include $<$solar\+\_\+viewer.\+h$>$}
+
+
+
+Inheritance diagram for Solar\+\_\+viewer\+:
+% FIG 0
+
+
+Collaboration diagram for Solar\+\_\+viewer\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSolar__viewer_a0bde18b5e12179314b342ceb52aa465f}{Solar\+\_\+viewer} (const char $\ast$\+\_\+title, int \+\_\+width, int \+\_\+height)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSolar__viewer_ad995310e4ede7e0ade07a6b6fb799488}{initialize} ()
+\begin{DoxyCompactList}\small\item\em function that is called on the creation of the widget for the initialisation of Open\+GL \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSolar__viewer_a40df69388b641e5982f0975d711ae3ca}{resize} (int width, int height)
+\begin{DoxyCompactList}\small\item\em resize function -\/ called when the window size is changed \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}{paint} ()
+\begin{DoxyCompactList}\small\item\em paint function -\/ called when the window should be refreshed \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}{keyboard} (int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em keyboard interaction \end{DoxyCompactList}\item 
+void \hyperlink{classSolar__viewer_af6b468fb543b9c9ed466fe1687f1aff8}{draw\+\_\+scene} (\hyperlink{classmat4}{mat4} \&\+\_\+projection, \hyperlink{classmat4}{mat4} \&\+\_\+view)
+\item 
+virtual void \hyperlink{classSolar__viewer_a1b9915ee3f62232328c7326753c11101}{timer} ()
+\begin{DoxyCompactList}\small\item\em update function on every timer event (controls the animation) \end{DoxyCompactList}\item 
+void \hyperlink{classSolar__viewer_ab86b680afd2e29e8ead0ae9bdb2cef48}{update\+\_\+body\+\_\+positions} ()
+\begin{DoxyCompactList}\small\item\em update the body positions (called by the timer). \end{DoxyCompactList}\item 
+void \hyperlink{classSolar__viewer_aa88b398265ff4e938fd522426e1d7333}{randomize\+\_\+planets} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88}{Curve\+Display\+Mode} \{ \\*
+\hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a1397cb671bd96a0a15c241617fea99e9}{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+O\+NE} = 0, 
+\hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a258c35298f28a01bfaa1c18ce9df3fa8}{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+TH} = 1, 
+\hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a44157ba65d88263416f5f1b6c9b83d71}{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+CP} = 2, 
+\hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a561ebf84867cf9734de69a2f0a31b255}{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+F\+R\+A\+ME} = 3, 
+\\*
+\hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a0e7f84c9f071589c0cbcc9f0a50f0e6a}{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+ES} = 4
+ \}\begin{DoxyCompactList}\small\item\em Whether/how to display the ship path curve. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSphere}{Sphere} \hyperlink{classSolar__viewer_a47d90d63f22fd4e9e58651e9e9c7baef}{unit\+\_\+sphere\+\_\+}
+\begin{DoxyCompactList}\small\item\em sphere object \end{DoxyCompactList}\item 
+\hyperlink{classPlanet}{Planet} \hyperlink{classSolar__viewer_a381a824e3e1a2c6bff1bd67bf615ffdb}{sun\+\_\+}
+\begin{DoxyCompactList}\small\item\em the sun object \end{DoxyCompactList}\item 
+\hyperlink{classPlanet}{Planet} \hyperlink{classSolar__viewer_ac6f237c0c02818cb2f5beac34a6ec253}{mercury\+\_\+}
+\begin{DoxyCompactList}\small\item\em the mercury object \end{DoxyCompactList}\item 
+\hyperlink{classPlanet}{Planet} \hyperlink{classSolar__viewer_a52df2043cba78b9afef933ce6515303d}{venus\+\_\+}
+\begin{DoxyCompactList}\small\item\em the venus object \end{DoxyCompactList}\item 
+\hyperlink{classEarth}{Earth} \hyperlink{classSolar__viewer_a769d9e8775ba2106682964488117e695}{earth\+\_\+}
+\begin{DoxyCompactList}\small\item\em the earth object \end{DoxyCompactList}\item 
+\hyperlink{classPlanet}{Planet} \hyperlink{classSolar__viewer_a28f77d042e23dd0dab3be944c4c5b135}{moon\+\_\+}
+\begin{DoxyCompactList}\small\item\em the moon object \end{DoxyCompactList}\item 
+\hyperlink{classPlanet}{Planet} \hyperlink{classSolar__viewer_a1d1582410c9e761b14796329eff12b08}{mars\+\_\+}
+\begin{DoxyCompactList}\small\item\em the mars object \end{DoxyCompactList}\item 
+\hyperlink{classPlanet}{Planet} \hyperlink{classSolar__viewer_aeaeb8ed645d3e4a14ac8cda157472f39}{stars\+\_\+}
+\begin{DoxyCompactList}\small\item\em the stars object \end{DoxyCompactList}\item 
+\hyperlink{classShip}{Ship} \hyperlink{classSolar__viewer_a15b5951427b3a4abad4715255c94f2bd}{ship\+\_\+}
+\begin{DoxyCompactList}\small\item\em spaceship object \end{DoxyCompactList}\item 
+\hyperlink{classBillboard}{Billboard} \hyperlink{classSolar__viewer_a6a7e25827438c0e43f17e53d28041a79}{sunglow\+\_\+}
+\begin{DoxyCompactList}\small\item\em sunglow billboard \end{DoxyCompactList}\item 
+\hyperlink{classShader}{Shader} \hyperlink{classSolar__viewer_aed950d77f461e1ce32ba1dcf3898b814}{color\+\_\+shader\+\_\+}
+\begin{DoxyCompactList}\small\item\em default color shader (renders only texture) \end{DoxyCompactList}\item 
+\hyperlink{classShader}{Shader} \hyperlink{classSolar__viewer_a2b1a9a122bcbeebae265b49a1d048154}{sun\+\_\+shader\+\_\+}
+\item 
+\hyperlink{classShader}{Shader} \hyperlink{classSolar__viewer_a3f0eaae53b84778ce774d1c2ced29b9f}{phong\+\_\+shader\+\_\+}
+\begin{DoxyCompactList}\small\item\em phong shader (renders texture and basic illumination) \end{DoxyCompactList}\item 
+\hyperlink{classShader}{Shader} \hyperlink{classSolar__viewer_a5a423c2328fd2d79de95a2a270b385e3}{earth\+\_\+shader\+\_\+}
+\begin{DoxyCompactList}\small\item\em earth shader (renders the earth using multi texturing) \end{DoxyCompactList}\item 
+\hyperlink{classShader}{Shader} \hyperlink{classSolar__viewer_a3d36d3fc4b3e1cf447cf8ff087f0ab0e}{solid\+\_\+color\+\_\+shader\+\_\+}
+\begin{DoxyCompactList}\small\item\em simple shader for visualizing curves (just using solid color). \end{DoxyCompactList}\item 
+bool \hyperlink{classSolar__viewer_aedc75568a6aafd2ecf8245ed518f6214}{timer\+\_\+active\+\_\+}
+\begin{DoxyCompactList}\small\item\em interval for the animation timer \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_ad2ff1703788f0c694bd8e6e8be5c3be5}{time\+\_\+step\+\_\+}
+\begin{DoxyCompactList}\small\item\em update factor for the animation \end{DoxyCompactList}\item 
+bool \hyperlink{classSolar__viewer_ad0da37e7839ea05cd500c59eacfc04cb}{greyscale\+\_\+}
+\begin{DoxyCompactList}\small\item\em state whether the rendering should be in color or not \end{DoxyCompactList}\item 
+enum \hyperlink{classSolar__viewer_a81992414d6b7f79184b903adffca6d88}{Solar\+\_\+viewer\+::\+Curve\+Display\+Mode} \hyperlink{classSolar__viewer_a42bdd7e9bad9f049ae3c9d8dcb8f40ec}{curve\+\_\+display\+\_\+mode\+\_\+}
+\item 
+\hyperlink{classPath}{Path} \hyperlink{classSolar__viewer_a42b89bbee0c692097061b52d35ecf772}{ship\+\_\+path\+\_\+renderer\+\_\+}
+\item 
+\hyperlink{classPath}{Path} \hyperlink{classSolar__viewer_a3b486b4a6d1d555296aa064127fabd2f}{ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+}
+\item 
+\hyperlink{structFrame}{Frame} \hyperlink{classSolar__viewer_ae8f77efc9fcff33bd7c71dd37cbef2a1}{ship\+\_\+path\+\_\+frame\+\_\+}
+\item 
+float \hyperlink{classSolar__viewer_a3f197b01ef63db24545632dac7e3ca9c}{ship\+\_\+path\+\_\+param\+\_\+} = 0
+\item 
+\hyperlink{classPiecewiseBezier}{Piecewise\+Bezier} \hyperlink{classSolar__viewer_a717ac56af4cceb1d8606f5e050c46d57}{ship\+\_\+path\+\_\+}
+\begin{DoxyCompactList}\small\item\em Piecewise degree-\/3 Bezier spline. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classSolar__viewer_a67aa3b5cdacc2c7f2947ad2d72c6ce32}{control\+\_\+polygon\+\_\+}
+\item 
+float \hyperlink{classSolar__viewer_a0ee3e25d0a16f5f8f2be784b42a3b576}{fovy\+\_\+}
+\begin{DoxyCompactList}\small\item\em the field of view for the camera \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_a58e1539134e5eb23ee851565ae8724f1}{near\+\_\+}
+\begin{DoxyCompactList}\small\item\em the near plane for the virtual camera \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_ae47e94d8d1b6ee4297454d6234531d87}{far\+\_\+}
+\begin{DoxyCompactList}\small\item\em the far plane for the virtual camera \end{DoxyCompactList}\item 
+const \hyperlink{classPlanet}{Planet} $\ast$ \hyperlink{classSolar__viewer_af0b149d27213a8b45e5672c2e1d5b53a}{planet\+\_\+to\+\_\+look\+\_\+at\+\_\+}
+\begin{DoxyCompactList}\small\item\em which planet are we looking at (control with key 1-\/6) \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_afe0f50221ea1464e4b1a9c79071bcac0}{x\+\_\+angle\+\_\+}
+\begin{DoxyCompactList}\small\item\em rotation in x direction around the planet/sun from the original point \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_aec80e0da0a52b108b1b7223d2a974860}{y\+\_\+angle\+\_\+}
+\begin{DoxyCompactList}\small\item\em rotation in y direction around the planet/sun from the original point \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_a7447e4773978c9391a2ab54a52b92b43}{dist\+\_\+factor\+\_\+}
+\begin{DoxyCompactList}\small\item\em eye\textquotesingle{}s distance in radii from the observed planet \end{DoxyCompactList}\item 
+bool \hyperlink{classSolar__viewer_a6bed73dabfc1ef5dbf51b1bf6b854a55}{in\+\_\+ship\+\_\+}
+\begin{DoxyCompactList}\small\item\em true, if we look at the spaceship \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_adf92f5eeae577e1178a4e8216abb87bb}{billboard\+\_\+x\+\_\+angle\+\_\+}
+\begin{DoxyCompactList}\small\item\em x-\/rotation of the billboard \end{DoxyCompactList}\item 
+float \hyperlink{classSolar__viewer_af91dd8490128e7b955fee3a166db7c3f}{billboard\+\_\+y\+\_\+angle\+\_\+}
+\begin{DoxyCompactList}\small\item\em y-\/rotation of the billboard \end{DoxyCompactList}\item 
+int \hyperlink{classSolar__viewer_ad12592d718e123912365df3ef23a2dbb}{width\+\_\+}
+\begin{DoxyCompactList}\small\item\em current viewport dimension \end{DoxyCompactList}\item 
+int \hyperlink{classSolar__viewer_ae13eeec65d2a4ea4fda382687a4379cd}{height\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Open\+GL viewer that handles all the rendering for us. 
+
+\subsection{Member Enumeration Documentation}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!Curve\+Display\+Mode@{Curve\+Display\+Mode}}
+\index{Curve\+Display\+Mode@{Curve\+Display\+Mode}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{Curve\+Display\+Mode}{CurveDisplayMode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Solar\+\_\+viewer\+::\+Curve\+Display\+Mode}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a81992414d6b7f79184b903adffca6d88}{}\label{classSolar__viewer_a81992414d6b7f79184b903adffca6d88}
+
+
+Whether/how to display the ship path curve. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+O\+NE@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+O\+NE}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+O\+NE@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+O\+NE}}\item[{\em 
+C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+O\+NE\hypertarget{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a1397cb671bd96a0a15c241617fea99e9}{}\label{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a1397cb671bd96a0a15c241617fea99e9}
+}]\index{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+TH@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+TH}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+TH@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+TH}}\item[{\em 
+C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+TH\hypertarget{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a258c35298f28a01bfaa1c18ce9df3fa8}{}\label{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a258c35298f28a01bfaa1c18ce9df3fa8}
+}]\index{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+CP@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+CP}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+CP@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+CP}}\item[{\em 
+C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+CP\hypertarget{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a44157ba65d88263416f5f1b6c9b83d71}{}\label{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a44157ba65d88263416f5f1b6c9b83d71}
+}]\index{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+F\+R\+A\+ME@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+F\+R\+A\+ME}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+F\+R\+A\+ME@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+F\+R\+A\+ME}}\item[{\em 
+C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+P\+A\+T\+H\+\_\+\+F\+R\+A\+ME\hypertarget{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a561ebf84867cf9734de69a2f0a31b255}{}\label{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a561ebf84867cf9734de69a2f0a31b255}
+}]\index{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+ES@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+ES}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+ES@{C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+ES}}\item[{\em 
+C\+U\+R\+V\+E\+\_\+\+S\+H\+O\+W\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+ES\hypertarget{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a0e7f84c9f071589c0cbcc9f0a50f0e6a}{}\label{classSolar__viewer_a81992414d6b7f79184b903adffca6d88a0e7f84c9f071589c0cbcc9f0a50f0e6a}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{Solar\+\_\+viewer(const char $\ast$\+\_\+title, int \+\_\+width, int \+\_\+height)}{Solar_viewer(const char *_title, int _width, int _height)}}]{\setlength{\rightskip}{0pt plus 5cm}Solar\+\_\+viewer\+::\+Solar\+\_\+viewer (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{\+\_\+title, }
+\item[{int}]{\+\_\+width, }
+\item[{int}]{\+\_\+height}
+\end{DoxyParamCaption}
+)}\hypertarget{classSolar__viewer_a0bde18b5e12179314b342ceb52aa465f}{}\label{classSolar__viewer_a0bde18b5e12179314b342ceb52aa465f}
+default constructor \+\_\+title the window\textquotesingle{}s title \+\_\+width the window\textquotesingle{}s width \+\_\+height the window\textquotesingle{}s height
+
+Use the following for better planet distances/sizes (but still not realistic) To get a true-\/to-\/scale solar system, planets would be 20x smaller, and their distance to the sun would be $\sim$11x larger For example r\+\_\+mercury/r\+\_\+sun = 0.\+0034 and distance\+\_\+mercury\+\_\+to\+\_\+sun/r\+\_\+sun = 33.\+3 
+
+\subsection{Member Function Documentation}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!draw\+\_\+scene@{draw\+\_\+scene}}
+\index{draw\+\_\+scene@{draw\+\_\+scene}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{draw\+\_\+scene(mat4 \&\+\_\+projection, mat4 \&\+\_\+view)}{draw_scene(mat4 &_projection, mat4 &_view)}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::draw\+\_\+scene (
+\begin{DoxyParamCaption}
+\item[{{\bf mat4} \&}]{\+\_\+projection, }
+\item[{{\bf mat4} \&}]{\+\_\+view}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classSolar__viewer_af6b468fb543b9c9ed466fe1687f1aff8}{}\label{classSolar__viewer_af6b468fb543b9c9ed466fe1687f1aff8}
+function that draws the planet system 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+projection} & the projection matrix for the scene \\
+\hline
+{\em \+\_\+view} & the view matrix for the scene \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]Assignment 11, Task 4\+: Update the model matrix for your ship so that the ship is placed on the {\ttfamily ship\+\_\+path\+\_\+} curve and oriented to face along the path\textquotesingle{}s tangent vector, {\ttfamily ship\+\_\+path\+\_\+frame\+\_\+.\+t}. Also, the ship should be rotated so that vertical axis agrees with {\ttfamily ship\+\_\+path\+\_\+frame\+\_\+.\+up}. Note, in its local coordinate system, the ship\textquotesingle{}s forward direction is +z and its up direction is +y. \end{DoxyRefDesc}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!initialize@{initialize}}
+\index{initialize@{initialize}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{initialize()}{initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classSolar__viewer_ad995310e4ede7e0ade07a6b6fb799488}{}\label{classSolar__viewer_ad995310e4ede7e0ade07a6b6fb799488}
+
+
+function that is called on the creation of the widget for the initialisation of Open\+GL 
+
+
+
+Implements \hyperlink{classGLFW__window_a14a56877d0edc611e1e69c1f924183bb}{G\+L\+F\+W\+\_\+window}.
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{keyboard(int key, int scancode, int action, int mods)}{keyboard(int key, int scancode, int action, int mods)}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::keyboard (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{scancode, }
+\item[{int}]{action, }
+\item[{int}]{mods}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}{}\label{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}
+
+
+keyboard interaction 
+
+
+
+Reimplemented from \hyperlink{classGLFW__window_a23f66e5464a50bd3196b5308afce5f92}{G\+L\+F\+W\+\_\+window}.
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!paint@{paint}}
+\index{paint@{paint}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{paint()}{paint()}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::paint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}{}\label{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}
+
+
+paint function -\/ called when the window should be refreshed 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]Assignment 11, Task 6 Paste your viewing/navigation code from assignment 5 here, then update the view matrix calculation for in\+\_\+ship\+\_\+ == true to account for the new ship orientation (instead of using {\ttfamily ship\+\_\+.\+pos\+\_\+} and {\ttfamily ship\+\_\+.\+angle\+\_\+} to define the eye coordinate system, you need to use {\ttfamily ship\+\_\+path\+\_\+(ship\+\_\+path\+\_\+param\+\_\+)} and {\ttfamily ship\+\_\+path\+\_\+frame\+\_\+}. Recall that we use a hard-\/coded viewing radius of 0.\+01f for the ship. \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classGLFW__window_ac1dffdbaead812e20c696348f4aff460}{G\+L\+F\+W\+\_\+window}.
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!randomize\+\_\+planets@{randomize\+\_\+planets}}
+\index{randomize\+\_\+planets@{randomize\+\_\+planets}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{randomize\+\_\+planets()}{randomize_planets()}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::randomize\+\_\+planets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classSolar__viewer_aa88b398265ff4e938fd522426e1d7333}{}\label{classSolar__viewer_aa88b398265ff4e938fd522426e1d7333}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!resize@{resize}}
+\index{resize@{resize}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{resize(int width, int height)}{resize(int width, int height)}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::resize (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classSolar__viewer_a40df69388b641e5982f0975d711ae3ca}{}\label{classSolar__viewer_a40df69388b641e5982f0975d711ae3ca}
+
+
+resize function -\/ called when the window size is changed 
+
+
+
+Implements \hyperlink{classGLFW__window_a64044226d3bd2c9b286d837b7fa8ae7c}{G\+L\+F\+W\+\_\+window}.
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!timer@{timer}}
+\index{timer@{timer}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{timer()}{timer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classSolar__viewer_a1b9915ee3f62232328c7326753c11101}{}\label{classSolar__viewer_a1b9915ee3f62232328c7326753c11101}
+
+
+update function on every timer event (controls the animation) 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}]Assignment 11, Task 5 Advance the curve evaluation parameter \char`\"{}ship\+\_\+path\+\_\+param\+\_\+\char`\"{} so that the ship moves by (approximately) Euclidean distance {\ttfamily ship\+\_\+speed} in this frame. \end{DoxyRefDesc}
+
+
+Reimplemented from \hyperlink{classGLFW__window_af12f8511c1311546f8cecabb556cae74}{G\+L\+F\+W\+\_\+window}.
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!update\+\_\+body\+\_\+positions@{update\+\_\+body\+\_\+positions}}
+\index{update\+\_\+body\+\_\+positions@{update\+\_\+body\+\_\+positions}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{update\+\_\+body\+\_\+positions()}{update_body_positions()}}]{\setlength{\rightskip}{0pt plus 5cm}void Solar\+\_\+viewer\+::update\+\_\+body\+\_\+positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classSolar__viewer_ab86b680afd2e29e8ead0ae9bdb2cef48}{}\label{classSolar__viewer_ab86b680afd2e29e8ead0ae9bdb2cef48}
+
+
+update the body positions (called by the timer). 
+
+
+
+\subsection{Member Data Documentation}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!billboard\+\_\+x\+\_\+angle\+\_\+@{billboard\+\_\+x\+\_\+angle\+\_\+}}
+\index{billboard\+\_\+x\+\_\+angle\+\_\+@{billboard\+\_\+x\+\_\+angle\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{billboard\+\_\+x\+\_\+angle\+\_\+}{billboard_x_angle_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::billboard\+\_\+x\+\_\+angle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_adf92f5eeae577e1178a4e8216abb87bb}{}\label{classSolar__viewer_adf92f5eeae577e1178a4e8216abb87bb}
+
+
+x-\/rotation of the billboard 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!billboard\+\_\+y\+\_\+angle\+\_\+@{billboard\+\_\+y\+\_\+angle\+\_\+}}
+\index{billboard\+\_\+y\+\_\+angle\+\_\+@{billboard\+\_\+y\+\_\+angle\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{billboard\+\_\+y\+\_\+angle\+\_\+}{billboard_y_angle_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::billboard\+\_\+y\+\_\+angle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_af91dd8490128e7b955fee3a166db7c3f}{}\label{classSolar__viewer_af91dd8490128e7b955fee3a166db7c3f}
+
+
+y-\/rotation of the billboard 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!color\+\_\+shader\+\_\+@{color\+\_\+shader\+\_\+}}
+\index{color\+\_\+shader\+\_\+@{color\+\_\+shader\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{color\+\_\+shader\+\_\+}{color_shader_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader} Solar\+\_\+viewer\+::color\+\_\+shader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_aed950d77f461e1ce32ba1dcf3898b814}{}\label{classSolar__viewer_aed950d77f461e1ce32ba1dcf3898b814}
+
+
+default color shader (renders only texture) 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!control\+\_\+polygon\+\_\+@{control\+\_\+polygon\+\_\+}}
+\index{control\+\_\+polygon\+\_\+@{control\+\_\+polygon\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{control\+\_\+polygon\+\_\+}{control_polygon_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Solar\+\_\+viewer\+::control\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a67aa3b5cdacc2c7f2947ad2d72c6ce32}{}\label{classSolar__viewer_a67aa3b5cdacc2c7f2947ad2d72c6ce32}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+        \{2.0, 2.0, 0.0\},
+        \{3.0, 0.0, 0.0\},
+        \{3.0, 0.0, -2.0\},
+        \{0.0, 2.0, -3.0\},
+        \{-2.0, 2.0, -1.0\},
+        \{-3.0, 3.0, 0.0\},
+        \{-1.0, 1.0, 1.0\}
+    \}
+\end{DoxyCode}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!curve\+\_\+display\+\_\+mode\+\_\+@{curve\+\_\+display\+\_\+mode\+\_\+}}
+\index{curve\+\_\+display\+\_\+mode\+\_\+@{curve\+\_\+display\+\_\+mode\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{curve\+\_\+display\+\_\+mode\+\_\+}{curve_display_mode_}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Solar\+\_\+viewer\+::\+Curve\+Display\+Mode}  Solar\+\_\+viewer\+::curve\+\_\+display\+\_\+mode\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a42bdd7e9bad9f049ae3c9d8dcb8f40ec}{}\label{classSolar__viewer_a42bdd7e9bad9f049ae3c9d8dcb8f40ec}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!dist\+\_\+factor\+\_\+@{dist\+\_\+factor\+\_\+}}
+\index{dist\+\_\+factor\+\_\+@{dist\+\_\+factor\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{dist\+\_\+factor\+\_\+}{dist_factor_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::dist\+\_\+factor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a7447e4773978c9391a2ab54a52b92b43}{}\label{classSolar__viewer_a7447e4773978c9391a2ab54a52b92b43}
+
+
+eye\textquotesingle{}s distance in radii from the observed planet 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!earth\+\_\+@{earth\+\_\+}}
+\index{earth\+\_\+@{earth\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{earth\+\_\+}{earth_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Earth} Solar\+\_\+viewer\+::earth\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a769d9e8775ba2106682964488117e695}{}\label{classSolar__viewer_a769d9e8775ba2106682964488117e695}
+
+
+the earth object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!earth\+\_\+shader\+\_\+@{earth\+\_\+shader\+\_\+}}
+\index{earth\+\_\+shader\+\_\+@{earth\+\_\+shader\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{earth\+\_\+shader\+\_\+}{earth_shader_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader} Solar\+\_\+viewer\+::earth\+\_\+shader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a5a423c2328fd2d79de95a2a270b385e3}{}\label{classSolar__viewer_a5a423c2328fd2d79de95a2a270b385e3}
+
+
+earth shader (renders the earth using multi texturing) 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!far\+\_\+@{far\+\_\+}}
+\index{far\+\_\+@{far\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{far\+\_\+}{far_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::far\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ae47e94d8d1b6ee4297454d6234531d87}{}\label{classSolar__viewer_ae47e94d8d1b6ee4297454d6234531d87}
+
+
+the far plane for the virtual camera 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!fovy\+\_\+@{fovy\+\_\+}}
+\index{fovy\+\_\+@{fovy\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{fovy\+\_\+}{fovy_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::fovy\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a0ee3e25d0a16f5f8f2be784b42a3b576}{}\label{classSolar__viewer_a0ee3e25d0a16f5f8f2be784b42a3b576}
+
+
+the field of view for the camera 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!greyscale\+\_\+@{greyscale\+\_\+}}
+\index{greyscale\+\_\+@{greyscale\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{greyscale\+\_\+}{greyscale_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Solar\+\_\+viewer\+::greyscale\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ad0da37e7839ea05cd500c59eacfc04cb}{}\label{classSolar__viewer_ad0da37e7839ea05cd500c59eacfc04cb}
+
+
+state whether the rendering should be in color or not 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!height\+\_\+@{height\+\_\+}}
+\index{height\+\_\+@{height\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{height\+\_\+}{height_}}]{\setlength{\rightskip}{0pt plus 5cm}int Solar\+\_\+viewer\+::height\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ae13eeec65d2a4ea4fda382687a4379cd}{}\label{classSolar__viewer_ae13eeec65d2a4ea4fda382687a4379cd}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!in\+\_\+ship\+\_\+@{in\+\_\+ship\+\_\+}}
+\index{in\+\_\+ship\+\_\+@{in\+\_\+ship\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{in\+\_\+ship\+\_\+}{in_ship_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Solar\+\_\+viewer\+::in\+\_\+ship\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a6bed73dabfc1ef5dbf51b1bf6b854a55}{}\label{classSolar__viewer_a6bed73dabfc1ef5dbf51b1bf6b854a55}
+
+
+true, if we look at the spaceship 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!mars\+\_\+@{mars\+\_\+}}
+\index{mars\+\_\+@{mars\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{mars\+\_\+}{mars_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Planet} Solar\+\_\+viewer\+::mars\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a1d1582410c9e761b14796329eff12b08}{}\label{classSolar__viewer_a1d1582410c9e761b14796329eff12b08}
+
+
+the mars object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!mercury\+\_\+@{mercury\+\_\+}}
+\index{mercury\+\_\+@{mercury\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{mercury\+\_\+}{mercury_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Planet} Solar\+\_\+viewer\+::mercury\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ac6f237c0c02818cb2f5beac34a6ec253}{}\label{classSolar__viewer_ac6f237c0c02818cb2f5beac34a6ec253}
+
+
+the mercury object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!moon\+\_\+@{moon\+\_\+}}
+\index{moon\+\_\+@{moon\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{moon\+\_\+}{moon_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Planet} Solar\+\_\+viewer\+::moon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a28f77d042e23dd0dab3be944c4c5b135}{}\label{classSolar__viewer_a28f77d042e23dd0dab3be944c4c5b135}
+
+
+the moon object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!near\+\_\+@{near\+\_\+}}
+\index{near\+\_\+@{near\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{near\+\_\+}{near_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::near\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a58e1539134e5eb23ee851565ae8724f1}{}\label{classSolar__viewer_a58e1539134e5eb23ee851565ae8724f1}
+
+
+the near plane for the virtual camera 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!phong\+\_\+shader\+\_\+@{phong\+\_\+shader\+\_\+}}
+\index{phong\+\_\+shader\+\_\+@{phong\+\_\+shader\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{phong\+\_\+shader\+\_\+}{phong_shader_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader} Solar\+\_\+viewer\+::phong\+\_\+shader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a3f0eaae53b84778ce774d1c2ced29b9f}{}\label{classSolar__viewer_a3f0eaae53b84778ce774d1c2ced29b9f}
+
+
+phong shader (renders texture and basic illumination) 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!planet\+\_\+to\+\_\+look\+\_\+at\+\_\+@{planet\+\_\+to\+\_\+look\+\_\+at\+\_\+}}
+\index{planet\+\_\+to\+\_\+look\+\_\+at\+\_\+@{planet\+\_\+to\+\_\+look\+\_\+at\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{planet\+\_\+to\+\_\+look\+\_\+at\+\_\+}{planet_to_look_at_}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Planet}$\ast$ Solar\+\_\+viewer\+::planet\+\_\+to\+\_\+look\+\_\+at\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_af0b149d27213a8b45e5672c2e1d5b53a}{}\label{classSolar__viewer_af0b149d27213a8b45e5672c2e1d5b53a}
+
+
+which planet are we looking at (control with key 1-\/6) 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!ship\+\_\+@{ship\+\_\+}}
+\index{ship\+\_\+@{ship\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{ship\+\_\+}{ship_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ship} Solar\+\_\+viewer\+::ship\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a15b5951427b3a4abad4715255c94f2bd}{}\label{classSolar__viewer_a15b5951427b3a4abad4715255c94f2bd}
+
+
+spaceship object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!ship\+\_\+path\+\_\+@{ship\+\_\+path\+\_\+}}
+\index{ship\+\_\+path\+\_\+@{ship\+\_\+path\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{ship\+\_\+path\+\_\+}{ship_path_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Piecewise\+Bezier} Solar\+\_\+viewer\+::ship\+\_\+path\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a717ac56af4cceb1d8606f5e050c46d57}{}\label{classSolar__viewer_a717ac56af4cceb1d8606f5e050c46d57}
+
+
+Piecewise degree-\/3 Bezier spline. 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+@{ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+}}
+\index{ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+@{ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+}{ship_path_cp_renderer_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path} Solar\+\_\+viewer\+::ship\+\_\+path\+\_\+cp\+\_\+renderer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a3b486b4a6d1d555296aa064127fabd2f}{}\label{classSolar__viewer_a3b486b4a6d1d555296aa064127fabd2f}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!ship\+\_\+path\+\_\+frame\+\_\+@{ship\+\_\+path\+\_\+frame\+\_\+}}
+\index{ship\+\_\+path\+\_\+frame\+\_\+@{ship\+\_\+path\+\_\+frame\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{ship\+\_\+path\+\_\+frame\+\_\+}{ship_path_frame_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frame} Solar\+\_\+viewer\+::ship\+\_\+path\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ae8f77efc9fcff33bd7c71dd37cbef2a1}{}\label{classSolar__viewer_ae8f77efc9fcff33bd7c71dd37cbef2a1}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!ship\+\_\+path\+\_\+param\+\_\+@{ship\+\_\+path\+\_\+param\+\_\+}}
+\index{ship\+\_\+path\+\_\+param\+\_\+@{ship\+\_\+path\+\_\+param\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{ship\+\_\+path\+\_\+param\+\_\+}{ship_path_param_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::ship\+\_\+path\+\_\+param\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a3f197b01ef63db24545632dac7e3ca9c}{}\label{classSolar__viewer_a3f197b01ef63db24545632dac7e3ca9c}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!ship\+\_\+path\+\_\+renderer\+\_\+@{ship\+\_\+path\+\_\+renderer\+\_\+}}
+\index{ship\+\_\+path\+\_\+renderer\+\_\+@{ship\+\_\+path\+\_\+renderer\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{ship\+\_\+path\+\_\+renderer\+\_\+}{ship_path_renderer_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path} Solar\+\_\+viewer\+::ship\+\_\+path\+\_\+renderer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a42b89bbee0c692097061b52d35ecf772}{}\label{classSolar__viewer_a42b89bbee0c692097061b52d35ecf772}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!solid\+\_\+color\+\_\+shader\+\_\+@{solid\+\_\+color\+\_\+shader\+\_\+}}
+\index{solid\+\_\+color\+\_\+shader\+\_\+@{solid\+\_\+color\+\_\+shader\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{solid\+\_\+color\+\_\+shader\+\_\+}{solid_color_shader_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader} Solar\+\_\+viewer\+::solid\+\_\+color\+\_\+shader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a3d36d3fc4b3e1cf447cf8ff087f0ab0e}{}\label{classSolar__viewer_a3d36d3fc4b3e1cf447cf8ff087f0ab0e}
+
+
+simple shader for visualizing curves (just using solid color). 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!stars\+\_\+@{stars\+\_\+}}
+\index{stars\+\_\+@{stars\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{stars\+\_\+}{stars_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Planet} Solar\+\_\+viewer\+::stars\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_aeaeb8ed645d3e4a14ac8cda157472f39}{}\label{classSolar__viewer_aeaeb8ed645d3e4a14ac8cda157472f39}
+
+
+the stars object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!sun\+\_\+@{sun\+\_\+}}
+\index{sun\+\_\+@{sun\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{sun\+\_\+}{sun_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Planet} Solar\+\_\+viewer\+::sun\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a381a824e3e1a2c6bff1bd67bf615ffdb}{}\label{classSolar__viewer_a381a824e3e1a2c6bff1bd67bf615ffdb}
+
+
+the sun object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!sun\+\_\+shader\+\_\+@{sun\+\_\+shader\+\_\+}}
+\index{sun\+\_\+shader\+\_\+@{sun\+\_\+shader\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{sun\+\_\+shader\+\_\+}{sun_shader_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader} Solar\+\_\+viewer\+::sun\+\_\+shader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a2b1a9a122bcbeebae265b49a1d048154}{}\label{classSolar__viewer_a2b1a9a122bcbeebae265b49a1d048154}
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!sunglow\+\_\+@{sunglow\+\_\+}}
+\index{sunglow\+\_\+@{sunglow\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{sunglow\+\_\+}{sunglow_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Billboard} Solar\+\_\+viewer\+::sunglow\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a6a7e25827438c0e43f17e53d28041a79}{}\label{classSolar__viewer_a6a7e25827438c0e43f17e53d28041a79}
+
+
+sunglow billboard 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!time\+\_\+step\+\_\+@{time\+\_\+step\+\_\+}}
+\index{time\+\_\+step\+\_\+@{time\+\_\+step\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{time\+\_\+step\+\_\+}{time_step_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::time\+\_\+step\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ad2ff1703788f0c694bd8e6e8be5c3be5}{}\label{classSolar__viewer_ad2ff1703788f0c694bd8e6e8be5c3be5}
+
+
+update factor for the animation 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!timer\+\_\+active\+\_\+@{timer\+\_\+active\+\_\+}}
+\index{timer\+\_\+active\+\_\+@{timer\+\_\+active\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{timer\+\_\+active\+\_\+}{timer_active_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Solar\+\_\+viewer\+::timer\+\_\+active\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_aedc75568a6aafd2ecf8245ed518f6214}{}\label{classSolar__viewer_aedc75568a6aafd2ecf8245ed518f6214}
+
+
+interval for the animation timer 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!unit\+\_\+sphere\+\_\+@{unit\+\_\+sphere\+\_\+}}
+\index{unit\+\_\+sphere\+\_\+@{unit\+\_\+sphere\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{unit\+\_\+sphere\+\_\+}{unit_sphere_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sphere} Solar\+\_\+viewer\+::unit\+\_\+sphere\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a47d90d63f22fd4e9e58651e9e9c7baef}{}\label{classSolar__viewer_a47d90d63f22fd4e9e58651e9e9c7baef}
+
+
+sphere object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!venus\+\_\+@{venus\+\_\+}}
+\index{venus\+\_\+@{venus\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{venus\+\_\+}{venus_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Planet} Solar\+\_\+viewer\+::venus\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_a52df2043cba78b9afef933ce6515303d}{}\label{classSolar__viewer_a52df2043cba78b9afef933ce6515303d}
+
+
+the venus object 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!width\+\_\+@{width\+\_\+}}
+\index{width\+\_\+@{width\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{width\+\_\+}{width_}}]{\setlength{\rightskip}{0pt plus 5cm}int Solar\+\_\+viewer\+::width\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_ad12592d718e123912365df3ef23a2dbb}{}\label{classSolar__viewer_ad12592d718e123912365df3ef23a2dbb}
+
+
+current viewport dimension 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!x\+\_\+angle\+\_\+@{x\+\_\+angle\+\_\+}}
+\index{x\+\_\+angle\+\_\+@{x\+\_\+angle\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{x\+\_\+angle\+\_\+}{x_angle_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::x\+\_\+angle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_afe0f50221ea1464e4b1a9c79071bcac0}{}\label{classSolar__viewer_afe0f50221ea1464e4b1a9c79071bcac0}
+
+
+rotation in x direction around the planet/sun from the original point 
+
+\index{Solar\+\_\+viewer@{Solar\+\_\+viewer}!y\+\_\+angle\+\_\+@{y\+\_\+angle\+\_\+}}
+\index{y\+\_\+angle\+\_\+@{y\+\_\+angle\+\_\+}!Solar\+\_\+viewer@{Solar\+\_\+viewer}}
+\subsubsection[{\texorpdfstring{y\+\_\+angle\+\_\+}{y_angle_}}]{\setlength{\rightskip}{0pt plus 5cm}float Solar\+\_\+viewer\+::y\+\_\+angle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSolar__viewer_aec80e0da0a52b108b1b7223d2a974860}{}\label{classSolar__viewer_aec80e0da0a52b108b1b7223d2a974860}
+
+
+rotation in y direction around the planet/sun from the original point 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{solar__viewer_8h}{solar\+\_\+viewer.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{solar__viewer_8cpp}{solar\+\_\+viewer.\+cpp}\end{DoxyCompactItemize}

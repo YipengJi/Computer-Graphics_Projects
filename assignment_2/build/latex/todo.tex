@@ -1,0 +1,20 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000002}%
+\hypertarget{todo__todo000002}{}%
+Member \hyperlink{classScene_a8c3c270f36a5e73805d925763450de7c}{Scene\+:\+:lighting} (const \hyperlink{classvec3}{vec3} \&\+\_\+point, const \hyperlink{classvec3}{vec3} \&\+\_\+normal, const \hyperlink{classvec3}{vec3} \&\+\_\+view, const \hyperlink{structMaterial}{Material} \&\+\_\+material)]Compute the Phong lighting\+:
+\begin{DoxyItemize}
+\item start with global ambient contribution
+\item for each light source (stored in vector {\ttfamily lights}) add diffuse and specular contribution
+\item only add diffuse and specular light if object is not in shadow 
+\end{DoxyItemize}
+\item[\label{todo__todo000001}%
+\hypertarget{todo__todo000001}{}%
+Member \hyperlink{classScene_aee2e562b23da56880ea30e33f9e76e1b}{Scene\+:\+:trace} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, int \+\_\+depth)]Compute reflections by recursive ray tracing\+:
+\begin{DoxyItemize}
+\item check whether {\ttfamily object} is reflective by checking its {\ttfamily material.\+mirror}
+\item check recursion depth
+\item generate reflected ray, compute its color contribution, and mix it with the color computed by local Phong lighting (use {\ttfamily object-\/$>$material.\+mirror} as weight)
+\item check whether your recursive algorithm reflects the ray {\ttfamily max\+\_\+depth} times 
+\end{DoxyItemize}
+\end{DoxyRefList}

@@ -1,0 +1,143 @@
+\hypertarget{classPiecewiseBezier}{}\section{Piecewise\+Bezier Class Reference}
+\label{classPiecewiseBezier}\index{Piecewise\+Bezier@{Piecewise\+Bezier}}
+
+
+{\ttfamily \#include $<$bezier.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPiecewiseBezier_ab8676451478fb74e19d8593cbcad0bbb}{Piecewise\+Bezier} ()
+\item 
+void \hyperlink{classPiecewiseBezier_a2cd325c11ab72464a8417dd9fe97e948}{set\+\_\+control\+\_\+polygon} (const std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \&control\+\_\+polygon, bool loop=false)
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPiecewiseBezier_a1c874dfcaba9da134e230c71b37e8cb3}{operator()} (float t) const 
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPiecewiseBezier_a46e8a8d04d7fdd22b662204419c21273}{tangent} (float t) const 
+\item 
+int \hyperlink{classPiecewiseBezier_a7457500c14e29ee35b4a7cb067d6bae5}{num\+\_\+segments} () const 
+\item 
+const std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classPiecewiseBezier_a18490d36a394feea0def7e4df3f54d79}{bezier\+\_\+control\+\_\+points} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPiecewiseBezier_aa3f433f0483cfd5b9b937e4eaee9e52e}{eval\+\_\+piecewise\+\_\+bezier\+\_\+curve} (float t) const 
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPiecewiseBezier_ab8ef08d6d3c8f34e71a04cf130841913}{eval\+\_\+bezier} (int bp\+\_\+offset, float t) const 
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPiecewiseBezier_ad438e5d185f6e74f85ff84e0dd7d73cd}{eval\+\_\+bezier\+\_\+tangent} (int bp\+\_\+offset, float t) const 
+\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classPiecewiseBezier_a7c05af0ba43e9c2459fbb502b078676d}{control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points} (std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ const \&control\+\_\+polygon)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classPiecewiseBezier_a7195de7263e5f4d7761d4c528b1a846d}{control\+\_\+polygon\+\_\+}
+\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classPiecewiseBezier_a8c9f3d203cf0b5cf6d1cf25269487581}{bezier\+\_\+control\+\_\+points\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{Piecewise\+Bezier()}{PiecewiseBezier()}}]{\setlength{\rightskip}{0pt plus 5cm}Piecewise\+Bezier\+::\+Piecewise\+Bezier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPiecewiseBezier_ab8676451478fb74e19d8593cbcad0bbb}{}\label{classPiecewiseBezier_ab8676451478fb74e19d8593cbcad0bbb}
+
+
+\subsection{Member Function Documentation}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!bezier\+\_\+control\+\_\+points@{bezier\+\_\+control\+\_\+points}}
+\index{bezier\+\_\+control\+\_\+points@{bezier\+\_\+control\+\_\+points}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{bezier\+\_\+control\+\_\+points() const }{bezier_control_points() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<${\bf vec3}$>$ Piecewise\+Bezier\+::bezier\+\_\+control\+\_\+points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPiecewiseBezier_a18490d36a394feea0def7e4df3f54d79}{}\label{classPiecewiseBezier_a18490d36a394feea0def7e4df3f54d79}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points@{control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points}}
+\index{control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points@{control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points(std\+::vector$<$ vec3 $>$ const \&control\+\_\+polygon)}{control_polygon_to_bezier_points(std::vector< vec3 > const &control_polygon)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf vec3} $>$ Piecewise\+Bezier\+::control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf vec3} $>$ const \&}]{control\+\_\+polygon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPiecewiseBezier_a7c05af0ba43e9c2459fbb502b078676d}{}\label{classPiecewiseBezier_a7c05af0ba43e9c2459fbb502b078676d}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Assignment 11, Task 1\+: Determine the Bezier control points from the uniform cubic spline control points \char`\"{}cp\char`\"{} as visualized in Lecture 12 slide 22. Note, the last control point of one Bezier segment is shared with the first control point of the next, and you should not generate the duplicate control points. This means, Bezier segment 0 should be controlled by bezier\+\_\+pts 0, 1, 2, 3; segment 1 should be controlled by bezier\+\_\+pts 3, 4, 5, 6; segment 2 should be controlled by bezier\+\_\+pts 6, 7, 8, 9; and so on. \end{DoxyRefDesc}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!eval\+\_\+bezier@{eval\+\_\+bezier}}
+\index{eval\+\_\+bezier@{eval\+\_\+bezier}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{eval\+\_\+bezier(int bp\+\_\+offset, float t) const }{eval_bezier(int bp_offset, float t) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Piecewise\+Bezier\+::eval\+\_\+bezier (
+\begin{DoxyParamCaption}
+\item[{int}]{bp\+\_\+offset, }
+\item[{float}]{t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPiecewiseBezier_ab8ef08d6d3c8f34e71a04cf130841913}{}\label{classPiecewiseBezier_ab8ef08d6d3c8f34e71a04cf130841913}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Assignment 11, Task 2a\+: Evaluate the cubic Bezier polygon defined by control points bezier\+\_\+control\+\_\+points\+\_\+\mbox{[}bp\+\_\+offset..bp\+\_\+offset + 4\mbox{]} at parameter t in \mbox{[}0, 1\mbox{]} \end{DoxyRefDesc}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!eval\+\_\+bezier\+\_\+tangent@{eval\+\_\+bezier\+\_\+tangent}}
+\index{eval\+\_\+bezier\+\_\+tangent@{eval\+\_\+bezier\+\_\+tangent}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{eval\+\_\+bezier\+\_\+tangent(int bp\+\_\+offset, float t) const }{eval_bezier_tangent(int bp_offset, float t) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Piecewise\+Bezier\+::eval\+\_\+bezier\+\_\+tangent (
+\begin{DoxyParamCaption}
+\item[{int}]{bp\+\_\+offset, }
+\item[{float}]{t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPiecewiseBezier_ad438e5d185f6e74f85ff84e0dd7d73cd}{}\label{classPiecewiseBezier_ad438e5d185f6e74f85ff84e0dd7d73cd}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Assignment 11, Task 3a\+: Evaluate the tangent vector at \char`\"{}t\char`\"{} of the cubic Bezier polygon defined by control points bezier\+\_\+control\+\_\+points\+\_\+\mbox{[}bp\+\_\+offset..bp\+\_\+offset + 4\mbox{]} Recall, the tangent vector for a curve c(t) is given by the derivative of this curve, c\textquotesingle{}(t). \end{DoxyRefDesc}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!eval\+\_\+piecewise\+\_\+bezier\+\_\+curve@{eval\+\_\+piecewise\+\_\+bezier\+\_\+curve}}
+\index{eval\+\_\+piecewise\+\_\+bezier\+\_\+curve@{eval\+\_\+piecewise\+\_\+bezier\+\_\+curve}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{eval\+\_\+piecewise\+\_\+bezier\+\_\+curve(float t) const }{eval_piecewise_bezier_curve(float t) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Piecewise\+Bezier\+::eval\+\_\+piecewise\+\_\+bezier\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{float}]{t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPiecewiseBezier_aa3f433f0483cfd5b9b937e4eaee9e52e}{}\label{classPiecewiseBezier_aa3f433f0483cfd5b9b937e4eaee9e52e}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]Assignment 11, Task 2b\+: The argument t is in the interval \mbox{[}0, 1\mbox{]} which corresponds to the whole curve. The whole curve is defined by piecewise Bezier curves, which are each in turn parameterized by t\+\_\+s in \mbox{[}0, 1\mbox{]}. Select appropriate control points and map the value t such that you evaluate the correct point on the correct Bezier segment. Note that the current code only evaluates the very first Bezier segment. \end{DoxyRefDesc}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!num\+\_\+segments@{num\+\_\+segments}}
+\index{num\+\_\+segments@{num\+\_\+segments}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{num\+\_\+segments() const }{num_segments() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Piecewise\+Bezier\+::num\+\_\+segments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPiecewiseBezier_a7457500c14e29ee35b4a7cb067d6bae5}{}\label{classPiecewiseBezier_a7457500c14e29ee35b4a7cb067d6bae5}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!operator()@{operator()}}
+\index{operator()@{operator()}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{operator()(float t) const }{operator()(float t) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Piecewise\+Bezier\+::operator() (
+\begin{DoxyParamCaption}
+\item[{float}]{t}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPiecewiseBezier_a1c874dfcaba9da134e230c71b37e8cb3}{}\label{classPiecewiseBezier_a1c874dfcaba9da134e230c71b37e8cb3}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!set\+\_\+control\+\_\+polygon@{set\+\_\+control\+\_\+polygon}}
+\index{set\+\_\+control\+\_\+polygon@{set\+\_\+control\+\_\+polygon}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{set\+\_\+control\+\_\+polygon(const std\+::vector$<$ vec3 $>$ \&control\+\_\+polygon, bool loop=false)}{set_control_polygon(const std::vector< vec3 > &control_polygon, bool loop=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void Piecewise\+Bezier\+::set\+\_\+control\+\_\+polygon (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf vec3} $>$ \&}]{control\+\_\+polygon, }
+\item[{bool}]{loop = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classPiecewiseBezier_a2cd325c11ab72464a8417dd9fe97e948}{}\label{classPiecewiseBezier_a2cd325c11ab72464a8417dd9fe97e948}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!tangent@{tangent}}
+\index{tangent@{tangent}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{tangent(float t) const }{tangent(float t) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Piecewise\+Bezier\+::tangent (
+\begin{DoxyParamCaption}
+\item[{float}]{t}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPiecewiseBezier_a46e8a8d04d7fdd22b662204419c21273}{}\label{classPiecewiseBezier_a46e8a8d04d7fdd22b662204419c21273}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]Assignment 11, Task 3b\+: The argument t is in the interval \mbox{[}0, 1\mbox{]} which corresponds to the whole curve. The whole curve is defined by piecewise Bezier curves, which are each in turn parameterized by t\+\_\+s in \mbox{[}0, 1\mbox{]}. Select appropriate control points and map the value t such that you evaluate the correct point on the correct Bezier segment. Note that the current code only evaluates the very first Bezier segment. Also, remember to use the chain rule when computing the tangent! \end{DoxyRefDesc}
+
+
+\subsection{Member Data Documentation}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!bezier\+\_\+control\+\_\+points\+\_\+@{bezier\+\_\+control\+\_\+points\+\_\+}}
+\index{bezier\+\_\+control\+\_\+points\+\_\+@{bezier\+\_\+control\+\_\+points\+\_\+}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{bezier\+\_\+control\+\_\+points\+\_\+}{bezier_control_points_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Piecewise\+Bezier\+::bezier\+\_\+control\+\_\+points\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPiecewiseBezier_a8c9f3d203cf0b5cf6d1cf25269487581}{}\label{classPiecewiseBezier_a8c9f3d203cf0b5cf6d1cf25269487581}
+\index{Piecewise\+Bezier@{Piecewise\+Bezier}!control\+\_\+polygon\+\_\+@{control\+\_\+polygon\+\_\+}}
+\index{control\+\_\+polygon\+\_\+@{control\+\_\+polygon\+\_\+}!Piecewise\+Bezier@{Piecewise\+Bezier}}
+\subsubsection[{\texorpdfstring{control\+\_\+polygon\+\_\+}{control_polygon_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Piecewise\+Bezier\+::control\+\_\+polygon\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPiecewiseBezier_a7195de7263e5f4d7761d4c528b1a846d}{}\label{classPiecewiseBezier_a7195de7263e5f4d7761d4c528b1a846d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{bezier_8h}{bezier.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{bezier_8cpp}{bezier.\+cpp}\end{DoxyCompactItemize}

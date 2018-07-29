@@ -1,0 +1,22 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000001}%
+\hypertarget{todo__todo000001}{}%
+Member \hyperlink{classCylinder_a0ae732b1b669bbeb9eb83ee7395a5add}{Cylinder\+:\+:intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override]
+\begin{DoxyItemize}
+\item compute the first valid intersection {\ttfamily \+\_\+ray} with the cylinder (valid means in front of the viewer\+: t $>$ 0)
+\item store intersection point in {\ttfamily \+\_\+intersection\+\_\+point}
+\item store ray parameter in {\ttfamily \+\_\+intersection\+\_\+t}
+\item store normal at \+\_\+intersection\+\_\+point in {\ttfamily \+\_\+intersection\+\_\+normal}.
+\item return whether there is an intersection with t $>$ 0  
+\end{DoxyItemize}
+\item[\label{todo__todo000002}%
+\hypertarget{todo__todo000002}{}%
+Member \hyperlink{classPlane_ab146bb10ad52e8535dad25d531c43b86}{Plane\+:\+:intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override]
+\begin{DoxyItemize}
+\item compute the intersection of the plane with {\ttfamily \+\_\+ray}
+\item if ray and plane are parallel there is no intersection
+\item otherwise compute intersection data and store it in {\ttfamily \+\_\+intersection\+\_\+point}, {\ttfamily \+\_\+intersection\+\_\+normal}, and {\ttfamily \+\_\+intersection\+\_\+t}.
+\item return whether there is an intersection in front of the viewer (t $>$ 0) 
+\end{DoxyItemize}
+\end{DoxyRefList}

@@ -1,0 +1,24 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000002}%
+\hypertarget{todo__todo000002}{}%
+Member \hyperlink{classSolar__viewer_af6b468fb543b9c9ed466fe1687f1aff8}{Solar\+\_\+viewer\+:\+:draw\+\_\+scene} (\hyperlink{classmat4}{mat4} \&\+\_\+projection, \hyperlink{classmat4}{mat4} \&\+\_\+view)]Switch from using color\+\_\+shader\+\_\+ to the fancier shaders you\textquotesingle{}ll implement in this assignment\+: mercury, venus, moon, mars, ship\+: phong\+\_\+shader\+\_\+ earth\+: earth\+\_\+shader\+\_\+ stars, sunglow\+: still use color\+\_\+shader\+\_\+ You\textquotesingle{}ll need to make sure all the G\+L\+SL uniform variables are set. For Phong shading, you need to pass in the modelview matrix, the normal transformation matrix, and light position in addition to the color\+\_\+shader\+\_\+ parameters. 
+
+Render the sun\textquotesingle{}s halo here using the \char`\"{}color\+\_\+shader\+\_\+\char`\"{}
+\begin{DoxyItemize}
+\item Construct a model matrix that scales the billboard to 3 times the sun\textquotesingle{}s radius and orients it according to billboard\+\_\+x\+\_\+angle\+\_\+ and billboard\+\_\+y\+\_\+angle\+\_\+
+\item Bind the texture for and draw sunglow\+\_\+  
+\end{DoxyItemize}
+\item[\label{todo__todo000001}%
+\hypertarget{todo__todo000001}{}%
+Member \hyperlink{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}{Solar\+\_\+viewer\+:\+:paint} ()]Orient the billboard used to display the sun\textquotesingle{}s glow Update billboard\+\_\+x\+\_\+andle\+\_\+ and billboard\+\_\+y\+\_\+angle\+\_\+ so that the billboard plane drawn to produce the sun\textquotesingle{}s halo is orthogonal to the view vector for the sun\textquotesingle{}s center.  
+\item[\label{todo__todo000004}%
+\hypertarget{todo__todo000004}{}%
+Member \hyperlink{classTexture_a124fe8f7960fad810b68e3d4f5870cbe}{Texture\+:\+:create\+Sun\+Billboard\+Texture} ()]Set up the texture for the sun billboard.
+\begin{DoxyItemize}
+\item Draw an opaque circle with a 150 pixel radius in its middle
+\item Outside that circle the texture should become more and more transparent to mimic a nice glow effect
+\item Make sure that your texture is fully transparent at its borders to avoid seeing visible edges
+\item Experiment with the color and with how fast you change the transparency until the effect satisfies you 
+\end{DoxyItemize}
+\end{DoxyRefList}

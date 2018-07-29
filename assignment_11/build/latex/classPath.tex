@@ -1,0 +1,121 @@
+\hypertarget{classPath}{}\section{Path Class Reference}
+\label{classPath}\index{Path@{Path}}
+
+
+{\ttfamily \#include $<$path.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPath_a815c94272d3b7721815f70e82453358c}{Path} (unsigned int resolution=1000)
+\item 
+void \hyperlink{classPath_aa7416eac9bd0928062140e022b1f8bd3}{initialize} ()
+\item 
+void \hyperlink{classPath_aa591f2910de2b259d3fd3b94fc87d3f3}{set\+Points} (const std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \&pts)
+\item 
+{\footnotesize template$<$typename F $>$ }\\void \hyperlink{classPath_acaabd7ad7669592f9885cdb09a434695}{sample} (const F \&f)
+\item 
+void \hyperlink{classPath_a44c5c139fada63bc08efe1fe28ca264a}{draw} ()
+\begin{DoxyCompactList}\small\item\em render the path as line segments \end{DoxyCompactList}\item 
+\hyperlink{classPath_a141da9ff89c85e0ba410b5a73864c267}{$\sim$\+Path} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classPath_aaaef03e26c4f734b42299cc2c2f9d3f4}{m\+\_\+resolution}
+\begin{DoxyCompactList}\small\item\em tessellation resolution \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPath_aaa3b47af8c1e9b897e9e8337d2661577}{m\+\_\+num\+\_\+pts}
+\item 
+G\+Luint \hyperlink{classPath_a87bc63df1b698ec710bcd60c79100b63}{m\+\_\+vao} = 0
+\item 
+G\+Luint \hyperlink{classPath_a238310356ba1339fdb9ac19c85853e13}{m\+\_\+vbo} = 0
+\begin{DoxyCompactList}\small\item\em vertex buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classPath_a3b6d4940f71844ab37d9318d899d725a}{m\+\_\+ibo} = 0
+\begin{DoxyCompactList}\small\item\em index buffer object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Path@{Path}!Path@{Path}}
+\index{Path@{Path}!Path@{Path}}
+\subsubsection[{\texorpdfstring{Path(unsigned int resolution=1000)}{Path(unsigned int resolution=1000)}}]{\setlength{\rightskip}{0pt plus 5cm}Path\+::\+Path (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{resolution = {\ttfamily 1000}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPath_a815c94272d3b7721815f70e82453358c}{}\label{classPath_a815c94272d3b7721815f70e82453358c}
+\index{Path@{Path}!````~Path@{$\sim$\+Path}}
+\index{````~Path@{$\sim$\+Path}!Path@{Path}}
+\subsubsection[{\texorpdfstring{$\sim$\+Path()}{~Path()}}]{\setlength{\rightskip}{0pt plus 5cm}Path\+::$\sim$\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPath_a141da9ff89c85e0ba410b5a73864c267}{}\label{classPath_a141da9ff89c85e0ba410b5a73864c267}
+
+
+\subsection{Member Function Documentation}
+\index{Path@{Path}!draw@{draw}}
+\index{draw@{draw}!Path@{Path}}
+\subsubsection[{\texorpdfstring{draw()}{draw()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPath_a44c5c139fada63bc08efe1fe28ca264a}{}\label{classPath_a44c5c139fada63bc08efe1fe28ca264a}
+
+
+render the path as line segments 
+
+\index{Path@{Path}!initialize@{initialize}}
+\index{initialize@{initialize}!Path@{Path}}
+\subsubsection[{\texorpdfstring{initialize()}{initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPath_aa7416eac9bd0928062140e022b1f8bd3}{}\label{classPath_aa7416eac9bd0928062140e022b1f8bd3}
+\index{Path@{Path}!sample@{sample}}
+\index{sample@{sample}!Path@{Path}}
+\subsubsection[{\texorpdfstring{sample(const F \&f)}{sample(const F &f)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F $>$ void Path\+::sample (
+\begin{DoxyParamCaption}
+\item[{const F \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPath_acaabd7ad7669592f9885cdb09a434695}{}\label{classPath_acaabd7ad7669592f9885cdb09a434695}
+\index{Path@{Path}!set\+Points@{set\+Points}}
+\index{set\+Points@{set\+Points}!Path@{Path}}
+\subsubsection[{\texorpdfstring{set\+Points(const std\+::vector$<$ vec3 $>$ \&pts)}{setPoints(const std::vector< vec3 > &pts)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+::set\+Points (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf vec3} $>$ \&}]{pts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPath_aa591f2910de2b259d3fd3b94fc87d3f3}{}\label{classPath_aa591f2910de2b259d3fd3b94fc87d3f3}
+
+
+\subsection{Member Data Documentation}
+\index{Path@{Path}!m\+\_\+ibo@{m\+\_\+ibo}}
+\index{m\+\_\+ibo@{m\+\_\+ibo}!Path@{Path}}
+\subsubsection[{\texorpdfstring{m\+\_\+ibo}{m_ibo}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Path\+::m\+\_\+ibo = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPath_a3b6d4940f71844ab37d9318d899d725a}{}\label{classPath_a3b6d4940f71844ab37d9318d899d725a}
+
+
+index buffer object 
+
+\index{Path@{Path}!m\+\_\+num\+\_\+pts@{m\+\_\+num\+\_\+pts}}
+\index{m\+\_\+num\+\_\+pts@{m\+\_\+num\+\_\+pts}!Path@{Path}}
+\subsubsection[{\texorpdfstring{m\+\_\+num\+\_\+pts}{m_num_pts}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Path\+::m\+\_\+num\+\_\+pts\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPath_aaa3b47af8c1e9b897e9e8337d2661577}{}\label{classPath_aaa3b47af8c1e9b897e9e8337d2661577}
+\index{Path@{Path}!m\+\_\+resolution@{m\+\_\+resolution}}
+\index{m\+\_\+resolution@{m\+\_\+resolution}!Path@{Path}}
+\subsubsection[{\texorpdfstring{m\+\_\+resolution}{m_resolution}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Path\+::m\+\_\+resolution\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPath_aaaef03e26c4f734b42299cc2c2f9d3f4}{}\label{classPath_aaaef03e26c4f734b42299cc2c2f9d3f4}
+
+
+tessellation resolution 
+
+\index{Path@{Path}!m\+\_\+vao@{m\+\_\+vao}}
+\index{m\+\_\+vao@{m\+\_\+vao}!Path@{Path}}
+\subsubsection[{\texorpdfstring{m\+\_\+vao}{m_vao}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Path\+::m\+\_\+vao = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPath_a87bc63df1b698ec710bcd60c79100b63}{}\label{classPath_a87bc63df1b698ec710bcd60c79100b63}
+\index{Path@{Path}!m\+\_\+vbo@{m\+\_\+vbo}}
+\index{m\+\_\+vbo@{m\+\_\+vbo}!Path@{Path}}
+\subsubsection[{\texorpdfstring{m\+\_\+vbo}{m_vbo}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Path\+::m\+\_\+vbo = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPath_a238310356ba1339fdb9ac19c85853e13}{}\label{classPath_a238310356ba1339fdb9ac19c85853e13}
+
+
+vertex buffer object 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{path_8h}{path.\+h}\end{DoxyCompactItemize}

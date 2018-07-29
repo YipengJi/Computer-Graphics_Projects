@@ -1,0 +1,287 @@
+\hypertarget{classShip}{}\section{Ship Class Reference}
+\label{classShip}\index{Ship@{Ship}}
+
+
+{\ttfamily \#include $<$ship.\+h$>$}
+
+
+
+Collaboration diagram for Ship\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classShip_ab7608fcfc4d27c678aacaf9bfd68a462}{Ship} ()
+\item 
+\hyperlink{classShip_a43cd6eeaffc11b49239b091621963a65}{$\sim$\+Ship} ()
+\item 
+bool \hyperlink{classShip_a34832cdc6cb1c67fa346b6903da62c81}{load\+\_\+model} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em loads vertices and faces from .off file \end{DoxyCompactList}\item 
+void \hyperlink{classShip_abece18ed5b9d72264a1392cce3ad0f63}{update\+\_\+ship} ()
+\begin{DoxyCompactList}\small\item\em updates ships position and angle \end{DoxyCompactList}\item 
+void \hyperlink{classShip_a2918a19717ac2417289d74ae2aa7d2ab}{accelerate} (float speedup)
+\begin{DoxyCompactList}\small\item\em changes ship\textquotesingle{}s forward speed \end{DoxyCompactList}\item 
+void \hyperlink{classShip_aef8f64c5d8a70e96151ab6fb9f09d6bb}{accelerate\+\_\+angular} (float angular\+\_\+speedup)
+\begin{DoxyCompactList}\small\item\em changes ship\textquotesingle{}s angular speed \end{DoxyCompactList}\item 
+void \hyperlink{classShip_a6e34e65bf743c2f50d4bf462da92e20a}{draw} (G\+Lenum mode=G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+ES)
+\begin{DoxyCompactList}\small\item\em draws the ship \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTexture}{Texture} \hyperlink{classShip_a4e83f38e706d9b6dde212a62f855ae4c}{tex\+\_\+}
+\begin{DoxyCompactList}\small\item\em main diffuse texture for the planet \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \hyperlink{classShip_abb51f0860d7fecc14bc10b8955ca2f61}{pos\+\_\+}
+\begin{DoxyCompactList}\small\item\em current position \end{DoxyCompactList}\item 
+float \hyperlink{classShip_ac1eecf17b4d217e4379fe3b83082f570}{angle\+\_\+}
+\begin{DoxyCompactList}\small\item\em current y-\/axis angle \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \hyperlink{classShip_aaf08394bcc18913a81303668cd865fa1}{direction\+\_\+}
+\begin{DoxyCompactList}\small\item\em current direction in which the ship faces \end{DoxyCompactList}\item 
+float \hyperlink{classShip_a0f013dc95c2aa775f3245fd603179983}{speed\+\_\+}
+\begin{DoxyCompactList}\small\item\em current forward speed (pos\+\_\+ += speed$\ast$direction) \end{DoxyCompactList}\item 
+float \hyperlink{classShip_a5ddc78691bc11038daf5b323579c1da9}{angular\+\_\+speed\+\_\+}
+\begin{DoxyCompactList}\small\item\em current angular speed (angle\+\_\+ += angular\+\_\+speed) \end{DoxyCompactList}\item 
+float \hyperlink{classShip_a4fd3b5e924dfd2d5e8484d769be8a758}{radius\+\_\+}
+\begin{DoxyCompactList}\small\item\em ship\textquotesingle{}s radius \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classShip_a0303c714554ecf490894f87428a2b7da}{compute\+\_\+normals} ()
+\item 
+void \hyperlink{classShip_a3f0c77b19ba169d271cdd781e7e1815d}{initialize\+\_\+buffers} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classShip_aa6dc51c843eba9a8252c75a0450c0f9a}{vertices\+\_\+}
+\begin{DoxyCompactList}\small\item\em vertex array \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classShip_af738fb884346cf28830f326a10d998fd}{indices\+\_\+}
+\begin{DoxyCompactList}\small\item\em triangle index array \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classShip_a19f863867223a90ba40f177da69a740c}{vertex\+\_\+normals\+\_\+}
+\begin{DoxyCompactList}\small\item\em vertex normals \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classvec3}{vec3} $>$ \hyperlink{classShip_aa7d1b82de97e0574a87c7d5abfee7fd3}{face\+\_\+normals\+\_\+}
+\begin{DoxyCompactList}\small\item\em face normals \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classShip_a16d302502e0fd72f2f550deb8d7a94b3}{n\+\_\+indices\+\_\+}
+\begin{DoxyCompactList}\small\item\em indices of the triangle vertices \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classShip_a75ff9091b12184668e7fbd207ae54723}{vao\+\_\+} = 0
+\item 
+G\+Luint \hyperlink{classShip_a5b0e65184158ac09af89f22b175f4638}{vbo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em vertex buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classShip_a109cc987e9d6ec0245bcf6b839f2216c}{tbo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em texture coordinates buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classShip_a85444653cb93dfc74c3193277c8cd581}{nbo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em normals buffer object \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{classShip_ab2ccb1ba2674e0eb61df65d278ab2b5e}{ibo\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em index buffer object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Ship@{Ship}!Ship@{Ship}}
+\index{Ship@{Ship}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{Ship()}{Ship()}}]{\setlength{\rightskip}{0pt plus 5cm}Ship\+::\+Ship (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_ab7608fcfc4d27c678aacaf9bfd68a462}{}\label{classShip_ab7608fcfc4d27c678aacaf9bfd68a462}
+\index{Ship@{Ship}!````~Ship@{$\sim$\+Ship}}
+\index{````~Ship@{$\sim$\+Ship}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{$\sim$\+Ship()}{~Ship()}}]{\setlength{\rightskip}{0pt plus 5cm}Ship\+::$\sim$\+Ship (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_a43cd6eeaffc11b49239b091621963a65}{}\label{classShip_a43cd6eeaffc11b49239b091621963a65}
+
+
+\subsection{Member Function Documentation}
+\index{Ship@{Ship}!accelerate@{accelerate}}
+\index{accelerate@{accelerate}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{accelerate(float speedup)}{accelerate(float speedup)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ship\+::accelerate (
+\begin{DoxyParamCaption}
+\item[{float}]{speedup}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_a2918a19717ac2417289d74ae2aa7d2ab}{}\label{classShip_a2918a19717ac2417289d74ae2aa7d2ab}
+
+
+changes ship\textquotesingle{}s forward speed 
+
+\index{Ship@{Ship}!accelerate\+\_\+angular@{accelerate\+\_\+angular}}
+\index{accelerate\+\_\+angular@{accelerate\+\_\+angular}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{accelerate\+\_\+angular(float angular\+\_\+speedup)}{accelerate_angular(float angular_speedup)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ship\+::accelerate\+\_\+angular (
+\begin{DoxyParamCaption}
+\item[{float}]{angular\+\_\+speedup}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_aef8f64c5d8a70e96151ab6fb9f09d6bb}{}\label{classShip_aef8f64c5d8a70e96151ab6fb9f09d6bb}
+
+
+changes ship\textquotesingle{}s angular speed 
+
+\index{Ship@{Ship}!compute\+\_\+normals@{compute\+\_\+normals}}
+\index{compute\+\_\+normals@{compute\+\_\+normals}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{compute\+\_\+normals()}{compute_normals()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ship\+::compute\+\_\+normals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a0303c714554ecf490894f87428a2b7da}{}\label{classShip_a0303c714554ecf490894f87428a2b7da}
+\index{Ship@{Ship}!draw@{draw}}
+\index{draw@{draw}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{draw(\+G\+Lenum mode=\+G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+S)}{draw(GLenum mode=GL_TRIANGLES)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ship\+::draw (
+\begin{DoxyParamCaption}
+\item[{G\+Lenum}]{mode = {\ttfamily GL\+\_\+TRIANGLES}}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_a6e34e65bf743c2f50d4bf462da92e20a}{}\label{classShip_a6e34e65bf743c2f50d4bf462da92e20a}
+
+
+draws the ship 
+
+\index{Ship@{Ship}!initialize\+\_\+buffers@{initialize\+\_\+buffers}}
+\index{initialize\+\_\+buffers@{initialize\+\_\+buffers}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{initialize\+\_\+buffers()}{initialize_buffers()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ship\+::initialize\+\_\+buffers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a3f0c77b19ba169d271cdd781e7e1815d}{}\label{classShip_a3f0c77b19ba169d271cdd781e7e1815d}
+\index{Ship@{Ship}!load\+\_\+model@{load\+\_\+model}}
+\index{load\+\_\+model@{load\+\_\+model}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{load\+\_\+model(const char $\ast$filename)}{load_model(const char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Ship\+::load\+\_\+model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_a34832cdc6cb1c67fa346b6903da62c81}{}\label{classShip_a34832cdc6cb1c67fa346b6903da62c81}
+
+
+loads vertices and faces from .off file 
+
+\index{Ship@{Ship}!update\+\_\+ship@{update\+\_\+ship}}
+\index{update\+\_\+ship@{update\+\_\+ship}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{update\+\_\+ship()}{update_ship()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ship\+::update\+\_\+ship (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShip_abece18ed5b9d72264a1392cce3ad0f63}{}\label{classShip_abece18ed5b9d72264a1392cce3ad0f63}
+
+
+updates ships position and angle 
+
+
+
+\subsection{Member Data Documentation}
+\index{Ship@{Ship}!angle\+\_\+@{angle\+\_\+}}
+\index{angle\+\_\+@{angle\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{angle\+\_\+}{angle_}}]{\setlength{\rightskip}{0pt plus 5cm}float Ship\+::angle\+\_\+}\hypertarget{classShip_ac1eecf17b4d217e4379fe3b83082f570}{}\label{classShip_ac1eecf17b4d217e4379fe3b83082f570}
+
+
+current y-\/axis angle 
+
+\index{Ship@{Ship}!angular\+\_\+speed\+\_\+@{angular\+\_\+speed\+\_\+}}
+\index{angular\+\_\+speed\+\_\+@{angular\+\_\+speed\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{angular\+\_\+speed\+\_\+}{angular_speed_}}]{\setlength{\rightskip}{0pt plus 5cm}float Ship\+::angular\+\_\+speed\+\_\+}\hypertarget{classShip_a5ddc78691bc11038daf5b323579c1da9}{}\label{classShip_a5ddc78691bc11038daf5b323579c1da9}
+
+
+current angular speed (angle\+\_\+ += angular\+\_\+speed) 
+
+\index{Ship@{Ship}!direction\+\_\+@{direction\+\_\+}}
+\index{direction\+\_\+@{direction\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{direction\+\_\+}{direction_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4} Ship\+::direction\+\_\+}\hypertarget{classShip_aaf08394bcc18913a81303668cd865fa1}{}\label{classShip_aaf08394bcc18913a81303668cd865fa1}
+
+
+current direction in which the ship faces 
+
+\index{Ship@{Ship}!face\+\_\+normals\+\_\+@{face\+\_\+normals\+\_\+}}
+\index{face\+\_\+normals\+\_\+@{face\+\_\+normals\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{face\+\_\+normals\+\_\+}{face_normals_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Ship\+::face\+\_\+normals\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_aa7d1b82de97e0574a87c7d5abfee7fd3}{}\label{classShip_aa7d1b82de97e0574a87c7d5abfee7fd3}
+
+
+face normals 
+
+\index{Ship@{Ship}!ibo\+\_\+@{ibo\+\_\+}}
+\index{ibo\+\_\+@{ibo\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{ibo\+\_\+}{ibo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Ship\+::ibo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_ab2ccb1ba2674e0eb61df65d278ab2b5e}{}\label{classShip_ab2ccb1ba2674e0eb61df65d278ab2b5e}
+
+
+index buffer object 
+
+\index{Ship@{Ship}!indices\+\_\+@{indices\+\_\+}}
+\index{indices\+\_\+@{indices\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{indices\+\_\+}{indices_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Ship\+::indices\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_af738fb884346cf28830f326a10d998fd}{}\label{classShip_af738fb884346cf28830f326a10d998fd}
+
+
+triangle index array 
+
+\index{Ship@{Ship}!n\+\_\+indices\+\_\+@{n\+\_\+indices\+\_\+}}
+\index{n\+\_\+indices\+\_\+@{n\+\_\+indices\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{n\+\_\+indices\+\_\+}{n_indices_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Ship\+::n\+\_\+indices\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a16d302502e0fd72f2f550deb8d7a94b3}{}\label{classShip_a16d302502e0fd72f2f550deb8d7a94b3}
+
+
+indices of the triangle vertices 
+
+\index{Ship@{Ship}!nbo\+\_\+@{nbo\+\_\+}}
+\index{nbo\+\_\+@{nbo\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{nbo\+\_\+}{nbo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Ship\+::nbo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a85444653cb93dfc74c3193277c8cd581}{}\label{classShip_a85444653cb93dfc74c3193277c8cd581}
+
+
+normals buffer object 
+
+\index{Ship@{Ship}!pos\+\_\+@{pos\+\_\+}}
+\index{pos\+\_\+@{pos\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{pos\+\_\+}{pos_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4} Ship\+::pos\+\_\+}\hypertarget{classShip_abb51f0860d7fecc14bc10b8955ca2f61}{}\label{classShip_abb51f0860d7fecc14bc10b8955ca2f61}
+
+
+current position 
+
+\index{Ship@{Ship}!radius\+\_\+@{radius\+\_\+}}
+\index{radius\+\_\+@{radius\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{radius\+\_\+}{radius_}}]{\setlength{\rightskip}{0pt plus 5cm}float Ship\+::radius\+\_\+}\hypertarget{classShip_a4fd3b5e924dfd2d5e8484d769be8a758}{}\label{classShip_a4fd3b5e924dfd2d5e8484d769be8a758}
+
+
+ship\textquotesingle{}s radius 
+
+\index{Ship@{Ship}!speed\+\_\+@{speed\+\_\+}}
+\index{speed\+\_\+@{speed\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{speed\+\_\+}{speed_}}]{\setlength{\rightskip}{0pt plus 5cm}float Ship\+::speed\+\_\+}\hypertarget{classShip_a0f013dc95c2aa775f3245fd603179983}{}\label{classShip_a0f013dc95c2aa775f3245fd603179983}
+
+
+current forward speed (pos\+\_\+ += speed$\ast$direction) 
+
+\index{Ship@{Ship}!tbo\+\_\+@{tbo\+\_\+}}
+\index{tbo\+\_\+@{tbo\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{tbo\+\_\+}{tbo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Ship\+::tbo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a109cc987e9d6ec0245bcf6b839f2216c}{}\label{classShip_a109cc987e9d6ec0245bcf6b839f2216c}
+
+
+texture coordinates buffer object 
+
+\index{Ship@{Ship}!tex\+\_\+@{tex\+\_\+}}
+\index{tex\+\_\+@{tex\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{tex\+\_\+}{tex_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Texture} Ship\+::tex\+\_\+}\hypertarget{classShip_a4e83f38e706d9b6dde212a62f855ae4c}{}\label{classShip_a4e83f38e706d9b6dde212a62f855ae4c}
+
+
+main diffuse texture for the planet 
+
+\index{Ship@{Ship}!vao\+\_\+@{vao\+\_\+}}
+\index{vao\+\_\+@{vao\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{vao\+\_\+}{vao_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Ship\+::vao\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a75ff9091b12184668e7fbd207ae54723}{}\label{classShip_a75ff9091b12184668e7fbd207ae54723}
+\index{Ship@{Ship}!vbo\+\_\+@{vbo\+\_\+}}
+\index{vbo\+\_\+@{vbo\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{vbo\+\_\+}{vbo_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Ship\+::vbo\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a5b0e65184158ac09af89f22b175f4638}{}\label{classShip_a5b0e65184158ac09af89f22b175f4638}
+
+
+vertex buffer object 
+
+\index{Ship@{Ship}!vertex\+\_\+normals\+\_\+@{vertex\+\_\+normals\+\_\+}}
+\index{vertex\+\_\+normals\+\_\+@{vertex\+\_\+normals\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{vertex\+\_\+normals\+\_\+}{vertex_normals_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Ship\+::vertex\+\_\+normals\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_a19f863867223a90ba40f177da69a740c}{}\label{classShip_a19f863867223a90ba40f177da69a740c}
+
+
+vertex normals 
+
+\index{Ship@{Ship}!vertices\+\_\+@{vertices\+\_\+}}
+\index{vertices\+\_\+@{vertices\+\_\+}!Ship@{Ship}}
+\subsubsection[{\texorpdfstring{vertices\+\_\+}{vertices_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf vec3}$>$ Ship\+::vertices\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShip_aa6dc51c843eba9a8252c75a0450c0f9a}{}\label{classShip_aa6dc51c843eba9a8252c75a0450c0f9a}
+
+
+vertex array 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/\hyperlink{ship_8h}{ship.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/\hyperlink{ship_8cpp}{ship.\+cpp}\end{DoxyCompactItemize}

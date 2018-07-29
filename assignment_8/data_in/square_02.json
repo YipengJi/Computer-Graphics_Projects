@@ -1,0 +1,11 @@
+{
+	"name": "square_02",
+	"stochastic": false,
+	"initial": "F-F-F-F",
+	"angle_deg": 90,
+	"num_iters": 3,
+	"rules": {
+		"F": "FF-F+F-F-FF"
+	}
+}
+

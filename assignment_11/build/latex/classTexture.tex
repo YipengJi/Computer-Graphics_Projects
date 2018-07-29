@@ -1,0 +1,187 @@
+\hypertarget{classTexture}{}\section{Texture Class Reference}
+\label{classTexture}\index{Texture@{Texture}}
+
+
+class that handles texture io and G\+PU upload  
+
+
+
+
+{\ttfamily \#include $<$texture.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTexture_a6c275e3f186675ff6ed73ccf970e552f}{Texture} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classTexture_a09c4bcb7462f64c1d20fa69dba3cee8a}{$\sim$\+Texture} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+void \hyperlink{classTexture_a9a8cf50e16cf499931d94ad37e3cd074}{init} (G\+Lenum unit, G\+Lenum type, G\+Lint minfilter, G\+Lint magfilter, G\+Lint wrap)
+\item 
+bool \hyperlink{classTexture_afd7b219173389b10fb4d41c68f0e26d8}{load\+P\+NG} (const char $\ast$filename)
+\item 
+bool \hyperlink{classTexture_a49a30cbb4fb0be42832c6b9bd0a2e786}{upload\+Image} (std\+::vector$<$ unsigned char $>$ \&img, unsigned width, unsigned height)
+\item 
+bool \hyperlink{classTexture_a124fe8f7960fad810b68e3d4f5870cbe}{create\+Sun\+Billboard\+Texture} ()
+\begin{DoxyCompactList}\small\item\em Generate the sun halo texture bitmap and upload it to the G\+PU. \end{DoxyCompactList}\item 
+void \hyperlink{classTexture_a3840dc7429982ffaddeafc8d62345b5d}{bind} ()
+\begin{DoxyCompactList}\small\item\em activates this texture for the predefined unit \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{classTexture_af6d8cc702b5f11b8c0dabb0ddaa3cdcf}{id} () const 
+\begin{DoxyCompactList}\small\item\em returns the texture id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{classTexture_a40b70860116e01ee19401909c887507d}{id\+\_\+}
+\begin{DoxyCompactList}\small\item\em texture ID on G\+PU \end{DoxyCompactList}\item 
+G\+Lenum \hyperlink{classTexture_a6ac3d804ac4ef042b5fc0f2580a29ac8}{unit\+\_\+}
+\begin{DoxyCompactList}\small\item\em texture unit (important for use of multiple textures in shader) \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{classTexture_ab3aecf31a2233f66cb9959f9e01884b2}{type\+\_\+}
+\begin{DoxyCompactList}\small\item\em the type of the texture (T\+E\+X\+T\+U\+R\+E\+\_\+1D,T\+E\+X\+T\+U\+R\+E\+\_\+2D, etc) \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{classTexture_ab996e764d09b196ed4a468870186f76d}{minfilter\+\_\+}
+\begin{DoxyCompactList}\small\item\em the minfilter setting \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class that handles texture io and G\+PU upload 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{Texture()}{Texture()}}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+::\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_a6c275e3f186675ff6ed73ccf970e552f}{}\label{classTexture_a6c275e3f186675ff6ed73ccf970e552f}
+
+
+default constructor 
+
+\index{Texture@{Texture}!````~Texture@{$\sim$\+Texture}}
+\index{````~Texture@{$\sim$\+Texture}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{$\sim$\+Texture()}{~Texture()}}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+::$\sim$\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_a09c4bcb7462f64c1d20fa69dba3cee8a}{}\label{classTexture_a09c4bcb7462f64c1d20fa69dba3cee8a}
+
+
+default destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{Texture@{Texture}!bind@{bind}}
+\index{bind@{bind}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{bind()}{bind()}}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+::bind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_a3840dc7429982ffaddeafc8d62345b5d}{}\label{classTexture_a3840dc7429982ffaddeafc8d62345b5d}
+
+
+activates this texture for the predefined unit 
+
+\index{Texture@{Texture}!create\+Sun\+Billboard\+Texture@{create\+Sun\+Billboard\+Texture}}
+\index{create\+Sun\+Billboard\+Texture@{create\+Sun\+Billboard\+Texture}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{create\+Sun\+Billboard\+Texture()}{createSunBillboardTexture()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Texture\+::create\+Sun\+Billboard\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_a124fe8f7960fad810b68e3d4f5870cbe}{}\label{classTexture_a124fe8f7960fad810b68e3d4f5870cbe}
+
+
+Generate the sun halo texture bitmap and upload it to the G\+PU. 
+
+\index{Texture@{Texture}!id@{id}}
+\index{id@{id}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{id() const }{id() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Texture\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTexture_af6d8cc702b5f11b8c0dabb0ddaa3cdcf}{}\label{classTexture_af6d8cc702b5f11b8c0dabb0ddaa3cdcf}
+
+
+returns the texture id 
+
+\index{Texture@{Texture}!init@{init}}
+\index{init@{init}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{init(\+G\+Lenum unit, G\+Lenum type, G\+Lint minfilter, G\+Lint magfilter, G\+Lint wrap)}{init(GLenum unit, GLenum type, GLint minfilter, GLint magfilter, GLint wrap)}}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+::init (
+\begin{DoxyParamCaption}
+\item[{G\+Lenum}]{unit, }
+\item[{G\+Lenum}]{type, }
+\item[{G\+Lint}]{minfilter, }
+\item[{G\+Lint}]{magfilter, }
+\item[{G\+Lint}]{wrap}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_a9a8cf50e16cf499931d94ad37e3cd074}{}\label{classTexture_a9a8cf50e16cf499931d94ad37e3cd074}
+creates an empty texture on the G\+PU 
+\begin{DoxyParams}{Parameters}
+{\em unit} & texure unit (important for use of multiple texturs in shader) \\
+\hline
+{\em type} & the type of the texture (1D, 2D, 3D etc.) \\
+\hline
+{\em minfilter} & interpolation filter for minification \\
+\hline
+{\em magfilter} & interpolation filter for magnification \\
+\hline
+{\em wrap} & texture coordinates wrap preference \\
+\hline
+\end{DoxyParams}
+\index{Texture@{Texture}!load\+P\+NG@{load\+P\+NG}}
+\index{load\+P\+NG@{load\+P\+NG}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{load\+P\+N\+G(const char $\ast$filename)}{loadPNG(const char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Texture\+::load\+P\+NG (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_afd7b219173389b10fb4d41c68f0e26d8}{}\label{classTexture_afd7b219173389b10fb4d41c68f0e26d8}
+Load a texture from a png file and upload it to the gpu. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the location and name of the texture for upload \\
+\hline
+\end{DoxyParams}
+\index{Texture@{Texture}!upload\+Image@{upload\+Image}}
+\index{upload\+Image@{upload\+Image}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{upload\+Image(std\+::vector$<$ unsigned char $>$ \&img, unsigned width, unsigned height)}{uploadImage(std::vector< unsigned char > &img, unsigned width, unsigned height)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Texture\+::upload\+Image (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ unsigned char $>$ \&}]{img, }
+\item[{unsigned}]{width, }
+\item[{unsigned}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{classTexture_a49a30cbb4fb0be42832c6b9bd0a2e786}{}\label{classTexture_a49a30cbb4fb0be42832c6b9bd0a2e786}
+Upload a texture specified as a byte array to the G\+PU. Side-\/effect\+: vertically flips the image data stored in \char`\"{}img.\char`\"{} 
+
+\subsection{Member Data Documentation}
+\index{Texture@{Texture}!id\+\_\+@{id\+\_\+}}
+\index{id\+\_\+@{id\+\_\+}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{id\+\_\+}{id_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Texture\+::id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTexture_a40b70860116e01ee19401909c887507d}{}\label{classTexture_a40b70860116e01ee19401909c887507d}
+
+
+texture ID on G\+PU 
+
+\index{Texture@{Texture}!minfilter\+\_\+@{minfilter\+\_\+}}
+\index{minfilter\+\_\+@{minfilter\+\_\+}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{minfilter\+\_\+}{minfilter_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Texture\+::minfilter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTexture_ab996e764d09b196ed4a468870186f76d}{}\label{classTexture_ab996e764d09b196ed4a468870186f76d}
+
+
+the minfilter setting 
+
+\index{Texture@{Texture}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{type\+\_\+}{type_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Texture\+::type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTexture_ab3aecf31a2233f66cb9959f9e01884b2}{}\label{classTexture_ab3aecf31a2233f66cb9959f9e01884b2}
+
+
+the type of the texture (T\+E\+X\+T\+U\+R\+E\+\_\+1D,T\+E\+X\+T\+U\+R\+E\+\_\+2D, etc) 
+
+\index{Texture@{Texture}!unit\+\_\+@{unit\+\_\+}}
+\index{unit\+\_\+@{unit\+\_\+}!Texture@{Texture}}
+\subsubsection[{\texorpdfstring{unit\+\_\+}{unit_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lenum Texture\+::unit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTexture_a6ac3d804ac4ef042b5fc0f2580a29ac8}{}\label{classTexture_a6ac3d804ac4ef042b5fc0f2580a29ac8}
+
+
+texture unit (important for use of multiple textures in shader) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{texture_8h}{texture.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{texture_8cpp}{texture.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{classStopWatch}{}\section{Stop\+Watch Class Reference}
+\label{classStopWatch}\index{Stop\+Watch@{Stop\+Watch}}
+
+
+{\ttfamily \#include $<$Stop\+Watch.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStopWatch_ad715945060eeb23baa3c036ad19b1edb}{Stop\+Watch} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e}{start} ()
+\begin{DoxyCompactList}\small\item\em Start time measurement. \end{DoxyCompactList}\item 
+double \hyperlink{classStopWatch_a14c40846cb1cd3e0d576d59b2cda14a0}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop time measurement, return elapsed time in ms. \end{DoxyCompactList}\item 
+double \hyperlink{classStopWatch_a37e3cfc0cec9a636a645adcaf228a272}{elapsed} () const 
+\begin{DoxyCompactList}\small\item\em Return elapsed time in ms (watch has to be stopped). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+timeval \hyperlink{classStopWatch_a11c7e8fc779cb1e0d13c0676342dbe35}{current\+\_\+time} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+timeval \hyperlink{classStopWatch_ada5556538f0ebec66b6e45b846ca3864}{starttime\+\_\+}
+\item 
+timeval \hyperlink{classStopWatch_ac4092981269811b221e31ab5bc0a8ce2}{endtime\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple stop watch, that you can \hyperlink{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e}{start()} and \hyperlink{classStopWatch_a14c40846cb1cd3e0d576d59b2cda14a0}{stop()} and that returns the \hyperlink{classStopWatch_a37e3cfc0cec9a636a645adcaf228a272}{elapsed()} time in milliseconds. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Stop\+Watch@{Stop\+Watch}!Stop\+Watch@{Stop\+Watch}}
+\index{Stop\+Watch@{Stop\+Watch}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{Stop\+Watch()}{StopWatch()}}]{\setlength{\rightskip}{0pt plus 5cm}Stop\+Watch\+::\+Stop\+Watch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStopWatch_ad715945060eeb23baa3c036ad19b1edb}{}\label{classStopWatch_ad715945060eeb23baa3c036ad19b1edb}
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Stop\+Watch@{Stop\+Watch}!current\+\_\+time@{current\+\_\+time}}
+\index{current\+\_\+time@{current\+\_\+time}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{current\+\_\+time() const }{current_time() const }}]{\setlength{\rightskip}{0pt plus 5cm}timeval Stop\+Watch\+::current\+\_\+time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classStopWatch_a11c7e8fc779cb1e0d13c0676342dbe35}{}\label{classStopWatch_a11c7e8fc779cb1e0d13c0676342dbe35}
+\index{Stop\+Watch@{Stop\+Watch}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{elapsed() const }{elapsed() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Stop\+Watch\+::elapsed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStopWatch_a37e3cfc0cec9a636a645adcaf228a272}{}\label{classStopWatch_a37e3cfc0cec9a636a645adcaf228a272}
+
+
+Return elapsed time in ms (watch has to be stopped). 
+
+\index{Stop\+Watch@{Stop\+Watch}!start@{start}}
+\index{start@{start}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Stop\+Watch\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e}{}\label{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e}
+
+
+Start time measurement. 
+
+\index{Stop\+Watch@{Stop\+Watch}!stop@{stop}}
+\index{stop@{stop}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{stop()}{stop()}}]{\setlength{\rightskip}{0pt plus 5cm}double Stop\+Watch\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStopWatch_a14c40846cb1cd3e0d576d59b2cda14a0}{}\label{classStopWatch_a14c40846cb1cd3e0d576d59b2cda14a0}
+
+
+Stop time measurement, return elapsed time in ms. 
+
+
+
+\subsection{Member Data Documentation}
+\index{Stop\+Watch@{Stop\+Watch}!endtime\+\_\+@{endtime\+\_\+}}
+\index{endtime\+\_\+@{endtime\+\_\+}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{endtime\+\_\+}{endtime_}}]{\setlength{\rightskip}{0pt plus 5cm}timeval Stop\+Watch\+::endtime\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStopWatch_ac4092981269811b221e31ab5bc0a8ce2}{}\label{classStopWatch_ac4092981269811b221e31ab5bc0a8ce2}
+\index{Stop\+Watch@{Stop\+Watch}!starttime\+\_\+@{starttime\+\_\+}}
+\index{starttime\+\_\+@{starttime\+\_\+}!Stop\+Watch@{Stop\+Watch}}
+\subsubsection[{\texorpdfstring{starttime\+\_\+}{starttime_}}]{\setlength{\rightskip}{0pt plus 5cm}timeval Stop\+Watch\+::starttime\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStopWatch_ada5556538f0ebec66b6e45b846ca3864}{}\label{classStopWatch_ada5556538f0ebec66b6e45b846ca3864}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+2/src/\hyperlink{StopWatch_8h}{Stop\+Watch.\+h}\end{DoxyCompactItemize}

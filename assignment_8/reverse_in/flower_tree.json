@@ -1,0 +1,11 @@
+{
+	"name": "flower_tree",
+	"stochastic": false,
+	"initial": "T",
+	"angle_deg": 120,
+	"num_iters": 7,
+	"rules": {
+		"T": "F[++T][--T]",
+		"F": "FF"
+	}
+}

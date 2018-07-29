@@ -1,0 +1,286 @@
+\hypertarget{classvec4}{}\section{vec4 Class Reference}
+\label{classvec4}\index{vec4@{vec4}}
+
+
+{\ttfamily \#include $<$glmath.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}{vec4} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classvec4_ae1b8361552262b9f52f0e164086b52fa}{vec4} (float \+\_\+s)
+\begin{DoxyCompactList}\small\item\em construct with scalar value that is assigned to x, y, z, w \end{DoxyCompactList}\item 
+\hyperlink{classvec4_aefebfcef5cfacc8d070c28f4c84709f2}{vec4} (float \+\_\+x, float \+\_\+y, float \+\_\+z, float \+\_\+w)
+\begin{DoxyCompactList}\small\item\em construct with x,y,z,w values \end{DoxyCompactList}\item 
+\hyperlink{classvec4_aade8ea71d3496e4704c54725921b9a0e}{vec4} (const \hyperlink{classvec3}{vec3} \&v, float \hyperlink{classvec4_a0c92fe67e490d9768217a00c2e8abd49}{w})
+\begin{DoxyCompactList}\small\item\em Construct by appending to a \hyperlink{classvec3}{vec3}. \end{DoxyCompactList}\item 
+const float $\ast$ \hyperlink{classvec4_a5fd305cabd88de4f64e9fb6bab95df89}{data} () const 
+\begin{DoxyCompactList}\small\item\em return pointer to array/vector (for passing it to Open\+GL) \end{DoxyCompactList}\item 
+\hyperlink{classvec4_aa833810e2ec237c4a1668b982b902d86}{operator vec3} ()
+\item 
+float \& \hyperlink{classvec4_aec6937954e939236b02eda65b00abf5d}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \+\_\+i)
+\begin{DoxyCompactList}\small\item\em read/write the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 3) \end{DoxyCompactList}\item 
+const float \hyperlink{classvec4_ad26676799641dfe9033d3715423ade8d}{operator\mbox{[}$\,$\mbox{]}} (unsigned int \+\_\+i) const 
+\begin{DoxyCompactList}\small\item\em read the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 3) \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \& \hyperlink{classvec4_ac97789260e6386514fe8586d2e7db372}{operator$\ast$=} (const float s)
+\begin{DoxyCompactList}\small\item\em multiply this vector by a scalar {\ttfamily s} \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \& \hyperlink{classvec4_aaebb986a13f6d696f7c7554e564ce85a}{operator/=} (const float s)
+\begin{DoxyCompactList}\small\item\em divide this vector by a scalar {\ttfamily s} \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \& \hyperlink{classvec4_a0c2976559fb5c6c0c3864071c0a3bdad}{operator$\ast$=} (const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em component-\/wise multiplication of this vector with vector {\ttfamily v} \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \& \hyperlink{classvec4_a7b7f91f9ae6a8dce5404be6eb7ee4c41}{operator-\/=} (const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em subtract vector {\ttfamily v} from this vector \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \& \hyperlink{classvec4_a32b3157d2fd121ac428b3e25bdd03d5f}{operator+=} (const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em add vector {\ttfamily v} to this vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>float \hyperlink{classvec4_a36c650782a67137380c83b01545c94d6}{x}\\
+\>\>\>{\em x coordinate }\\
+\>\>float \hyperlink{classvec4_a7328fe0e502fce92fa32016193052e92}{y}\\
+\>\>\>{\em y coordinate }\\
+\>\>float \hyperlink{classvec4_a12b318751110db034dddc450cdec455d}{z}\\
+\>\>\>{\em z coordinate }\\
+\>\>float \hyperlink{classvec4_a0c92fe67e490d9768217a00c2e8abd49}{w}\\
+\>\>\>{\em w coordinate }\\
+\>\} \\
+\>\>\>{\em XYZW coordinates. }\\
+\>struct \{\\
+\>\>float \hyperlink{classvec4_a1682827e4304b44e6f768d616cdf3899}{r}\\
+\>\>\>{\em red component }\\
+\>\>float \hyperlink{classvec4_aa626a2728056a1b410fb8e133bdffd05}{g}\\
+\>\>\>{\em green component }\\
+\>\>float \hyperlink{classvec4_a62421478df6548c8e5e24d33345e3417}{b}\\
+\>\>\>{\em blue component }\\
+\>\>float \hyperlink{classvec4_ac1c847c2cd65c10fd059fceb8e57a5f6}{a}\\
+\>\>\>{\em alpha component }\\
+\>\} \\
+\>\>\>{\em RGBA color components. }\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple 4D vector, that we use to represent points in 4D homogeneous coordinates X\+Y\+ZW or R\+G\+BA colors. You can access the individual components either by x,y,z,w or by r,g,b,a. The \hyperlink{classvec4}{vec4} class provides all commonly used mathematical operations. \begin{DoxySeeAlso}{See also}
+\hyperlink{glmath_8h}{glmath.\+h} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{vec4@{vec4}!vec4@{vec4}}
+\index{vec4@{vec4}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{vec4()}{vec4()}}]{\setlength{\rightskip}{0pt plus 5cm}vec4\+::vec4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}{}\label{classvec4_aa29685cf2528dae6ad7d74a7e01c1d6f}
+
+
+default constructor 
+
+\index{vec4@{vec4}!vec4@{vec4}}
+\index{vec4@{vec4}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{vec4(float \+\_\+s)}{vec4(float _s)}}]{\setlength{\rightskip}{0pt plus 5cm}vec4\+::vec4 (
+\begin{DoxyParamCaption}
+\item[{float}]{\+\_\+s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classvec4_ae1b8361552262b9f52f0e164086b52fa}{}\label{classvec4_ae1b8361552262b9f52f0e164086b52fa}
+
+
+construct with scalar value that is assigned to x, y, z, w 
+
+\index{vec4@{vec4}!vec4@{vec4}}
+\index{vec4@{vec4}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{vec4(float \+\_\+x, float \+\_\+y, float \+\_\+z, float \+\_\+w)}{vec4(float _x, float _y, float _z, float _w)}}]{\setlength{\rightskip}{0pt plus 5cm}vec4\+::vec4 (
+\begin{DoxyParamCaption}
+\item[{float}]{\+\_\+x, }
+\item[{float}]{\+\_\+y, }
+\item[{float}]{\+\_\+z, }
+\item[{float}]{\+\_\+w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_aefebfcef5cfacc8d070c28f4c84709f2}{}\label{classvec4_aefebfcef5cfacc8d070c28f4c84709f2}
+
+
+construct with x,y,z,w values 
+
+\index{vec4@{vec4}!vec4@{vec4}}
+\index{vec4@{vec4}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{vec4(const vec3 \&v, float w)}{vec4(const vec3 &v, float w)}}]{\setlength{\rightskip}{0pt plus 5cm}vec4\+::vec4 (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{float}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_aade8ea71d3496e4704c54725921b9a0e}{}\label{classvec4_aade8ea71d3496e4704c54725921b9a0e}
+
+
+Construct by appending to a \hyperlink{classvec3}{vec3}. 
+
+
+
+\subsection{Member Function Documentation}
+\index{vec4@{vec4}!data@{data}}
+\index{data@{data}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ vec4\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_a5fd305cabd88de4f64e9fb6bab95df89}{}\label{classvec4_a5fd305cabd88de4f64e9fb6bab95df89}
+
+
+return pointer to array/vector (for passing it to Open\+GL) 
+
+\index{vec4@{vec4}!operator vec3@{operator vec3}}
+\index{operator vec3@{operator vec3}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator vec3()}{operator vec3()}}]{\setlength{\rightskip}{0pt plus 5cm}vec4\+::operator {\bf vec3} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_aa833810e2ec237c4a1668b982b902d86}{}\label{classvec4_aa833810e2ec237c4a1668b982b902d86}
+\index{vec4@{vec4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator$\ast$=(const float s)}{operator*=(const float s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4}\& vec4\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_ac97789260e6386514fe8586d2e7db372}{}\label{classvec4_ac97789260e6386514fe8586d2e7db372}
+
+
+multiply this vector by a scalar {\ttfamily s} 
+
+\index{vec4@{vec4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator$\ast$=(const vec4 \&v)}{operator*=(const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4}\& vec4\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_a0c2976559fb5c6c0c3864071c0a3bdad}{}\label{classvec4_a0c2976559fb5c6c0c3864071c0a3bdad}
+
+
+component-\/wise multiplication of this vector with vector {\ttfamily v} 
+
+\index{vec4@{vec4}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator+=(const vec4 \&v)}{operator+=(const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4}\& vec4\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_a32b3157d2fd121ac428b3e25bdd03d5f}{}\label{classvec4_a32b3157d2fd121ac428b3e25bdd03d5f}
+
+
+add vector {\ttfamily v} to this vector 
+
+\index{vec4@{vec4}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator-\/=(const vec4 \&v)}{operator-=(const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4}\& vec4\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_a7b7f91f9ae6a8dce5404be6eb7ee4c41}{}\label{classvec4_a7b7f91f9ae6a8dce5404be6eb7ee4c41}
+
+
+subtract vector {\ttfamily v} from this vector 
+
+\index{vec4@{vec4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator/=(const float s)}{operator/=(const float s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4}\& vec4\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{const float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_aaebb986a13f6d696f7c7554e564ce85a}{}\label{classvec4_aaebb986a13f6d696f7c7554e564ce85a}
+
+
+divide this vector by a scalar {\ttfamily s} 
+
+\index{vec4@{vec4}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator[](unsigned int \+\_\+i)}{operator[](unsigned int _i)}}]{\setlength{\rightskip}{0pt plus 5cm}float\& vec4\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_aec6937954e939236b02eda65b00abf5d}{}\label{classvec4_aec6937954e939236b02eda65b00abf5d}
+
+
+read/write the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 3) 
+
+\index{vec4@{vec4}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{operator[](unsigned int \+\_\+i) const }{operator[](unsigned int _i) const }}]{\setlength{\rightskip}{0pt plus 5cm}const float vec4\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classvec4_ad26676799641dfe9033d3715423ade8d}{}\label{classvec4_ad26676799641dfe9033d3715423ade8d}
+
+
+read the \+\_\+i\textquotesingle{}th vector component (\+\_\+i from 0 to 3) 
+
+
+
+\subsection{Member Data Documentation}
+\subsubsection[{\texorpdfstring{"@7}{@7}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }\hypertarget{classvec4_a174554ac005f5970aede30eb208854f1}{}\label{classvec4_a174554ac005f5970aede30eb208854f1}
+this union allows us to access vector elements by either x,y,z or r,g,b, but we have to store only three floats. \index{vec4@{vec4}!a@{a}}
+\index{a@{a}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{a}{a}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::a}\hypertarget{classvec4_ac1c847c2cd65c10fd059fceb8e57a5f6}{}\label{classvec4_ac1c847c2cd65c10fd059fceb8e57a5f6}
+
+
+alpha component 
+
+\index{vec4@{vec4}!b@{b}}
+\index{b@{b}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{b}{b}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::b}\hypertarget{classvec4_a62421478df6548c8e5e24d33345e3417}{}\label{classvec4_a62421478df6548c8e5e24d33345e3417}
+
+
+blue component 
+
+\index{vec4@{vec4}!g@{g}}
+\index{g@{g}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{g}{g}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::g}\hypertarget{classvec4_aa626a2728056a1b410fb8e133bdffd05}{}\label{classvec4_aa626a2728056a1b410fb8e133bdffd05}
+
+
+green component 
+
+\index{vec4@{vec4}!r@{r}}
+\index{r@{r}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{r}{r}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::r}\hypertarget{classvec4_a1682827e4304b44e6f768d616cdf3899}{}\label{classvec4_a1682827e4304b44e6f768d616cdf3899}
+
+
+red component 
+
+\index{vec4@{vec4}!w@{w}}
+\index{w@{w}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{w}{w}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::w}\hypertarget{classvec4_a0c92fe67e490d9768217a00c2e8abd49}{}\label{classvec4_a0c92fe67e490d9768217a00c2e8abd49}
+
+
+w coordinate 
+
+\index{vec4@{vec4}!x@{x}}
+\index{x@{x}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::x}\hypertarget{classvec4_a36c650782a67137380c83b01545c94d6}{}\label{classvec4_a36c650782a67137380c83b01545c94d6}
+
+
+x coordinate 
+
+\index{vec4@{vec4}!y@{y}}
+\index{y@{y}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::y}\hypertarget{classvec4_a7328fe0e502fce92fa32016193052e92}{}\label{classvec4_a7328fe0e502fce92fa32016193052e92}
+
+
+y coordinate 
+
+\index{vec4@{vec4}!z@{z}}
+\index{z@{z}!vec4@{vec4}}
+\subsubsection[{\texorpdfstring{z}{z}}]{\setlength{\rightskip}{0pt plus 5cm}float vec4\+::z}\hypertarget{classvec4_a12b318751110db034dddc450cdec455d}{}\label{classvec4_a12b318751110db034dddc450cdec455d}
+
+
+z coordinate 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{glmath_8h}{glmath.\+h}\end{DoxyCompactItemize}

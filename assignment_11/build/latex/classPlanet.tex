@@ -1,0 +1,143 @@
+\hypertarget{classPlanet}{}\section{Planet Class Reference}
+\label{classPlanet}\index{Planet@{Planet}}
+
+
+default class for the planet  
+
+
+
+
+{\ttfamily \#include $<$planet.\+h$>$}
+
+
+
+Inheritance diagram for Planet\+:
+% FIG 0
+
+
+Collaboration diagram for Planet\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPlanet_a342b2e89969c70f5701c8f9d4726cfc2}{Planet} (const float \+\_\+angle\+\_\+step\+\_\+orbit, const float \+\_\+angle\+\_\+step\+\_\+self, const float \+\_\+radius, const float \+\_\+distance)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{classPlanet_a9585c31501222dc0b1d4b9ee16f6f754}{time\+\_\+step} (float \+\_\+days)
+\begin{DoxyCompactList}\small\item\em set the time for every update \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec4}{vec4} \hyperlink{classPlanet_aaa60c7184864fe744dcf1fd52a5bae82}{pos\+\_\+}
+\begin{DoxyCompactList}\small\item\em the current position of the planet \end{DoxyCompactList}\item 
+float \hyperlink{classPlanet_a5179a41d97c015b373b6e8a3f4458f64}{distance\+\_\+}
+\begin{DoxyCompactList}\small\item\em distance of the planet from the orbit center (=origin) \end{DoxyCompactList}\item 
+float \hyperlink{classPlanet_a9d7230f0afaedba54afa25462639de08}{radius\+\_\+}
+\begin{DoxyCompactList}\small\item\em the radius of the planet \end{DoxyCompactList}\item 
+float \hyperlink{classPlanet_a674db34348bebd17133630806b8a4523}{angle\+\_\+orbit\+\_\+}
+\begin{DoxyCompactList}\small\item\em current rotation around the orbit center \end{DoxyCompactList}\item 
+float \hyperlink{classPlanet_abb864fb6e4e677f72d1c3b5622a524af}{angle\+\_\+self\+\_\+}
+\begin{DoxyCompactList}\small\item\em current rotation around planet center \end{DoxyCompactList}\item 
+float \hyperlink{classPlanet_a91e8faddde8308f4037f4d4cd84e4da3}{angle\+\_\+step\+\_\+orbit\+\_\+}
+\begin{DoxyCompactList}\small\item\em how much to sweep around orbit in one day (in radians) \end{DoxyCompactList}\item 
+float \hyperlink{classPlanet_ab394e2d2c073a18f3dcd692b8ea62f68}{angle\+\_\+step\+\_\+self\+\_\+}
+\begin{DoxyCompactList}\small\item\em how much to rotation around planet center in one day (in radians) \end{DoxyCompactList}\item 
+\hyperlink{classTexture}{Texture} \hyperlink{classPlanet_a96a79b3b253480e586f7be9d66e3ef90}{tex\+\_\+}
+\begin{DoxyCompactList}\small\item\em main diffuse texture for the planet \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+default class for the planet 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Planet@{Planet}!Planet@{Planet}}
+\index{Planet@{Planet}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{Planet(const float \+\_\+angle\+\_\+step\+\_\+orbit, const float \+\_\+angle\+\_\+step\+\_\+self, const float \+\_\+radius, const float \+\_\+distance)}{Planet(const float _angle_step_orbit, const float _angle_step_self, const float _radius, const float _distance)}}]{\setlength{\rightskip}{0pt plus 5cm}Planet\+::\+Planet (
+\begin{DoxyParamCaption}
+\item[{const float}]{\+\_\+angle\+\_\+step\+\_\+orbit, }
+\item[{const float}]{\+\_\+angle\+\_\+step\+\_\+self, }
+\item[{const float}]{\+\_\+radius, }
+\item[{const float}]{\+\_\+distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPlanet_a342b2e89969c70f5701c8f9d4726cfc2}{}\label{classPlanet_a342b2e89969c70f5701c8f9d4726cfc2}
+
+
+default constructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{Planet@{Planet}!time\+\_\+step@{time\+\_\+step}}
+\index{time\+\_\+step@{time\+\_\+step}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{time\+\_\+step(float \+\_\+days)}{time_step(float _days)}}]{\setlength{\rightskip}{0pt plus 5cm}void Planet\+::time\+\_\+step (
+\begin{DoxyParamCaption}
+\item[{float}]{\+\_\+days}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPlanet_a9585c31501222dc0b1d4b9ee16f6f754}{}\label{classPlanet_a9585c31501222dc0b1d4b9ee16f6f754}
+
+
+set the time for every update 
+
+
+
+\subsection{Member Data Documentation}
+\index{Planet@{Planet}!angle\+\_\+orbit\+\_\+@{angle\+\_\+orbit\+\_\+}}
+\index{angle\+\_\+orbit\+\_\+@{angle\+\_\+orbit\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{angle\+\_\+orbit\+\_\+}{angle_orbit_}}]{\setlength{\rightskip}{0pt plus 5cm}float Planet\+::angle\+\_\+orbit\+\_\+}\hypertarget{classPlanet_a674db34348bebd17133630806b8a4523}{}\label{classPlanet_a674db34348bebd17133630806b8a4523}
+
+
+current rotation around the orbit center 
+
+\index{Planet@{Planet}!angle\+\_\+self\+\_\+@{angle\+\_\+self\+\_\+}}
+\index{angle\+\_\+self\+\_\+@{angle\+\_\+self\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{angle\+\_\+self\+\_\+}{angle_self_}}]{\setlength{\rightskip}{0pt plus 5cm}float Planet\+::angle\+\_\+self\+\_\+}\hypertarget{classPlanet_abb864fb6e4e677f72d1c3b5622a524af}{}\label{classPlanet_abb864fb6e4e677f72d1c3b5622a524af}
+
+
+current rotation around planet center 
+
+\index{Planet@{Planet}!angle\+\_\+step\+\_\+orbit\+\_\+@{angle\+\_\+step\+\_\+orbit\+\_\+}}
+\index{angle\+\_\+step\+\_\+orbit\+\_\+@{angle\+\_\+step\+\_\+orbit\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{angle\+\_\+step\+\_\+orbit\+\_\+}{angle_step_orbit_}}]{\setlength{\rightskip}{0pt plus 5cm}float Planet\+::angle\+\_\+step\+\_\+orbit\+\_\+}\hypertarget{classPlanet_a91e8faddde8308f4037f4d4cd84e4da3}{}\label{classPlanet_a91e8faddde8308f4037f4d4cd84e4da3}
+
+
+how much to sweep around orbit in one day (in radians) 
+
+\index{Planet@{Planet}!angle\+\_\+step\+\_\+self\+\_\+@{angle\+\_\+step\+\_\+self\+\_\+}}
+\index{angle\+\_\+step\+\_\+self\+\_\+@{angle\+\_\+step\+\_\+self\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{angle\+\_\+step\+\_\+self\+\_\+}{angle_step_self_}}]{\setlength{\rightskip}{0pt plus 5cm}float Planet\+::angle\+\_\+step\+\_\+self\+\_\+}\hypertarget{classPlanet_ab394e2d2c073a18f3dcd692b8ea62f68}{}\label{classPlanet_ab394e2d2c073a18f3dcd692b8ea62f68}
+
+
+how much to rotation around planet center in one day (in radians) 
+
+\index{Planet@{Planet}!distance\+\_\+@{distance\+\_\+}}
+\index{distance\+\_\+@{distance\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{distance\+\_\+}{distance_}}]{\setlength{\rightskip}{0pt plus 5cm}float Planet\+::distance\+\_\+}\hypertarget{classPlanet_a5179a41d97c015b373b6e8a3f4458f64}{}\label{classPlanet_a5179a41d97c015b373b6e8a3f4458f64}
+
+
+distance of the planet from the orbit center (=origin) 
+
+\index{Planet@{Planet}!pos\+\_\+@{pos\+\_\+}}
+\index{pos\+\_\+@{pos\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{pos\+\_\+}{pos_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4} Planet\+::pos\+\_\+}\hypertarget{classPlanet_aaa60c7184864fe744dcf1fd52a5bae82}{}\label{classPlanet_aaa60c7184864fe744dcf1fd52a5bae82}
+
+
+the current position of the planet 
+
+\index{Planet@{Planet}!radius\+\_\+@{radius\+\_\+}}
+\index{radius\+\_\+@{radius\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{radius\+\_\+}{radius_}}]{\setlength{\rightskip}{0pt plus 5cm}float Planet\+::radius\+\_\+}\hypertarget{classPlanet_a9d7230f0afaedba54afa25462639de08}{}\label{classPlanet_a9d7230f0afaedba54afa25462639de08}
+
+
+the radius of the planet 
+
+\index{Planet@{Planet}!tex\+\_\+@{tex\+\_\+}}
+\index{tex\+\_\+@{tex\+\_\+}!Planet@{Planet}}
+\subsubsection[{\texorpdfstring{tex\+\_\+}{tex_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Texture} Planet\+::tex\+\_\+}\hypertarget{classPlanet_a96a79b3b253480e586f7be9d66e3ef90}{}\label{classPlanet_a96a79b3b253480e586f7be9d66e3ef90}
+
+
+main diffuse texture for the planet 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{planet_8h}{planet.\+h}\end{DoxyCompactItemize}

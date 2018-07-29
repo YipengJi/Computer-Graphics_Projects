@@ -1,0 +1,537 @@
+\hypertarget{glmath_8h}{}\section{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/glmath.h File Reference}
+\label{glmath_8h}\index{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/glmath.\+h@{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/glmath.\+h}}
+
+
+Implements the vector and matrix classes and their mathematical operations.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for glmath.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classvec3}{vec3}
+\item 
+class \hyperlink{classvec4}{vec4}
+\item 
+class \hyperlink{classmat3}{mat3}
+\item 
+class \hyperlink{classmat4}{mat4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{glmath_8h_a87df84819dfbb3a874d5303f9cb9c709}{deg2rad} (const float deg)
+\item 
+float \hyperlink{glmath_8h_a868197c67514868c51ea92cce7c8388e}{rad2deg} (const float rad)
+\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_aadaf3215f08daa75822dba381804233d}{operator-\/} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em unary minus\+: turn v into -\/v \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_a72a686f0cfd97d75a8a1cbfbdddc4618}{operator$\ast$} (const float s, const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em multiply vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_ad4c16c5adc46ee99bcb9a0067e5fb4a3}{operator$\ast$} (const \hyperlink{classvec3}{vec3} \&v, const float s)
+\begin{DoxyCompactList}\small\item\em multiply vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_af444fe3c8a058ed1736d9679d42bd84b}{operator$\ast$} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em component-\/wise multiplication of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_af32f6fb813aec84308a2a7f23066a3c5}{operator/} (const \hyperlink{classvec3}{vec3} \&v, const float s)
+\begin{DoxyCompactList}\small\item\em divide vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_a2bd9ca78c7ca8be54afc9500ff89117d}{operator+} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em add two vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_aa8cf6ba584300aeb08b9d9143635680a}{operator-\/} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em subtract vector {\ttfamily v1} from vector {\ttfamily v0} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_ab7afd8764c8e083204e00a6e7695d052}{min} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the component-\/wise minimum of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_a88bf317d8d46ef981cc71e72eb77b184}{max} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the component-\/wise maximum of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const float \hyperlink{glmath_8h_aafc632e11993d11bf6aad32e062da360}{norm} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em compute the Euclidean norm (length) of a vector {\ttfamily v} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_a541c1fc23b130b6a2004c90901505f14}{normalize} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em normalize vector {\ttfamily v} by dividing it by its norm \end{DoxyCompactList}\item 
+const float \hyperlink{glmath_8h_a6dd5d7da2a24ad71e690c01c1119a9bd}{distance} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the distance between vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const float \hyperlink{glmath_8h_af317d52e93c2fc78bdf35c7ad7550ee2}{dot} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the Euclidean dot product of {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_a300b47ffa1833ec786fc2f49da86ac4a}{cross} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the cross product of {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{glmath_8h_a35b64cc9ea1af33a921da839d3349645}{reflect} (const \hyperlink{classvec3}{vec3} \&v, const \hyperlink{classvec3}{vec3} \&n)
+\begin{DoxyCompactList}\small\item\em reflect vector {\ttfamily v} at normal {\ttfamily n} \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{glmath_8h_ab705d3337286a4262e84bbbb0b694a56}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em read the space-\/separated components of a vector from a stream \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{glmath_8h_a3e8f4856b29a4320f185f9a9cf0f94bc}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em output a vector by printing its comma-\/separated compontens \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_a2e5726174f83edbd097a9945fd2f0c28}{operator-\/} (const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em unary minus\+: turn v into -\/v \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_a98c9d4c8fc27b32ed551ac203baf0e0c}{operator$\ast$} (const float s, const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em multiply vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_a208e7a884cfca891c25b9e3071f52d27}{operator$\ast$} (const \hyperlink{classvec4}{vec4} \&v, const float s)
+\begin{DoxyCompactList}\small\item\em multiply vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_add201e10d82637347497141f64d91020}{operator$\ast$} (const \hyperlink{classvec4}{vec4} \&v0, const \hyperlink{classvec4}{vec4} \&v1)
+\begin{DoxyCompactList}\small\item\em component-\/wise multiplication of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_a4efb6b186bb0b92635a0c3df6aedb39a}{operator/} (const \hyperlink{classvec4}{vec4} \&v, const float s)
+\begin{DoxyCompactList}\small\item\em divide vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_a1792cf0d55692ba5066cfdfc23a2fd9f}{operator+} (const \hyperlink{classvec4}{vec4} \&v0, const \hyperlink{classvec4}{vec4} \&v1)
+\begin{DoxyCompactList}\small\item\em add two vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_afb0288b3263bac4a90d831b0dfd7cc0e}{operator-\/} (const \hyperlink{classvec4}{vec4} \&v0, const \hyperlink{classvec4}{vec4} \&v1)
+\begin{DoxyCompactList}\small\item\em subtract vector {\ttfamily v1} from vector {\ttfamily v0} \end{DoxyCompactList}\item 
+const float \hyperlink{glmath_8h_ac04a51a7cf0021285664e40573bcbea1}{norm} (const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em compute the Euclidean norm (length) of a vector {\ttfamily v} \end{DoxyCompactList}\item 
+const float \hyperlink{glmath_8h_ae22b5978ed0a76d231a419e2480cdce9}{dot} (const \hyperlink{classvec4}{vec4} \&v0, const \hyperlink{classvec4}{vec4} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the Euclidean dot product of {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{glmath_8h_ada396ae1c4ef513c6baf301f20f89bfa}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em read the space-\/separated components of a vector from a stream \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{glmath_8h_afadcf8884205c469256e4be7d96bfa12}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classvec4}{vec4} \&v)
+\begin{DoxyCompactList}\small\item\em output a vector by printing its comma-\/separated compontens \end{DoxyCompactList}\item 
+\hyperlink{classmat3}{mat3} \hyperlink{glmath_8h_aee9b77151906be62ccaceb17c454e038}{operator$\ast$} (const \hyperlink{classmat3}{mat3} \&m0, const \hyperlink{classmat3}{mat3} \&m1)
+\begin{DoxyCompactList}\small\item\em return matrix product m0$\ast$m1 \end{DoxyCompactList}\item 
+\hyperlink{classmat3}{mat3} \hyperlink{glmath_8h_a5ef0b4740283a5c525f1a8e0d0343068}{transpose} (const \hyperlink{classmat3}{mat3} \&m)
+\begin{DoxyCompactList}\small\item\em return transposed matrix \end{DoxyCompactList}\item 
+\hyperlink{classmat3}{mat3} \hyperlink{glmath_8h_ae665e2778b01a006f14207e05280e343}{inverse} (const \hyperlink{classmat3}{mat3} \&m)
+\begin{DoxyCompactList}\small\item\em return inverse of 3x3 matrix \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{glmath_8h_a85d71885cc6797f2553701eb01c52851}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classmat3}{mat3} \&m)
+\begin{DoxyCompactList}\small\item\em print matrix to output stream \end{DoxyCompactList}\item 
+\hyperlink{classmat4}{mat4} \hyperlink{glmath_8h_a2e7b6ede225dc12ac74069ab9eb60a52}{operator$\ast$} (const \hyperlink{classmat4}{mat4} \&m0, const \hyperlink{classmat4}{mat4} \&m1)
+\begin{DoxyCompactList}\small\item\em return matrix product m0$\ast$m1 \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \hyperlink{glmath_8h_a95f8518be9e64ad566dd8442b2884d4b}{operator$\ast$} (const \hyperlink{classmat4}{mat4} \&m, const \hyperlink{classvec4}{vec4} \&v0)
+\begin{DoxyCompactList}\small\item\em return matrix-\/vector product m$\ast$v \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{glmath_8h_ac079e857a3c74a1b974e4f4619e16adf}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classmat4}{mat4} \&m)
+\begin{DoxyCompactList}\small\item\em print matrix to output stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the vector and matrix classes and their mathematical operations. 
+
+
+
+\subsection{Function Documentation}
+\index{glmath.\+h@{glmath.\+h}!cross@{cross}}
+\index{cross@{cross}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{cross(const vec3 \&v0, const vec3 \&v1)}{cross(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a300b47ffa1833ec786fc2f49da86ac4a}{}\label{glmath_8h_a300b47ffa1833ec786fc2f49da86ac4a}
+
+
+compute the cross product of {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{deg2rad(const float deg)}{deg2rad(const float deg)}}]{\setlength{\rightskip}{0pt plus 5cm}float deg2rad (
+\begin{DoxyParamCaption}
+\item[{const float}]{deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a87df84819dfbb3a874d5303f9cb9c709}{}\label{glmath_8h_a87df84819dfbb3a874d5303f9cb9c709}
+\index{glmath.\+h@{glmath.\+h}!distance@{distance}}
+\index{distance@{distance}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{distance(const vec3 \&v0, const vec3 \&v1)}{distance(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const float distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a6dd5d7da2a24ad71e690c01c1119a9bd}{}\label{glmath_8h_a6dd5d7da2a24ad71e690c01c1119a9bd}
+
+
+compute the distance between vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!dot@{dot}}
+\index{dot@{dot}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{dot(const vec3 \&v0, const vec3 \&v1)}{dot(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const float dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_af317d52e93c2fc78bdf35c7ad7550ee2}{}\label{glmath_8h_af317d52e93c2fc78bdf35c7ad7550ee2}
+
+
+compute the Euclidean dot product of {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!dot@{dot}}
+\index{dot@{dot}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{dot(const vec4 \&v0, const vec4 \&v1)}{dot(const vec4 &v0, const vec4 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const float dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v0, }
+\item[{const {\bf vec4} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_ae22b5978ed0a76d231a419e2480cdce9}{}\label{glmath_8h_ae22b5978ed0a76d231a419e2480cdce9}
+
+
+compute the Euclidean dot product of {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!inverse@{inverse}}
+\index{inverse@{inverse}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{inverse(const mat3 \&m)}{inverse(const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} inverse (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_ae665e2778b01a006f14207e05280e343}{}\label{glmath_8h_ae665e2778b01a006f14207e05280e343}
+
+
+return inverse of 3x3 matrix 
+
+\index{glmath.\+h@{glmath.\+h}!max@{max}}
+\index{max@{max}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{max(const vec3 \&v0, const vec3 \&v1)}{max(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} max (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a88bf317d8d46ef981cc71e72eb77b184}{}\label{glmath_8h_a88bf317d8d46ef981cc71e72eb77b184}
+
+
+compute the component-\/wise maximum of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!min@{min}}
+\index{min@{min}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{min(const vec3 \&v0, const vec3 \&v1)}{min(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} min (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_ab7afd8764c8e083204e00a6e7695d052}{}\label{glmath_8h_ab7afd8764c8e083204e00a6e7695d052}
+
+
+compute the component-\/wise minimum of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!norm@{norm}}
+\index{norm@{norm}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{norm(const vec3 \&v)}{norm(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const float norm (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_aafc632e11993d11bf6aad32e062da360}{}\label{glmath_8h_aafc632e11993d11bf6aad32e062da360}
+
+
+compute the Euclidean norm (length) of a vector {\ttfamily v} 
+
+\index{glmath.\+h@{glmath.\+h}!norm@{norm}}
+\index{norm@{norm}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{norm(const vec4 \&v)}{norm(const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const float norm (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_ac04a51a7cf0021285664e40573bcbea1}{}\label{glmath_8h_ac04a51a7cf0021285664e40573bcbea1}
+
+
+compute the Euclidean norm (length) of a vector {\ttfamily v} 
+
+\index{glmath.\+h@{glmath.\+h}!normalize@{normalize}}
+\index{normalize@{normalize}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{normalize(const vec3 \&v)}{normalize(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} normalize (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a541c1fc23b130b6a2004c90901505f14}{}\label{glmath_8h_a541c1fc23b130b6a2004c90901505f14}
+
+
+normalize vector {\ttfamily v} by dividing it by its norm 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const float s, const vec3 \&v)}{operator*(const float s, const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const float}]{s, }
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a72a686f0cfd97d75a8a1cbfbdddc4618}{}\label{glmath_8h_a72a686f0cfd97d75a8a1cbfbdddc4618}
+
+
+multiply vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const vec3 \&v, const float s)}{operator*(const vec3 &v, const float s)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_ad4c16c5adc46ee99bcb9a0067e5fb4a3}{}\label{glmath_8h_ad4c16c5adc46ee99bcb9a0067e5fb4a3}
+
+
+multiply vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const vec3 \&v0, const vec3 \&v1)}{operator*(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_af444fe3c8a058ed1736d9679d42bd84b}{}\label{glmath_8h_af444fe3c8a058ed1736d9679d42bd84b}
+
+
+component-\/wise multiplication of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const float s, const vec4 \&v)}{operator*(const float s, const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const float}]{s, }
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a98c9d4c8fc27b32ed551ac203baf0e0c}{}\label{glmath_8h_a98c9d4c8fc27b32ed551ac203baf0e0c}
+
+
+multiply vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const vec4 \&v, const float s)}{operator*(const vec4 &v, const float s)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v, }
+\item[{const float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a208e7a884cfca891c25b9e3071f52d27}{}\label{glmath_8h_a208e7a884cfca891c25b9e3071f52d27}
+
+
+multiply vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const vec4 \&v0, const vec4 \&v1)}{operator*(const vec4 &v0, const vec4 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v0, }
+\item[{const {\bf vec4} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_add201e10d82637347497141f64d91020}{}\label{glmath_8h_add201e10d82637347497141f64d91020}
+
+
+component-\/wise multiplication of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const mat3 \&m0, const mat3 \&m1)}{operator*(const mat3 &m0, const mat3 &m1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m0, }
+\item[{const {\bf mat3} \&}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_aee9b77151906be62ccaceb17c454e038}{}\label{glmath_8h_aee9b77151906be62ccaceb17c454e038}
+
+
+return matrix product m0$\ast$m1 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const mat4 \&m0, const mat4 \&m1)}{operator*(const mat4 &m0, const mat4 &m1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat4} \&}]{m0, }
+\item[{const {\bf mat4} \&}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_a2e7b6ede225dc12ac74069ab9eb60a52}{}\label{glmath_8h_a2e7b6ede225dc12ac74069ab9eb60a52}
+
+
+return matrix product m0$\ast$m1 
+
+\index{glmath.\+h@{glmath.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const mat4 \&m, const vec4 \&v0)}{operator*(const mat4 &m, const vec4 &v0)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat4} \&}]{m, }
+\item[{const {\bf vec4} \&}]{v0}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_a95f8518be9e64ad566dd8442b2884d4b}{}\label{glmath_8h_a95f8518be9e64ad566dd8442b2884d4b}
+
+
+return matrix-\/vector product m$\ast$v 
+
+\index{glmath.\+h@{glmath.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator+(const vec3 \&v0, const vec3 \&v1)}{operator+(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a2bd9ca78c7ca8be54afc9500ff89117d}{}\label{glmath_8h_a2bd9ca78c7ca8be54afc9500ff89117d}
+
+
+add two vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator+(const vec4 \&v0, const vec4 \&v1)}{operator+(const vec4 &v0, const vec4 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v0, }
+\item[{const {\bf vec4} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a1792cf0d55692ba5066cfdfc23a2fd9f}{}\label{glmath_8h_a1792cf0d55692ba5066cfdfc23a2fd9f}
+
+
+add two vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{glmath.\+h@{glmath.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator-\/(const vec3 \&v)}{operator-(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_aadaf3215f08daa75822dba381804233d}{}\label{glmath_8h_aadaf3215f08daa75822dba381804233d}
+
+
+unary minus\+: turn v into -\/v 
+
+\index{glmath.\+h@{glmath.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator-\/(const vec3 \&v0, const vec3 \&v1)}{operator-(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_aa8cf6ba584300aeb08b9d9143635680a}{}\label{glmath_8h_aa8cf6ba584300aeb08b9d9143635680a}
+
+
+subtract vector {\ttfamily v1} from vector {\ttfamily v0} 
+
+\index{glmath.\+h@{glmath.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator-\/(const vec4 \&v)}{operator-(const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a2e5726174f83edbd097a9945fd2f0c28}{}\label{glmath_8h_a2e5726174f83edbd097a9945fd2f0c28}
+
+
+unary minus\+: turn v into -\/v 
+
+\index{glmath.\+h@{glmath.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator-\/(const vec4 \&v0, const vec4 \&v1)}{operator-(const vec4 &v0, const vec4 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v0, }
+\item[{const {\bf vec4} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_afb0288b3263bac4a90d831b0dfd7cc0e}{}\label{glmath_8h_afb0288b3263bac4a90d831b0dfd7cc0e}
+
+
+subtract vector {\ttfamily v1} from vector {\ttfamily v0} 
+
+\index{glmath.\+h@{glmath.\+h}!operator/@{operator/}}
+\index{operator/@{operator/}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator/(const vec3 \&v, const float s)}{operator/(const vec3 &v, const float s)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_af32f6fb813aec84308a2a7f23066a3c5}{}\label{glmath_8h_af32f6fb813aec84308a2a7f23066a3c5}
+
+
+divide vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{glmath.\+h@{glmath.\+h}!operator/@{operator/}}
+\index{operator/@{operator/}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator/(const vec4 \&v, const float s)}{operator/(const vec4 &v, const float s)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec4} operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec4} \&}]{v, }
+\item[{const float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a4efb6b186bb0b92635a0c3df6aedb39a}{}\label{glmath_8h_a4efb6b186bb0b92635a0c3df6aedb39a}
+
+
+divide vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{glmath.\+h@{glmath.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const vec3 \&v)}{operator<<(std::ostream &os, const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a3e8f4856b29a4320f185f9a9cf0f94bc}{}\label{glmath_8h_a3e8f4856b29a4320f185f9a9cf0f94bc}
+
+
+output a vector by printing its comma-\/separated compontens 
+
+\index{glmath.\+h@{glmath.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const vec4 \&v)}{operator<<(std::ostream &os, const vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_afadcf8884205c469256e4be7d96bfa12}{}\label{glmath_8h_afadcf8884205c469256e4be7d96bfa12}
+
+
+output a vector by printing its comma-\/separated compontens 
+
+\index{glmath.\+h@{glmath.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const mat3 \&m)}{operator<<(std::ostream &os, const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_a85d71885cc6797f2553701eb01c52851}{}\label{glmath_8h_a85d71885cc6797f2553701eb01c52851}
+
+
+print matrix to output stream 
+
+\index{glmath.\+h@{glmath.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const mat4 \&m)}{operator<<(std::ostream &os, const mat4 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf mat4} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_ac079e857a3c74a1b974e4f4619e16adf}{}\label{glmath_8h_ac079e857a3c74a1b974e4f4619e16adf}
+
+
+print matrix to output stream 
+
+\index{glmath.\+h@{glmath.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(std\+::istream \&is, vec3 \&v)}{operator>>(std::istream &is, vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_ab705d3337286a4262e84bbbb0b694a56}{}\label{glmath_8h_ab705d3337286a4262e84bbbb0b694a56}
+
+
+read the space-\/separated components of a vector from a stream 
+
+\index{glmath.\+h@{glmath.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(std\+::istream \&is, vec4 \&v)}{operator>>(std::istream &is, vec4 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_ada396ae1c4ef513c6baf301f20f89bfa}{}\label{glmath_8h_ada396ae1c4ef513c6baf301f20f89bfa}
+
+
+read the space-\/separated components of a vector from a stream 
+
+\index{glmath.\+h@{glmath.\+h}!rad2deg@{rad2deg}}
+\index{rad2deg@{rad2deg}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{rad2deg(const float rad)}{rad2deg(const float rad)}}]{\setlength{\rightskip}{0pt plus 5cm}float rad2deg (
+\begin{DoxyParamCaption}
+\item[{const float}]{rad}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a868197c67514868c51ea92cce7c8388e}{}\label{glmath_8h_a868197c67514868c51ea92cce7c8388e}
+\index{glmath.\+h@{glmath.\+h}!reflect@{reflect}}
+\index{reflect@{reflect}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{reflect(const vec3 \&v, const vec3 \&n)}{reflect(const vec3 &v, const vec3 &n)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} reflect (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const {\bf vec3} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{glmath_8h_a35b64cc9ea1af33a921da839d3349645}{}\label{glmath_8h_a35b64cc9ea1af33a921da839d3349645}
+
+
+reflect vector {\ttfamily v} at normal {\ttfamily n} 
+
+\index{glmath.\+h@{glmath.\+h}!transpose@{transpose}}
+\index{transpose@{transpose}!glmath.\+h@{glmath.\+h}}
+\subsubsection[{\texorpdfstring{transpose(const mat3 \&m)}{transpose(const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} transpose (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8h_a5ef0b4740283a5c525f1a8e0d0343068}{}\label{glmath_8h_a5ef0b4740283a5c525f1a8e0d0343068}
+
+
+return transposed matrix 
+

@@ -1,0 +1,58 @@
+\hypertarget{solar__viewer_8h}{}\section{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/solar\+\_\+viewer.h File Reference}
+\label{solar__viewer_8h}\index{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/solar\+\_\+viewer.\+h@{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/solar\+\_\+viewer.\+h}}
+{\ttfamily \#include \char`\"{}gl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}glfw\+\_\+window.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sphere.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}shader.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}texture.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}planet.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ship.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}path.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}frame.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}billboard.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bezier.\+h\char`\"{}}\\*
+Include dependency graph for solar\+\_\+viewer.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classSolar__viewer}{Solar\+\_\+viewer}
+\begin{DoxyCompactList}\small\item\em Open\+GL viewer that handles all the rendering for us. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97}{P\+L\+A\+N\+ET} \{ \\*
+\hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97ad740e028dfaa7a9a6bcd70b41b2d6598}{S\+UN} =0, 
+\hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a2a817d820a01a599d5a7b8d4c1efdcd1}{M\+E\+R\+C\+U\+RY} =1, 
+\hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a3cad57d681b42e9c2cad588c91fdfe86}{V\+E\+N\+US} =2, 
+\hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a6c9e1310032c6048284b796f5738f469}{E\+A\+R\+TH} =3, 
+\\*
+\hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a913c111f07d4331db94d8a5f4e5f0bc8}{M\+O\+ON} =4, 
+\hyperlink{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a83bbeb6e2f14b3da41dfd9c0387d253f}{M\+A\+RS} =5
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!P\+L\+A\+N\+ET@{P\+L\+A\+N\+ET}}
+\index{P\+L\+A\+N\+ET@{P\+L\+A\+N\+ET}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}
+\subsubsection[{\texorpdfstring{P\+L\+A\+N\+ET}{PLANET}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf P\+L\+A\+N\+ET}}\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+UN@{S\+UN}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!S\+UN@{S\+UN}}\item[{\em 
+S\+UN\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97ad740e028dfaa7a9a6bcd70b41b2d6598}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97ad740e028dfaa7a9a6bcd70b41b2d6598}
+}]\index{M\+E\+R\+C\+U\+RY@{M\+E\+R\+C\+U\+RY}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!M\+E\+R\+C\+U\+RY@{M\+E\+R\+C\+U\+RY}}\item[{\em 
+M\+E\+R\+C\+U\+RY\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a2a817d820a01a599d5a7b8d4c1efdcd1}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a2a817d820a01a599d5a7b8d4c1efdcd1}
+}]\index{V\+E\+N\+US@{V\+E\+N\+US}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!V\+E\+N\+US@{V\+E\+N\+US}}\item[{\em 
+V\+E\+N\+US\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a3cad57d681b42e9c2cad588c91fdfe86}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a3cad57d681b42e9c2cad588c91fdfe86}
+}]\index{E\+A\+R\+TH@{E\+A\+R\+TH}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!E\+A\+R\+TH@{E\+A\+R\+TH}}\item[{\em 
+E\+A\+R\+TH\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a6c9e1310032c6048284b796f5738f469}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a6c9e1310032c6048284b796f5738f469}
+}]\index{M\+O\+ON@{M\+O\+ON}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!M\+O\+ON@{M\+O\+ON}}\item[{\em 
+M\+O\+ON\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a913c111f07d4331db94d8a5f4e5f0bc8}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a913c111f07d4331db94d8a5f4e5f0bc8}
+}]\index{M\+A\+RS@{M\+A\+RS}!solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}}\index{solar\+\_\+viewer.\+h@{solar\+\_\+viewer.\+h}!M\+A\+RS@{M\+A\+RS}}\item[{\em 
+M\+A\+RS\hypertarget{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a83bbeb6e2f14b3da41dfd9c0387d253f}{}\label{solar__viewer_8h_a084235bafbc211b5061626af0887ab97a83bbeb6e2f14b3da41dfd9c0387d253f}
+}]\end{description}
+\end{Desc}

@@ -1,0 +1,164 @@
+\hypertarget{classCylinder}{}\section{Cylinder Class Reference}
+\label{classCylinder}\index{Cylinder@{Cylinder}}
+
+
+This class overrides the intersection method \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}.  
+
+
+
+
+{\ttfamily \#include $<$Cylinder.\+h$>$}
+
+
+
+Inheritance diagram for Cylinder\+:
+% FIG 0
+
+
+Collaboration diagram for Cylinder\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCylinder_acfd8665ca7813f66b02db296fa0a6fd3}{Cylinder} (const \hyperlink{classvec3}{vec3} \&\+\_\+center=\hyperlink{classvec3}{vec3}(0, 0, 0), double \+\_\+radius=1, const \hyperlink{classvec3}{vec3} \&\+\_\+axis=\hyperlink{classvec3}{vec3}(1, 0, 0), double \+\_\+height=1)
+\begin{DoxyCompactList}\small\item\em Construct a cylinder by directly specifying its parameters. \end{DoxyCompactList}\item 
+\hyperlink{classCylinder_a63a01bb5b2a520b0fb7521740a90c2a7}{Cylinder} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Construct a cylinder with parameters parsed from an input stream. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classCylinder_a0ae732b1b669bbeb9eb83ee7395a5add}{intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override
+\item 
+virtual void \hyperlink{classCylinder_a15050a6257a624cae1566a949b03b7da}{parse} (std\+::istream \&is) override
+\begin{DoxyCompactList}\small\item\em parse cylinder from an input stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCylinder_a50180f95904cab9cc52c7ebb25aa3ea2}{center}
+\begin{DoxyCompactList}\small\item\em center position \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCylinder_a82b22d56b3affae2163dfb474d206227}{axis}
+\begin{DoxyCompactList}\small\item\em unit axis vector \end{DoxyCompactList}\item 
+double \hyperlink{classCylinder_a8a825799285bcf60b49b8aef0459b498}{radius}
+\begin{DoxyCompactList}\small\item\em radius \end{DoxyCompactList}\item 
+double \hyperlink{classCylinder_a211cebc37f1025850cdacffe1badb578}{height}
+\begin{DoxyCompactList}\small\item\em height \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class overrides the intersection method \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+
+This class implements a cylinder object, which is specified by its center, 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
+\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{Cylinder(const vec3 \&\+\_\+center=vec3(0, 0, 0), double \+\_\+radius=1, const vec3 \&\+\_\+axis=vec3(1, 0, 0), double \+\_\+height=1)}{Cylinder(const vec3 &_center=vec3(0, 0, 0), double _radius=1, const vec3 &_axis=vec3(1, 0, 0), double _height=1)}}]{\setlength{\rightskip}{0pt plus 5cm}Cylinder\+::\+Cylinder (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{\+\_\+center = {\ttfamily {\bf vec3}(0,0,0)}, }
+\item[{double}]{\+\_\+radius = {\ttfamily 1}, }
+\item[{const {\bf vec3} \&}]{\+\_\+axis = {\ttfamily {\bf vec3}(1,0,0)}, }
+\item[{double}]{\+\_\+height = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCylinder_acfd8665ca7813f66b02db296fa0a6fd3}{}\label{classCylinder_acfd8665ca7813f66b02db296fa0a6fd3}
+
+
+Construct a cylinder by directly specifying its parameters. 
+
+\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
+\index{Cylinder@{Cylinder}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{Cylinder(std\+::istream \&is)}{Cylinder(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}Cylinder\+::\+Cylinder (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCylinder_a63a01bb5b2a520b0fb7521740a90c2a7}{}\label{classCylinder_a63a01bb5b2a520b0fb7521740a90c2a7}
+
+
+Construct a cylinder with parameters parsed from an input stream. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Cylinder@{Cylinder}!intersect@{intersect}}
+\index{intersect@{intersect}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{intersect(const Ray \&\+\_\+ray, vec3 \&\+\_\+intersection\+\_\+point, vec3 \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override}{intersect(const Ray &_ray, vec3 &_intersection_point, vec3 &_intersection_normal, double &_intersection_t) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool Cylinder\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+normal, }
+\item[{double \&}]{\+\_\+intersection\+\_\+t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classCylinder_a0ae732b1b669bbeb9eb83ee7395a5add}{}\label{classCylinder_a0ae732b1b669bbeb9eb83ee7395a5add}
+Compute the intersection of the cylinder with {\ttfamily \+\_\+ray}. Return whether there is an intersection. If there is one, return the intersection data. This function overrides \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ray} & the ray to intersect the plane with \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+point} & position of the intersection \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+normal} & normal vector at the intersection point \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+t} & ray parameter at the intesection point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]
+\begin{DoxyItemize}
+\item compute the first valid intersection {\ttfamily \+\_\+ray} with the cylinder (valid means in front of the viewer\+: t $>$ 0)
+\item store intersection point in {\ttfamily \+\_\+intersection\+\_\+point}
+\item store ray parameter in {\ttfamily \+\_\+intersection\+\_\+t}
+\item store normal at \+\_\+intersection\+\_\+point in {\ttfamily \+\_\+intersection\+\_\+normal}.
+\item return whether there is an intersection with t $>$ 0 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+Implements \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object}.
+
+\index{Cylinder@{Cylinder}!parse@{parse}}
+\index{parse@{parse}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{parse(std\+::istream \&is) override}{parse(std::istream &is) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Cylinder\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classCylinder_a15050a6257a624cae1566a949b03b7da}{}\label{classCylinder_a15050a6257a624cae1566a949b03b7da}
+
+
+parse cylinder from an input stream 
+
+
+
+Reimplemented from \hyperlink{structObject_ae7828b080c96e2226f3dc19823161d41}{Object}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Cylinder@{Cylinder}!axis@{axis}}
+\index{axis@{axis}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{axis}{axis}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Cylinder\+::axis\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCylinder_a82b22d56b3affae2163dfb474d206227}{}\label{classCylinder_a82b22d56b3affae2163dfb474d206227}
+
+
+unit axis vector 
+
+\index{Cylinder@{Cylinder}!center@{center}}
+\index{center@{center}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{center}{center}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Cylinder\+::center\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCylinder_a50180f95904cab9cc52c7ebb25aa3ea2}{}\label{classCylinder_a50180f95904cab9cc52c7ebb25aa3ea2}
+
+
+center position 
+
+\index{Cylinder@{Cylinder}!height@{height}}
+\index{height@{height}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{height}{height}}]{\setlength{\rightskip}{0pt plus 5cm}double Cylinder\+::height\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCylinder_a211cebc37f1025850cdacffe1badb578}{}\label{classCylinder_a211cebc37f1025850cdacffe1badb578}
+
+
+height 
+
+\index{Cylinder@{Cylinder}!radius@{radius}}
+\index{radius@{radius}!Cylinder@{Cylinder}}
+\subsubsection[{\texorpdfstring{radius}{radius}}]{\setlength{\rightskip}{0pt plus 5cm}double Cylinder\+::radius\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCylinder_a8a825799285bcf60b49b8aef0459b498}{}\label{classCylinder_a8a825799285bcf60b49b8aef0459b498}
+
+
+radius 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Cylinder_8h}{Cylinder.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Cylinder_8cpp}{Cylinder.\+cpp}\end{DoxyCompactItemize}

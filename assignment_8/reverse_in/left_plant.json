@@ -1,0 +1,10 @@
+{
+	"name": "left_plant",
+	"stochastic": false,
+	"initial": "F",
+	"angle_deg": 60,
+	"num_iters": 7,
+	"rules": {
+		"F": "F[+F]F"
+	}
+}

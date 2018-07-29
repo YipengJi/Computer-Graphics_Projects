@@ -1,0 +1,17 @@
+/home/eason/Desktop/EPFL_CG/assignment_4/build/CMakeFiles/edit_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/CMakeFiles/rebuild_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/CMakeFiles/doc.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glew/CMakeFiles/rebuild_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glew/CMakeFiles/edit_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glew/CMakeFiles/glew.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glfw/CMakeFiles/edit_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glfw/CMakeFiles/rebuild_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glfw/src/CMakeFiles/rebuild_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glfw/src/CMakeFiles/edit_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/glfw/src/CMakeFiles/glfw.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/lodePNG/CMakeFiles/edit_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/lodePNG/CMakeFiles/rebuild_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/lib/lodePNG/CMakeFiles/lodePNG.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/src/CMakeFiles/edit_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/src/CMakeFiles/rebuild_cache.dir
+/home/eason/Desktop/EPFL_CG/assignment_4/build/src/CMakeFiles/SolarSystem.dir

@@ -1,0 +1,130 @@
+\hypertarget{classSphere}{}\section{Sphere Class Reference}
+\label{classSphere}\index{Sphere@{Sphere}}
+
+
+{\ttfamily \#include $<$Sphere.\+h$>$}
+
+
+
+Inheritance diagram for Sphere\+:
+% FIG 0
+
+
+Collaboration diagram for Sphere\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSphere_a65c44103cb8b65e624b89db0aa4831e1}{Sphere} (const \hyperlink{classvec3}{vec3} \&\+\_\+center=\hyperlink{classvec3}{vec3}(0, 0, 0), double \+\_\+radius=1)
+\begin{DoxyCompactList}\small\item\em Construct a sphere by specifying center and radius. \end{DoxyCompactList}\item 
+\hyperlink{classSphere_acb3e0c818334dfbbcb0557a37a38ee85}{Sphere} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Construct a sphere with parameters parsed from an input stream. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classSphere_a6650f14281c43b799d9ae0c0b690b1bd}{intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override
+\item 
+virtual void \hyperlink{classSphere_aa55e3407f148feb451866bc39907f6fb}{parse} (std\+::istream \&is) override
+\begin{DoxyCompactList}\small\item\em parse sphere from an input stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classSphere_a06c913d87d0f6d172b4049bbf18dadf9}{center}
+\begin{DoxyCompactList}\small\item\em center position of the sphere \end{DoxyCompactList}\item 
+double \hyperlink{classSphere_a45d6c6c870fac7c2a885ad2e226334ad}{radius}
+\begin{DoxyCompactList}\small\item\em radius of the sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class loads and raytraces scenes consisting of cameras, lights, and objects
+
+This class implements a sphere object, which is specified by its center and its radius. This class overrides the intersection method \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{Sphere(const vec3 \&\+\_\+center=vec3(0, 0, 0), double \+\_\+radius=1)}{Sphere(const vec3 &_center=vec3(0, 0, 0), double _radius=1)}}]{\setlength{\rightskip}{0pt plus 5cm}Sphere\+::\+Sphere (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{\+\_\+center = {\ttfamily {\bf vec3}(0,0,0)}, }
+\item[{double}]{\+\_\+radius = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classSphere_a65c44103cb8b65e624b89db0aa4831e1}{}\label{classSphere_a65c44103cb8b65e624b89db0aa4831e1}
+
+
+Construct a sphere by specifying center and radius. 
+
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{Sphere(std\+::istream \&is)}{Sphere(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}Sphere\+::\+Sphere (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classSphere_acb3e0c818334dfbbcb0557a37a38ee85}{}\label{classSphere_acb3e0c818334dfbbcb0557a37a38ee85}
+
+
+Construct a sphere with parameters parsed from an input stream. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Sphere@{Sphere}!intersect@{intersect}}
+\index{intersect@{intersect}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{intersect(const Ray \&\+\_\+ray, vec3 \&\+\_\+intersection\+\_\+point, vec3 \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override}{intersect(const Ray &_ray, vec3 &_intersection_point, vec3 &_intersection_normal, double &_intersection_t) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sphere\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+normal, }
+\item[{double \&}]{\+\_\+intersection\+\_\+t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classSphere_a6650f14281c43b799d9ae0c0b690b1bd}{}\label{classSphere_a6650f14281c43b799d9ae0c0b690b1bd}
+Compute the intersection of the sphere with {\ttfamily \+\_\+ray}. Return whether there is an intersection. If there is one, return the intersection data. This function overrides \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ray} & the ray to intersect the plane with \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+point} & position of the intersection \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+normal} & normal vector at the intersection point \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+t} & ray parameter at the intesection point \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object}.
+
+\index{Sphere@{Sphere}!parse@{parse}}
+\index{parse@{parse}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{parse(std\+::istream \&is) override}{parse(std::istream &is) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sphere\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classSphere_aa55e3407f148feb451866bc39907f6fb}{}\label{classSphere_aa55e3407f148feb451866bc39907f6fb}
+
+
+parse sphere from an input stream 
+
+
+
+Reimplemented from \hyperlink{structObject_ae7828b080c96e2226f3dc19823161d41}{Object}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Sphere@{Sphere}!center@{center}}
+\index{center@{center}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{center}{center}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Sphere\+::center\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a06c913d87d0f6d172b4049bbf18dadf9}{}\label{classSphere_a06c913d87d0f6d172b4049bbf18dadf9}
+
+
+center position of the sphere 
+
+\index{Sphere@{Sphere}!radius@{radius}}
+\index{radius@{radius}!Sphere@{Sphere}}
+\subsubsection[{\texorpdfstring{radius}{radius}}]{\setlength{\rightskip}{0pt plus 5cm}double Sphere\+::radius\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSphere_a45d6c6c870fac7c2a885ad2e226334ad}{}\label{classSphere_a45d6c6c870fac7c2a885ad2e226334ad}
+
+
+radius of the sphere 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+3/src/\hyperlink{Sphere_8h}{Sphere.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+3/src/\hyperlink{Sphere_8cpp}{Sphere.\+cpp}\end{DoxyCompactItemize}

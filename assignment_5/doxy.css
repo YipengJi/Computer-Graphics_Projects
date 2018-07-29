@@ -1,0 +1,6 @@
+div.image {
+	text-align: inherit;
+}
+div.image img{
+	max-width: 42em;
+}

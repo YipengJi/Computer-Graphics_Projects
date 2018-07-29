@@ -1,0 +1,14 @@
+{
+	"name": "stochastic_01",
+	"stochastic": true,
+	"initial": "F",
+	"angle_deg": 12,
+	"num_iters": 5,
+	"rules": {
+		"F": [
+			{"p": 0.33, "e": "F[+F]F[-F]F"},
+			{"p": 0.33, "e": "F[+F]F"},
+			{"p": 0.34, "e": "F[-F]F"}
+		]
+	}
+}

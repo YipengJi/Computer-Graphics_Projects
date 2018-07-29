@@ -1,0 +1,136 @@
+\hypertarget{classPlane}{}\section{Plane Class Reference}
+\label{classPlane}\index{Plane@{Plane}}
+
+
+{\ttfamily \#include $<$Plane.\+h$>$}
+
+
+
+Inheritance diagram for Plane\+:
+% FIG 0
+
+
+Collaboration diagram for Plane\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPlane_a6ce42dd3bf06b497256454534f582a80}{Plane} (const \hyperlink{classvec3}{vec3} \&\+\_\+center=\hyperlink{classvec3}{vec3}(0, 0, 0), const \hyperlink{classvec3}{vec3} \&\+\_\+normal=\hyperlink{classvec3}{vec3}(0, 1, 0))
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\hyperlink{classPlane_a5236597c4a6324126e8746ecb4af1535}{Plane} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Construct a plane with parameters parsed from an input stream. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classPlane_ab146bb10ad52e8535dad25d531c43b86}{intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override
+\item 
+virtual void \hyperlink{classPlane_af5361222d1aa404fc720d7b4b68a634c}{parse} (std\+::istream \&is) override
+\begin{DoxyCompactList}\small\item\em parse plane from an input stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPlane_a366eef1f4daccfc48ccd824cca63a026}{center}
+\begin{DoxyCompactList}\small\item\em one (arbitrary) point on the plane \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classPlane_ac3a6d80b28df1dd0ef7867663227c937}{normal}
+\begin{DoxyCompactList}\small\item\em normal vector of the plane \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements a simple plane object. A plane is specified by a center point and a normal vector. This class overrides the intersection method \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\subsubsection[{\texorpdfstring{Plane(const vec3 \&\+\_\+center=vec3(0, 0, 0), const vec3 \&\+\_\+normal=vec3(0, 1, 0))}{Plane(const vec3 &_center=vec3(0, 0, 0), const vec3 &_normal=vec3(0, 1, 0))}}]{\setlength{\rightskip}{0pt plus 5cm}Plane\+::\+Plane (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{\+\_\+center = {\ttfamily {\bf vec3}(0,0,0)}, }
+\item[{const {\bf vec3} \&}]{\+\_\+normal = {\ttfamily {\bf vec3}(0,1,0)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classPlane_a6ce42dd3bf06b497256454534f582a80}{}\label{classPlane_a6ce42dd3bf06b497256454534f582a80}
+
+
+constructor 
+
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\subsubsection[{\texorpdfstring{Plane(std\+::istream \&is)}{Plane(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}Plane\+::\+Plane (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPlane_a5236597c4a6324126e8746ecb4af1535}{}\label{classPlane_a5236597c4a6324126e8746ecb4af1535}
+
+
+Construct a plane with parameters parsed from an input stream. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Plane@{Plane}!intersect@{intersect}}
+\index{intersect@{intersect}!Plane@{Plane}}
+\subsubsection[{\texorpdfstring{intersect(const Ray \&\+\_\+ray, vec3 \&\+\_\+intersection\+\_\+point, vec3 \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override}{intersect(const Ray &_ray, vec3 &_intersection_point, vec3 &_intersection_normal, double &_intersection_t) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool Plane\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+normal, }
+\item[{double \&}]{\+\_\+intersection\+\_\+t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classPlane_ab146bb10ad52e8535dad25d531c43b86}{}\label{classPlane_ab146bb10ad52e8535dad25d531c43b86}
+Compute the intersection of the plane with {\ttfamily \+\_\+ray}. Return whether there is an intersection. If there is one, return the intersection data. This function overrides \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ray} & the ray to intersect the plane with \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+point} & position of the intersection \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+normal} & normal vector at the intersection point \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+t} & ray parameter at the intesection point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]
+\begin{DoxyItemize}
+\item compute the intersection of the plane with {\ttfamily \+\_\+ray}
+\item if ray and plane are parallel there is no intersection
+\item otherwise compute intersection data and store it in {\ttfamily \+\_\+intersection\+\_\+point}, {\ttfamily \+\_\+intersection\+\_\+normal}, and {\ttfamily \+\_\+intersection\+\_\+t}.
+\item return whether there is an intersection in front of the viewer (t $>$ 0) 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+Implements \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object}.
+
+\index{Plane@{Plane}!parse@{parse}}
+\index{parse@{parse}!Plane@{Plane}}
+\subsubsection[{\texorpdfstring{parse(std\+::istream \&is) override}{parse(std::istream &is) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Plane\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classPlane_af5361222d1aa404fc720d7b4b68a634c}{}\label{classPlane_af5361222d1aa404fc720d7b4b68a634c}
+
+
+parse plane from an input stream 
+
+
+
+Reimplemented from \hyperlink{structObject_ae7828b080c96e2226f3dc19823161d41}{Object}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Plane@{Plane}!center@{center}}
+\index{center@{center}!Plane@{Plane}}
+\subsubsection[{\texorpdfstring{center}{center}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Plane\+::center\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPlane_a366eef1f4daccfc48ccd824cca63a026}{}\label{classPlane_a366eef1f4daccfc48ccd824cca63a026}
+
+
+one (arbitrary) point on the plane 
+
+\index{Plane@{Plane}!normal@{normal}}
+\index{normal@{normal}!Plane@{Plane}}
+\subsubsection[{\texorpdfstring{normal}{normal}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Plane\+::normal\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPlane_ac3a6d80b28df1dd0ef7867663227c937}{}\label{classPlane_ac3a6d80b28df1dd0ef7867663227c937}
+
+
+normal vector of the plane 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Plane_8h}{Plane.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Plane_8cpp}{Plane.\+cpp}\end{DoxyCompactItemize}

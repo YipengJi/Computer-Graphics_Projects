@@ -1,0 +1,230 @@
+\hypertarget{classGLFW__window}{}\section{G\+L\+F\+W\+\_\+window Class Reference}
+\label{classGLFW__window}\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+
+
+Simple G\+L\+FW window.  
+
+
+
+
+{\ttfamily \#include $<$glfw\+\_\+window.\+h$>$}
+
+
+
+Inheritance diagram for G\+L\+F\+W\+\_\+window\+:
+% FIG 0
+
+
+Collaboration diagram for G\+L\+F\+W\+\_\+window\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGLFW__window_ac02ae290228702da2ded0e810b2e201d}{G\+L\+F\+W\+\_\+window} (const char $\ast$\+\_\+title=\char`\"{}\char`\"{}, int \+\_\+width=0, int \+\_\+height=0)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classGLFW__window_a4ac7294a25f64fcb6dbb640767ad3022}{$\sim$\+G\+L\+F\+W\+\_\+window} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+int \hyperlink{classGLFW__window_a9d48023a3e8659231872e7a163924ee1}{run} ()
+\begin{DoxyCompactList}\small\item\em main window loop \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classGLFW__window_a14a56877d0edc611e1e69c1f924183bb}{initialize} ()=0
+\begin{DoxyCompactList}\small\item\em must overload\+: initialize all Open\+GL states \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGLFW__window_a64044226d3bd2c9b286d837b7fa8ae7c}{resize} (int width, int height)=0
+\begin{DoxyCompactList}\small\item\em must overload\+: handle window resizing \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGLFW__window_ac1dffdbaead812e20c696348f4aff460}{paint} ()=0
+\begin{DoxyCompactList}\small\item\em must overload\+: render the scene \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGLFW__window_a23f66e5464a50bd3196b5308afce5f92}{keyboard} (int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em may overload\+: handle keyboard events \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGLFW__window_af12f8511c1311546f8cecabb556cae74}{timer} ()
+\begin{DoxyCompactList}\small\item\em may overload\+: handle idle timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+Wwindow $\ast$ \hyperlink{classGLFW__window_aa4396bd9557a5476690132bf6a0efcdf}{window\+\_\+}
+\begin{DoxyCompactList}\small\item\em G\+L\+FW window pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classGLFW__window_aac936e6c0817f6737b3051b6e14012c4}{error\+\_\+\+\_\+} (int error, const char $\ast$description)
+\item 
+static void \hyperlink{classGLFW__window_a8e25e1839a18424271adf7930496f5db}{keyboard\+\_\+\+\_\+} (G\+L\+F\+Wwindow $\ast$window, int key, int scancode, int action, int mods)
+\item 
+static void \hyperlink{classGLFW__window_a3339d10de2b7372231c7bde09132dca7}{resize\+\_\+\+\_\+} (G\+L\+F\+Wwindow $\ast$window, int width, int height)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGLFW__window}{G\+L\+F\+W\+\_\+window} $\ast$ \hyperlink{classGLFW__window_ac19dc5a7b2b03de75b34fdec1f472d31}{instance\+\_\+\+\_\+} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple G\+L\+FW window. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{G\+L\+F\+W\+\_\+window(const char $\ast$\+\_\+title="""", int \+\_\+width=0, int \+\_\+height=0)}{GLFW_window(const char *_title="", int _width=0, int _height=0)}}]{\setlength{\rightskip}{0pt plus 5cm}G\+L\+F\+W\+\_\+window\+::\+G\+L\+F\+W\+\_\+window (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{\+\_\+title = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{int}]{\+\_\+width = {\ttfamily 0}, }
+\item[{int}]{\+\_\+height = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGLFW__window_ac02ae290228702da2ded0e810b2e201d}{}\label{classGLFW__window_ac02ae290228702da2ded0e810b2e201d}
+
+
+constructor 
+
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!````~G\+L\+F\+W\+\_\+window@{$\sim$\+G\+L\+F\+W\+\_\+window}}
+\index{````~G\+L\+F\+W\+\_\+window@{$\sim$\+G\+L\+F\+W\+\_\+window}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{$\sim$\+G\+L\+F\+W\+\_\+window()}{~GLFW_window()}}]{\setlength{\rightskip}{0pt plus 5cm}G\+L\+F\+W\+\_\+window\+::$\sim$\+G\+L\+F\+W\+\_\+window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGLFW__window_a4ac7294a25f64fcb6dbb640767ad3022}{}\label{classGLFW__window_a4ac7294a25f64fcb6dbb640767ad3022}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!error\+\_\+\+\_\+@{error\+\_\+\+\_\+}}
+\index{error\+\_\+\+\_\+@{error\+\_\+\+\_\+}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{error\+\_\+\+\_\+(int error, const char $\ast$description)}{error__(int error, const char *description)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+F\+W\+\_\+window\+::error\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{int}]{error, }
+\item[{const char $\ast$}]{description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classGLFW__window_aac936e6c0817f6737b3051b6e14012c4}{}\label{classGLFW__window_aac936e6c0817f6737b3051b6e14012c4}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!initialize@{initialize}}
+\index{initialize@{initialize}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{initialize()=0}{initialize()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+L\+F\+W\+\_\+window\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classGLFW__window_a14a56877d0edc611e1e69c1f924183bb}{}\label{classGLFW__window_a14a56877d0edc611e1e69c1f924183bb}
+
+
+must overload\+: initialize all Open\+GL states 
+
+
+
+Implemented in \hyperlink{classSolar__viewer_ad995310e4ede7e0ade07a6b6fb799488}{Solar\+\_\+viewer}.
+
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{keyboard(int key, int scancode, int action, int mods)}{keyboard(int key, int scancode, int action, int mods)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+L\+F\+W\+\_\+window\+::keyboard (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{scancode, }
+\item[{int}]{action, }
+\item[{int}]{mods}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classGLFW__window_a23f66e5464a50bd3196b5308afce5f92}{}\label{classGLFW__window_a23f66e5464a50bd3196b5308afce5f92}
+
+
+may overload\+: handle keyboard events 
+
+
+
+Reimplemented in \hyperlink{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}{Solar\+\_\+viewer}.
+
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!keyboard\+\_\+\+\_\+@{keyboard\+\_\+\+\_\+}}
+\index{keyboard\+\_\+\+\_\+@{keyboard\+\_\+\+\_\+}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{keyboard\+\_\+\+\_\+(\+G\+L\+F\+Wwindow $\ast$window, int key, int scancode, int action, int mods)}{keyboard__(GLFWwindow *window, int key, int scancode, int action, int mods)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+F\+W\+\_\+window\+::keyboard\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{G\+L\+F\+Wwindow $\ast$}]{window, }
+\item[{int}]{key, }
+\item[{int}]{scancode, }
+\item[{int}]{action, }
+\item[{int}]{mods}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classGLFW__window_a8e25e1839a18424271adf7930496f5db}{}\label{classGLFW__window_a8e25e1839a18424271adf7930496f5db}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!paint@{paint}}
+\index{paint@{paint}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{paint()=0}{paint()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+L\+F\+W\+\_\+window\+::paint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classGLFW__window_ac1dffdbaead812e20c696348f4aff460}{}\label{classGLFW__window_ac1dffdbaead812e20c696348f4aff460}
+
+
+must overload\+: render the scene 
+
+
+
+Implemented in \hyperlink{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}{Solar\+\_\+viewer}.
+
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!resize@{resize}}
+\index{resize@{resize}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{resize(int width, int height)=0}{resize(int width, int height)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+L\+F\+W\+\_\+window\+::resize (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classGLFW__window_a64044226d3bd2c9b286d837b7fa8ae7c}{}\label{classGLFW__window_a64044226d3bd2c9b286d837b7fa8ae7c}
+
+
+must overload\+: handle window resizing 
+
+
+
+Implemented in \hyperlink{classSolar__viewer_a40df69388b641e5982f0975d711ae3ca}{Solar\+\_\+viewer}.
+
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!resize\+\_\+\+\_\+@{resize\+\_\+\+\_\+}}
+\index{resize\+\_\+\+\_\+@{resize\+\_\+\+\_\+}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{resize\+\_\+\+\_\+(\+G\+L\+F\+Wwindow $\ast$window, int width, int height)}{resize__(GLFWwindow *window, int width, int height)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+F\+W\+\_\+window\+::resize\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{G\+L\+F\+Wwindow $\ast$}]{window, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classGLFW__window_a3339d10de2b7372231c7bde09132dca7}{}\label{classGLFW__window_a3339d10de2b7372231c7bde09132dca7}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!run@{run}}
+\index{run@{run}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{run()}{run()}}]{\setlength{\rightskip}{0pt plus 5cm}int G\+L\+F\+W\+\_\+window\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGLFW__window_a9d48023a3e8659231872e7a163924ee1}{}\label{classGLFW__window_a9d48023a3e8659231872e7a163924ee1}
+
+
+main window loop 
+
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!timer@{timer}}
+\index{timer@{timer}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{timer()}{timer()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+L\+F\+W\+\_\+window\+::timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classGLFW__window_af12f8511c1311546f8cecabb556cae74}{}\label{classGLFW__window_af12f8511c1311546f8cecabb556cae74}
+
+
+may overload\+: handle idle timer 
+
+
+
+Reimplemented in \hyperlink{classSolar__viewer_a1b9915ee3f62232328c7326753c11101}{Solar\+\_\+viewer}.
+
+
+
+\subsection{Member Data Documentation}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!instance\+\_\+\+\_\+@{instance\+\_\+\+\_\+}}
+\index{instance\+\_\+\+\_\+@{instance\+\_\+\+\_\+}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{instance\+\_\+\+\_\+}{instance__}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+L\+F\+W\+\_\+window} $\ast$ G\+L\+F\+W\+\_\+window\+::instance\+\_\+\+\_\+ = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classGLFW__window_ac19dc5a7b2b03de75b34fdec1f472d31}{}\label{classGLFW__window_ac19dc5a7b2b03de75b34fdec1f472d31}
+\index{G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}!window\+\_\+@{window\+\_\+}}
+\index{window\+\_\+@{window\+\_\+}!G\+L\+F\+W\+\_\+window@{G\+L\+F\+W\+\_\+window}}
+\subsubsection[{\texorpdfstring{window\+\_\+}{window_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+L\+F\+Wwindow$\ast$ G\+L\+F\+W\+\_\+window\+::window\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classGLFW__window_aa4396bd9557a5476690132bf6a0efcdf}{}\label{classGLFW__window_aa4396bd9557a5476690132bf6a0efcdf}
+
+
+G\+L\+FW window pointer. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+6/src/\hyperlink{glfw__window_8h}{glfw\+\_\+window.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+6/src/\hyperlink{glfw__window_8cpp}{glfw\+\_\+window.\+cpp}\end{DoxyCompactItemize}

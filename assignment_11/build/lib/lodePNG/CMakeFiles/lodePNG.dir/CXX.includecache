@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eason/Desktop/EPFL_CG/assignment_11/lib/lodePNG/lodepng.cpp
+lodepng.h
+/home/eason/Desktop/EPFL_CG/assignment_11/lib/lodePNG/lodepng.h
+stdio.h
+-
+stdlib.h
+-
+fstream
+-
+
+/home/eason/Desktop/EPFL_CG/assignment_11/lib/lodePNG/lodepng.h
+string.h
+-
+vector
+-
+string
+-
+lodepng.h
+/home/eason/Desktop/EPFL_CG/assignment_11/lib/lodePNG/lodepng.h
+iostream
+-
+lodepng.h
+/home/eason/Desktop/EPFL_CG/assignment_11/lib/lodePNG/lodepng.h
+

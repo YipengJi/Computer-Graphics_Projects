@@ -1,0 +1,19 @@
+{
+	"name": "stochastic_02",
+	"stochastic": true,
+	"initial": "---------GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+	"angle_deg": 9,
+	"num_iters": 6,
+	"rules": {
+		"G": [
+			{"p": 0.45, "e": "FF-FF"},
+			{"p": 0.45, "e": "FF+FF"},
+			{"p": 0.1, "e": "FF[++++++++++P]FF"}
+		],
+		"P": [
+			{"p": 0.33, "e": "P[+++P]P[---P]P"},
+			{"p": 0.33, "e": "P[+++P]P"},
+			{"p": 0.34, "e": "P[---P]P"}
+		]
+	}
+}

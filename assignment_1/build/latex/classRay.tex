@@ -1,0 +1,74 @@
+\hypertarget{classRay}{}\section{Ray Class Reference}
+\label{classRay}\index{Ray@{Ray}}
+
+
+{\ttfamily \#include $<$Ray.\+h$>$}
+
+
+
+Collaboration diagram for Ray\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRay_a773588948dfa8469c81f43907f6a7c63}{Ray} (const \hyperlink{classvec3}{vec3} \&\+\_\+origin=\hyperlink{classvec3}{vec3}(0, 0, 0), const \hyperlink{classvec3}{vec3} \&\+\_\+direction=\hyperlink{classvec3}{vec3}(0, 0, 1))
+\begin{DoxyCompactList}\small\item\em Constructor with origin and direction. Direction will be normalized. \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classRay_adcb42927ac5d583e1296d2ec4e5b8b1a}{operator()} (double \+\_\+t) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classRay_a3677f264c55cbe2f2cf450f9e0efa241}{origin}
+\begin{DoxyCompactList}\small\item\em origin of the ray \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classRay_a2b864cd91328207dc66e3ab4cd1e1e36}{direction}
+\begin{DoxyCompactList}\small\item\em direction of the ray (should be normalized) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a ray, specified by its origin and direction. It provides a convenient function to compute the point ray(t) at a specific ray paramter t. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Ray@{Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Ray@{Ray}}
+\subsubsection[{\texorpdfstring{Ray(const vec3 \&\+\_\+origin=vec3(0, 0, 0), const vec3 \&\+\_\+direction=vec3(0, 0, 1))}{Ray(const vec3 &_origin=vec3(0, 0, 0), const vec3 &_direction=vec3(0, 0, 1))}}]{\setlength{\rightskip}{0pt plus 5cm}Ray\+::\+Ray (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{\+\_\+origin = {\ttfamily {\bf vec3}(0,0,0)}, }
+\item[{const {\bf vec3} \&}]{\+\_\+direction = {\ttfamily {\bf vec3}(0,0,1)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRay_a773588948dfa8469c81f43907f6a7c63}{}\label{classRay_a773588948dfa8469c81f43907f6a7c63}
+
+
+Constructor with origin and direction. Direction will be normalized. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Ray@{Ray}!operator()@{operator()}}
+\index{operator()@{operator()}!Ray@{Ray}}
+\subsubsection[{\texorpdfstring{operator()(double \+\_\+t) const }{operator()(double _t) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Ray\+::operator() (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classRay_adcb42927ac5d583e1296d2ec4e5b8b1a}{}\label{classRay_adcb42927ac5d583e1296d2ec4e5b8b1a}
+Compute the point on the ray at the parameter {\ttfamily \+\_\+t}, which is origin + \+\_\+t$\ast$direction. 
+
+\subsection{Member Data Documentation}
+\index{Ray@{Ray}!direction@{direction}}
+\index{direction@{direction}!Ray@{Ray}}
+\subsubsection[{\texorpdfstring{direction}{direction}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Ray\+::direction}\hypertarget{classRay_a2b864cd91328207dc66e3ab4cd1e1e36}{}\label{classRay_a2b864cd91328207dc66e3ab4cd1e1e36}
+
+
+direction of the ray (should be normalized) 
+
+\index{Ray@{Ray}!origin@{origin}}
+\index{origin@{origin}!Ray@{Ray}}
+\subsubsection[{\texorpdfstring{origin}{origin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Ray\+::origin}\hypertarget{classRay_a3677f264c55cbe2f2cf450f9e0efa241}{}\label{classRay_a3677f264c55cbe2f2cf450f9e0efa241}
+
+
+origin of the ray 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Ray_8h}{Ray.\+h}\end{DoxyCompactItemize}

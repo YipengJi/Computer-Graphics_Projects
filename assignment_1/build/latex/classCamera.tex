@@ -1,0 +1,177 @@
+\hypertarget{classCamera}{}\section{Camera Class Reference}
+\label{classCamera}\index{Camera@{Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+
+
+Collaboration diagram for Camera\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera} ()
+\begin{DoxyCompactList}\small\item\em Default (empty) constructor. \end{DoxyCompactList}\item 
+\hyperlink{classCamera_ab1d4ceca18bb3143f89b19c2de5bccc4}{Camera} (const \hyperlink{classvec3}{vec3} \&\+\_\+eye, const \hyperlink{classvec3}{vec3} \&\+\_\+center, const \hyperlink{classvec3}{vec3} \&\+\_\+up, double \+\_\+fovy, unsigned int \+\_\+width, unsigned int \+\_\+height)
+\item 
+void \hyperlink{classCamera_af930ce1f46c9f5af3bd5e5bbff6b5022}{init} ()
+\begin{DoxyCompactList}\small\item\em This function precomputes some variables that are later required for \hyperlink{classCamera_abc4c25528b318dabadc65e83a4052534}{primary\+\_\+ray()} \end{DoxyCompactList}\item 
+\hyperlink{classRay}{Ray} \hyperlink{classCamera_abc4c25528b318dabadc65e83a4052534}{primary\+\_\+ray} (unsigned int \+\_\+x, unsigned int \+\_\+y) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCamera_a54104afe20129304cdd64d1d2a9ee5f6}{eye}
+\begin{DoxyCompactList}\small\item\em position of the eye in 3D space (camera center) \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCamera_a448dbf45a96fde76b524d0b183f876dc}{center}
+\begin{DoxyCompactList}\small\item\em the center of the scene the camera is looking at \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCamera_aff4fd1aa62994840f7742b698f15313e}{up}
+\begin{DoxyCompactList}\small\item\em up-\/direction of the camera \end{DoxyCompactList}\item 
+double \hyperlink{classCamera_a15e5d72f51341a192a09d70447e3fb53}{fovy}
+\begin{DoxyCompactList}\small\item\em opening angle (field of view) in y-\/direction \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classCamera_aa18f0bf8b6e8cb661643d980a4484ac0}{width}
+\begin{DoxyCompactList}\small\item\em image width in pixels \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classCamera_ae9ed166dbbc8876027ecbec9af8761c4}{height}
+\begin{DoxyCompactList}\small\item\em image height in pixels \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCamera_aa7766618e7cc508ff0a825559e014d31}{x\+\_\+dir}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCamera_a55166ac03aba3b694e9ef2df29be58f0}{y\+\_\+dir}
+\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classCamera_a7bf1e46dd54906691adf532cc39b664f}{lower\+\_\+left}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The camera class stores the following camera parameters in its member variables\+: eye, center, up, fovy, width, and height. The function primary\+\_\+ray(x,y) produces a ray from the camera center through the pixel (x,y). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{Camera()}{Camera()}}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCamera_a01f94c3543f56ede7af49dc778f19331}{}\label{classCamera_a01f94c3543f56ede7af49dc778f19331}
+
+
+Default (empty) constructor. 
+
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{Camera(const vec3 \&\+\_\+eye, const vec3 \&\+\_\+center, const vec3 \&\+\_\+up, double \+\_\+fovy, unsigned int \+\_\+width, unsigned int \+\_\+height)}{Camera(const vec3 &_eye, const vec3 &_center, const vec3 &_up, double _fovy, unsigned int _width, unsigned int _height)}}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{\+\_\+eye, }
+\item[{const {\bf vec3} \&}]{\+\_\+center, }
+\item[{const {\bf vec3} \&}]{\+\_\+up, }
+\item[{double}]{\+\_\+fovy, }
+\item[{unsigned int}]{\+\_\+width, }
+\item[{unsigned int}]{\+\_\+height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCamera_ab1d4ceca18bb3143f89b19c2de5bccc4}{}\label{classCamera_ab1d4ceca18bb3143f89b19c2de5bccc4}
+Construct camera by specifying all required data. Calls \hyperlink{classCamera_af930ce1f46c9f5af3bd5e5bbff6b5022}{init()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+eye} & \hyperlink{classCamera}{Camera} center \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+center} & Center of the scene, which the camera is looking at. \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+up} & Vector specifying the up direction. \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+fovy} & Opening angle (field of view) in y-\/direction \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+width} & Width of the image (in pixels) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+height} & Height of the image (in pixels) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Camera@{Camera}!init@{init}}
+\index{init@{init}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCamera_af930ce1f46c9f5af3bd5e5bbff6b5022}{}\label{classCamera_af930ce1f46c9f5af3bd5e5bbff6b5022}
+
+
+This function precomputes some variables that are later required for \hyperlink{classCamera_abc4c25528b318dabadc65e83a4052534}{primary\+\_\+ray()} 
+
+\index{Camera@{Camera}!primary\+\_\+ray@{primary\+\_\+ray}}
+\index{primary\+\_\+ray@{primary\+\_\+ray}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{primary\+\_\+ray(unsigned int \+\_\+x, unsigned int \+\_\+y) const }{primary_ray(unsigned int _x, unsigned int _y) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ray} Camera\+::primary\+\_\+ray (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\+\_\+x, }
+\item[{unsigned int}]{\+\_\+y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCamera_abc4c25528b318dabadc65e83a4052534}{}\label{classCamera_abc4c25528b318dabadc65e83a4052534}
+create a ray for a pixel in the image 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+x} & pixel location in image \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y} & pixel location in image \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Camera@{Camera}!center@{center}}
+\index{center@{center}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{center}{center}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Camera\+::center}\hypertarget{classCamera_a448dbf45a96fde76b524d0b183f876dc}{}\label{classCamera_a448dbf45a96fde76b524d0b183f876dc}
+
+
+the center of the scene the camera is looking at 
+
+\index{Camera@{Camera}!eye@{eye}}
+\index{eye@{eye}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{eye}{eye}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Camera\+::eye}\hypertarget{classCamera_a54104afe20129304cdd64d1d2a9ee5f6}{}\label{classCamera_a54104afe20129304cdd64d1d2a9ee5f6}
+
+
+position of the eye in 3D space (camera center) 
+
+\index{Camera@{Camera}!fovy@{fovy}}
+\index{fovy@{fovy}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{fovy}{fovy}}]{\setlength{\rightskip}{0pt plus 5cm}double Camera\+::fovy}\hypertarget{classCamera_a15e5d72f51341a192a09d70447e3fb53}{}\label{classCamera_a15e5d72f51341a192a09d70447e3fb53}
+
+
+opening angle (field of view) in y-\/direction 
+
+\index{Camera@{Camera}!height@{height}}
+\index{height@{height}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{height}{height}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Camera\+::height}\hypertarget{classCamera_ae9ed166dbbc8876027ecbec9af8761c4}{}\label{classCamera_ae9ed166dbbc8876027ecbec9af8761c4}
+
+
+image height in pixels 
+
+\index{Camera@{Camera}!lower\+\_\+left@{lower\+\_\+left}}
+\index{lower\+\_\+left@{lower\+\_\+left}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{lower\+\_\+left}{lower_left}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Camera\+::lower\+\_\+left\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCamera_a7bf1e46dd54906691adf532cc39b664f}{}\label{classCamera_a7bf1e46dd54906691adf532cc39b664f}
+\index{Camera@{Camera}!up@{up}}
+\index{up@{up}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{up}{up}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Camera\+::up}\hypertarget{classCamera_aff4fd1aa62994840f7742b698f15313e}{}\label{classCamera_aff4fd1aa62994840f7742b698f15313e}
+
+
+up-\/direction of the camera 
+
+\index{Camera@{Camera}!width@{width}}
+\index{width@{width}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{width}{width}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Camera\+::width}\hypertarget{classCamera_aa18f0bf8b6e8cb661643d980a4484ac0}{}\label{classCamera_aa18f0bf8b6e8cb661643d980a4484ac0}
+
+
+image width in pixels 
+
+\index{Camera@{Camera}!x\+\_\+dir@{x\+\_\+dir}}
+\index{x\+\_\+dir@{x\+\_\+dir}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{x\+\_\+dir}{x_dir}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Camera\+::x\+\_\+dir\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCamera_aa7766618e7cc508ff0a825559e014d31}{}\label{classCamera_aa7766618e7cc508ff0a825559e014d31}
+\index{Camera@{Camera}!y\+\_\+dir@{y\+\_\+dir}}
+\index{y\+\_\+dir@{y\+\_\+dir}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{y\+\_\+dir}{y_dir}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Camera\+::y\+\_\+dir\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCamera_a55166ac03aba3b694e9ef2df29be58f0}{}\label{classCamera_a55166ac03aba3b694e9ef2df29be58f0}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+1/src/\hyperlink{Camera_8h}{Camera.\+h}\end{DoxyCompactItemize}

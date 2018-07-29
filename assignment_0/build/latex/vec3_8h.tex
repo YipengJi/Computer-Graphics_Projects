@@ -1,0 +1,280 @@
+\hypertarget{vec3_8h}{}\section{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+0/src/vec3.h File Reference}
+\label{vec3_8h}\index{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+0/src/vec3.\+h@{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+0/src/vec3.\+h}}
+
+
+Implements the vector class and its mathematical operations.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+Include dependency graph for vec3.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classvec3}{vec3}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_aadaf3215f08daa75822dba381804233d}{operator-\/} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em unary minus\+: turn v into -\/v \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_aa4f93e60ec26c63f5f5f69107e9fa208}{operator$\ast$} (const double s, const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em multiply vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a57beb01e5a7126e742cb2f5d77f20a8d}{operator$\ast$} (const \hyperlink{classvec3}{vec3} \&v, const double s)
+\begin{DoxyCompactList}\small\item\em multiply vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_af444fe3c8a058ed1736d9679d42bd84b}{operator$\ast$} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em component-\/wise multiplication of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a0272bbe6135b89ae2a378e03ff809d4b}{operator/} (const \hyperlink{classvec3}{vec3} \&v, const double s)
+\begin{DoxyCompactList}\small\item\em divide vector {\ttfamily v} by scalar {\ttfamily s} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a2bd9ca78c7ca8be54afc9500ff89117d}{operator+} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em add two vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_aa8cf6ba584300aeb08b9d9143635680a}{operator-\/} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em subtract vector {\ttfamily v1} from vector {\ttfamily v0} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_ab7afd8764c8e083204e00a6e7695d052}{min} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the component-\/wise minimum of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a88bf317d8d46ef981cc71e72eb77b184}{max} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the component-\/wise maximum of vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const double \hyperlink{vec3_8h_ae151aaaf178ce355329547d9abd97089}{dot} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the Euclidean dot product of {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const double \hyperlink{vec3_8h_ab3f6a10e697cc19b6487a8d13c30cb6d}{norm} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em compute the Euclidean norm (length) of a vector {\ttfamily v} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a541c1fc23b130b6a2004c90901505f14}{normalize} (const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em normalize vector {\ttfamily v} by dividing it by its norm \end{DoxyCompactList}\item 
+const double \hyperlink{vec3_8h_a8ce1797e44c9afb838b7aa28a93b4db7}{distance} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the distance between vectors {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a300b47ffa1833ec786fc2f49da86ac4a}{cross} (const \hyperlink{classvec3}{vec3} \&v0, const \hyperlink{classvec3}{vec3} \&v1)
+\begin{DoxyCompactList}\small\item\em compute the cross product of {\ttfamily v0} and {\ttfamily v1} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a35b64cc9ea1af33a921da839d3349645}{reflect} (const \hyperlink{classvec3}{vec3} \&v, const \hyperlink{classvec3}{vec3} \&n)
+\begin{DoxyCompactList}\small\item\em reflect vector {\ttfamily v} at normal {\ttfamily n} \end{DoxyCompactList}\item 
+const \hyperlink{classvec3}{vec3} \hyperlink{vec3_8h_a8dc27d741a8c2be5d12953c024b65521}{mirror} (const \hyperlink{classvec3}{vec3} \&v, const \hyperlink{classvec3}{vec3} \&n)
+\begin{DoxyCompactList}\small\item\em mirrors vector {\ttfamily v} at normal {\ttfamily n} \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{vec3_8h_ab705d3337286a4262e84bbbb0b694a56}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em read the space-\/separated components of a vector from a stream \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{vec3_8h_a3e8f4856b29a4320f185f9a9cf0f94bc}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classvec3}{vec3} \&v)
+\begin{DoxyCompactList}\small\item\em output a vector by printing its comma-\/separated compontens \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the vector class and its mathematical operations. 
+
+
+
+\subsection{Function Documentation}
+\index{vec3.\+h@{vec3.\+h}!cross@{cross}}
+\index{cross@{cross}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{cross(const vec3 \&v0, const vec3 \&v1)}{cross(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a300b47ffa1833ec786fc2f49da86ac4a}{}\label{vec3_8h_a300b47ffa1833ec786fc2f49da86ac4a}
+
+
+compute the cross product of {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!distance@{distance}}
+\index{distance@{distance}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{distance(const vec3 \&v0, const vec3 \&v1)}{distance(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const double distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a8ce1797e44c9afb838b7aa28a93b4db7}{}\label{vec3_8h_a8ce1797e44c9afb838b7aa28a93b4db7}
+
+
+compute the distance between vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!dot@{dot}}
+\index{dot@{dot}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{dot(const vec3 \&v0, const vec3 \&v1)}{dot(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const double dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_ae151aaaf178ce355329547d9abd97089}{}\label{vec3_8h_ae151aaaf178ce355329547d9abd97089}
+
+
+compute the Euclidean dot product of {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!max@{max}}
+\index{max@{max}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{max(const vec3 \&v0, const vec3 \&v1)}{max(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} max (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a88bf317d8d46ef981cc71e72eb77b184}{}\label{vec3_8h_a88bf317d8d46ef981cc71e72eb77b184}
+
+
+compute the component-\/wise maximum of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!min@{min}}
+\index{min@{min}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{min(const vec3 \&v0, const vec3 \&v1)}{min(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} min (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_ab7afd8764c8e083204e00a6e7695d052}{}\label{vec3_8h_ab7afd8764c8e083204e00a6e7695d052}
+
+
+compute the component-\/wise minimum of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!mirror@{mirror}}
+\index{mirror@{mirror}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{mirror(const vec3 \&v, const vec3 \&n)}{mirror(const vec3 &v, const vec3 &n)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} mirror (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const {\bf vec3} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a8dc27d741a8c2be5d12953c024b65521}{}\label{vec3_8h_a8dc27d741a8c2be5d12953c024b65521}
+
+
+mirrors vector {\ttfamily v} at normal {\ttfamily n} 
+
+\index{vec3.\+h@{vec3.\+h}!norm@{norm}}
+\index{norm@{norm}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{norm(const vec3 \&v)}{norm(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const double norm (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_ab3f6a10e697cc19b6487a8d13c30cb6d}{}\label{vec3_8h_ab3f6a10e697cc19b6487a8d13c30cb6d}
+
+
+compute the Euclidean norm (length) of a vector {\ttfamily v} 
+
+\index{vec3.\+h@{vec3.\+h}!normalize@{normalize}}
+\index{normalize@{normalize}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{normalize(const vec3 \&v)}{normalize(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} normalize (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a541c1fc23b130b6a2004c90901505f14}{}\label{vec3_8h_a541c1fc23b130b6a2004c90901505f14}
+
+
+normalize vector {\ttfamily v} by dividing it by its norm 
+
+\index{vec3.\+h@{vec3.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const double s, const vec3 \&v)}{operator*(const double s, const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const double}]{s, }
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_aa4f93e60ec26c63f5f5f69107e9fa208}{}\label{vec3_8h_aa4f93e60ec26c63f5f5f69107e9fa208}
+
+
+multiply vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{vec3.\+h@{vec3.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const vec3 \&v, const double s)}{operator*(const vec3 &v, const double s)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const double}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a57beb01e5a7126e742cb2f5d77f20a8d}{}\label{vec3_8h_a57beb01e5a7126e742cb2f5d77f20a8d}
+
+
+multiply vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{vec3.\+h@{vec3.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const vec3 \&v0, const vec3 \&v1)}{operator*(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_af444fe3c8a058ed1736d9679d42bd84b}{}\label{vec3_8h_af444fe3c8a058ed1736d9679d42bd84b}
+
+
+component-\/wise multiplication of vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator+(const vec3 \&v0, const vec3 \&v1)}{operator+(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a2bd9ca78c7ca8be54afc9500ff89117d}{}\label{vec3_8h_a2bd9ca78c7ca8be54afc9500ff89117d}
+
+
+add two vectors {\ttfamily v0} and {\ttfamily v1} 
+
+\index{vec3.\+h@{vec3.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator-\/(const vec3 \&v)}{operator-(const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_aadaf3215f08daa75822dba381804233d}{}\label{vec3_8h_aadaf3215f08daa75822dba381804233d}
+
+
+unary minus\+: turn v into -\/v 
+
+\index{vec3.\+h@{vec3.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator-\/(const vec3 \&v0, const vec3 \&v1)}{operator-(const vec3 &v0, const vec3 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v0, }
+\item[{const {\bf vec3} \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_aa8cf6ba584300aeb08b9d9143635680a}{}\label{vec3_8h_aa8cf6ba584300aeb08b9d9143635680a}
+
+
+subtract vector {\ttfamily v1} from vector {\ttfamily v0} 
+
+\index{vec3.\+h@{vec3.\+h}!operator/@{operator/}}
+\index{operator/@{operator/}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator/(const vec3 \&v, const double s)}{operator/(const vec3 &v, const double s)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const double}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a0272bbe6135b89ae2a378e03ff809d4b}{}\label{vec3_8h_a0272bbe6135b89ae2a378e03ff809d4b}
+
+
+divide vector {\ttfamily v} by scalar {\ttfamily s} 
+
+\index{vec3.\+h@{vec3.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const vec3 \&v)}{operator<<(std::ostream &os, const vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a3e8f4856b29a4320f185f9a9cf0f94bc}{}\label{vec3_8h_a3e8f4856b29a4320f185f9a9cf0f94bc}
+
+
+output a vector by printing its comma-\/separated compontens 
+
+\index{vec3.\+h@{vec3.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(std\+::istream \&is, vec3 \&v)}{operator>>(std::istream &is, vec3 &v)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_ab705d3337286a4262e84bbbb0b694a56}{}\label{vec3_8h_ab705d3337286a4262e84bbbb0b694a56}
+
+
+read the space-\/separated components of a vector from a stream 
+
+\index{vec3.\+h@{vec3.\+h}!reflect@{reflect}}
+\index{reflect@{reflect}!vec3.\+h@{vec3.\+h}}
+\subsubsection[{\texorpdfstring{reflect(const vec3 \&v, const vec3 \&n)}{reflect(const vec3 &v, const vec3 &n)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf vec3} reflect (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{v, }
+\item[{const {\bf vec3} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{vec3_8h_a35b64cc9ea1af33a921da839d3349645}{}\label{vec3_8h_a35b64cc9ea1af33a921da839d3349645}
+
+
+reflect vector {\ttfamily v} at normal {\ttfamily n} 
+

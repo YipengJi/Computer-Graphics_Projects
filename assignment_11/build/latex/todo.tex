@@ -1,0 +1,27 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000003}%
+\hypertarget{todo__todo000003}{}%
+Member \hyperlink{classPiecewiseBezier_a7c05af0ba43e9c2459fbb502b078676d}{Piecewise\+Bezier\+:\+:control\+\_\+polygon\+\_\+to\+\_\+bezier\+\_\+points} (std\+::vector$<$ vec3 $>$ const \&control\+\_\+polygon)]Assignment 11, Task 1\+: Determine the Bezier control points from the uniform cubic spline control points \char`\"{}cp\char`\"{} as visualized in Lecture 12 slide 22. Note, the last control point of one Bezier segment is shared with the first control point of the next, and you should not generate the duplicate control points. This means, Bezier segment 0 should be controlled by bezier\+\_\+pts 0, 1, 2, 3; segment 1 should be controlled by bezier\+\_\+pts 3, 4, 5, 6; segment 2 should be controlled by bezier\+\_\+pts 6, 7, 8, 9; and so on.  
+\item[\label{todo__todo000001}%
+\hypertarget{todo__todo000001}{}%
+Member \hyperlink{classPiecewiseBezier_ab8ef08d6d3c8f34e71a04cf130841913}{Piecewise\+Bezier\+:\+:eval\+\_\+bezier} (int bp\+\_\+offset, float t) const ]Assignment 11, Task 2a\+: Evaluate the cubic Bezier polygon defined by control points bezier\+\_\+control\+\_\+points\+\_\+\mbox{[}bp\+\_\+offset..bp\+\_\+offset + 4\mbox{]} at parameter t in \mbox{[}0, 1\mbox{]}  
+\item[\label{todo__todo000002}%
+\hypertarget{todo__todo000002}{}%
+Member \hyperlink{classPiecewiseBezier_ad438e5d185f6e74f85ff84e0dd7d73cd}{Piecewise\+Bezier\+:\+:eval\+\_\+bezier\+\_\+tangent} (int bp\+\_\+offset, float t) const ]Assignment 11, Task 3a\+: Evaluate the tangent vector at \char`\"{}t\char`\"{} of the cubic Bezier polygon defined by control points bezier\+\_\+control\+\_\+points\+\_\+\mbox{[}bp\+\_\+offset..bp\+\_\+offset + 4\mbox{]} Recall, the tangent vector for a curve c(t) is given by the derivative of this curve, c\textquotesingle{}(t).  
+\item[\label{todo__todo000004}%
+\hypertarget{todo__todo000004}{}%
+Member \hyperlink{classPiecewiseBezier_aa3f433f0483cfd5b9b937e4eaee9e52e}{Piecewise\+Bezier\+:\+:eval\+\_\+piecewise\+\_\+bezier\+\_\+curve} (float t) const ]Assignment 11, Task 2b\+: The argument t is in the interval \mbox{[}0, 1\mbox{]} which corresponds to the whole curve. The whole curve is defined by piecewise Bezier curves, which are each in turn parameterized by t\+\_\+s in \mbox{[}0, 1\mbox{]}. Select appropriate control points and map the value t such that you evaluate the correct point on the correct Bezier segment. Note that the current code only evaluates the very first Bezier segment.  
+\item[\label{todo__todo000005}%
+\hypertarget{todo__todo000005}{}%
+Member \hyperlink{classPiecewiseBezier_a46e8a8d04d7fdd22b662204419c21273}{Piecewise\+Bezier\+:\+:tangent} (float t) const ]Assignment 11, Task 3b\+: The argument t is in the interval \mbox{[}0, 1\mbox{]} which corresponds to the whole curve. The whole curve is defined by piecewise Bezier curves, which are each in turn parameterized by t\+\_\+s in \mbox{[}0, 1\mbox{]}. Select appropriate control points and map the value t such that you evaluate the correct point on the correct Bezier segment. Note that the current code only evaluates the very first Bezier segment. Also, remember to use the chain rule when computing the tangent!  
+\item[\label{todo__todo000008}%
+\hypertarget{todo__todo000008}{}%
+Member \hyperlink{classSolar__viewer_af6b468fb543b9c9ed466fe1687f1aff8}{Solar\+\_\+viewer\+:\+:draw\+\_\+scene} (\hyperlink{classmat4}{mat4} \&\+\_\+projection, \hyperlink{classmat4}{mat4} \&\+\_\+view)]Assignment 11, Task 4\+: Update the model matrix for your ship so that the ship is placed on the {\ttfamily ship\+\_\+path\+\_\+} curve and oriented to face along the path\textquotesingle{}s tangent vector, {\ttfamily ship\+\_\+path\+\_\+frame\+\_\+.\+t}. Also, the ship should be rotated so that vertical axis agrees with {\ttfamily ship\+\_\+path\+\_\+frame\+\_\+.\+up}. Note, in its local coordinate system, the ship\textquotesingle{}s forward direction is +z and its up direction is +y.  
+\item[\label{todo__todo000007}%
+\hypertarget{todo__todo000007}{}%
+Member \hyperlink{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}{Solar\+\_\+viewer\+:\+:paint} ()]Assignment 11, Task 6 Paste your viewing/navigation code from assignment 5 here, then update the view matrix calculation for in\+\_\+ship\+\_\+ == true to account for the new ship orientation (instead of using {\ttfamily ship\+\_\+.\+pos\+\_\+} and {\ttfamily ship\+\_\+.\+angle\+\_\+} to define the eye coordinate system, you need to use {\ttfamily ship\+\_\+path\+\_\+(ship\+\_\+path\+\_\+param\+\_\+)} and {\ttfamily ship\+\_\+path\+\_\+frame\+\_\+}. Recall that we use a hard-\/coded viewing radius of 0.\+01f for the ship.  
+\item[\label{todo__todo000006}%
+\hypertarget{todo__todo000006}{}%
+Member \hyperlink{classSolar__viewer_a1b9915ee3f62232328c7326753c11101}{Solar\+\_\+viewer\+:\+:timer} ()]Assignment 11, Task 5 Advance the curve evaluation parameter \char`\"{}ship\+\_\+path\+\_\+param\+\_\+\char`\"{} so that the ship moves by (approximately) Euclidean distance {\ttfamily ship\+\_\+speed} in this frame. 
+\end{DoxyRefList}

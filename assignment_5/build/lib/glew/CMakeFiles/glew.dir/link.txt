@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc ../../libglew.a  CMakeFiles/glew.dir/glew.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib ../../libglew.a

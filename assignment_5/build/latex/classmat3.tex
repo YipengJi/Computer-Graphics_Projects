@@ -1,0 +1,122 @@
+\hypertarget{classmat3}{}\section{mat3 Class Reference}
+\label{classmat3}\index{mat3@{mat3}}
+
+
+{\ttfamily \#include $<$glmath.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmat3_a463027040addb1c56fe84c91b74b8d79}{mat3} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classmat3_a3448156b9da5befc4e219ac3e5e79430}{mat3} (float s)
+\begin{DoxyCompactList}\small\item\em construct matrix where all values are s \end{DoxyCompactList}\item 
+\hyperlink{classmat3_ae288ebcec6d9b2a7421ff61f162c6a39}{mat3} (const \hyperlink{classmat4}{mat4} \&m4)
+\begin{DoxyCompactList}\small\item\em construct 3x3 matrix from the upper-\/left 3x3 part of a 4x4 matrix \end{DoxyCompactList}\item 
+float \& \hyperlink{classmat3_a68a25e9a4276a0d5801d37d6e5c8523f}{operator()} (const int i, const int j)
+\begin{DoxyCompactList}\small\item\em read/write access to element (i,j) \end{DoxyCompactList}\item 
+float \hyperlink{classmat3_ad5d495b31140d3cbb167e5c7e233afc8}{operator()} (const int i, const int j) const 
+\begin{DoxyCompactList}\small\item\em read access to element (i,j) \end{DoxyCompactList}\item 
+const float $\ast$ \hyperlink{classmat3_a57c92c7e740876bba92c8854798fd848}{data} () const 
+\begin{DoxyCompactList}\small\item\em pointer to data (for passing it to Open\+GL) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classmat3_a83246c2a9e8ef6f33920e11e0ffdb003}{data\+\_\+} \mbox{[}9\mbox{]}
+\begin{DoxyCompactList}\small\item\em the data is stored as an array of 9 values \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple 3x3 matrix. \begin{DoxySeeAlso}{See also}
+\hyperlink{glmath_8h}{glmath.\+h} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{mat3@{mat3}!mat3@{mat3}}
+\index{mat3@{mat3}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{mat3()}{mat3()}}]{\setlength{\rightskip}{0pt plus 5cm}mat3\+::mat3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat3_a463027040addb1c56fe84c91b74b8d79}{}\label{classmat3_a463027040addb1c56fe84c91b74b8d79}
+
+
+default constructor 
+
+\index{mat3@{mat3}!mat3@{mat3}}
+\index{mat3@{mat3}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{mat3(float s)}{mat3(float s)}}]{\setlength{\rightskip}{0pt plus 5cm}mat3\+::mat3 (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classmat3_a3448156b9da5befc4e219ac3e5e79430}{}\label{classmat3_a3448156b9da5befc4e219ac3e5e79430}
+
+
+construct matrix where all values are s 
+
+\index{mat3@{mat3}!mat3@{mat3}}
+\index{mat3@{mat3}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{mat3(const mat4 \&m4)}{mat3(const mat4 &m4)}}]{\setlength{\rightskip}{0pt plus 5cm}mat3\+::mat3 (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat4} \&}]{m4}
+\end{DoxyParamCaption}
+)}\hypertarget{classmat3_ae288ebcec6d9b2a7421ff61f162c6a39}{}\label{classmat3_ae288ebcec6d9b2a7421ff61f162c6a39}
+
+
+construct 3x3 matrix from the upper-\/left 3x3 part of a 4x4 matrix 
+
+
+
+\subsection{Member Function Documentation}
+\index{mat3@{mat3}!data@{data}}
+\index{data@{data}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ mat3\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat3_a57c92c7e740876bba92c8854798fd848}{}\label{classmat3_a57c92c7e740876bba92c8854798fd848}
+
+
+pointer to data (for passing it to Open\+GL) 
+
+\index{mat3@{mat3}!operator()@{operator()}}
+\index{operator()@{operator()}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{operator()(const int i, const int j)}{operator()(const int i, const int j)}}]{\setlength{\rightskip}{0pt plus 5cm}float\& mat3\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat3_a68a25e9a4276a0d5801d37d6e5c8523f}{}\label{classmat3_a68a25e9a4276a0d5801d37d6e5c8523f}
+
+
+read/write access to element (i,j) 
+
+\index{mat3@{mat3}!operator()@{operator()}}
+\index{operator()@{operator()}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{operator()(const int i, const int j) const }{operator()(const int i, const int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}float mat3\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat3_ad5d495b31140d3cbb167e5c7e233afc8}{}\label{classmat3_ad5d495b31140d3cbb167e5c7e233afc8}
+
+
+read access to element (i,j) 
+
+
+
+\subsection{Member Data Documentation}
+\index{mat3@{mat3}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!mat3@{mat3}}
+\subsubsection[{\texorpdfstring{data\+\_\+}{data_}}]{\setlength{\rightskip}{0pt plus 5cm}float mat3\+::data\+\_\+\mbox{[}9\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classmat3_a83246c2a9e8ef6f33920e11e0ffdb003}{}\label{classmat3_a83246c2a9e8ef6f33920e11e0ffdb003}
+
+
+the data is stored as an array of 9 values 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/\hyperlink{glmath_8h}{glmath.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/\hyperlink{glmath_8cpp}{glmath.\+cpp}\end{DoxyCompactItemize}

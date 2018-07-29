@@ -1,0 +1,32 @@
+\hypertarget{Camera_8h}{}\section{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+0/src/\+Camera.h File Reference}
+\label{Camera_8h}\index{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+0/src/\+Camera.\+h@{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+0/src/\+Camera.\+h}}
+{\ttfamily \#include \char`\"{}vec3.\+h\char`\"{}}\\*
+Include dependency graph for Camera.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCamera}{Camera}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \hyperlink{Camera_8h_a795334c6fd85b466dd0071ba555da450}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classCamera}{Camera} \&c)
+\begin{DoxyCompactList}\small\item\em read camera data from stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Camera.\+h@{Camera.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Camera.\+h@{Camera.\+h}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(std\+::istream \&is, Camera \&c)}{operator>>(std::istream &is, Camera &c)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf Camera} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{Camera_8h_a795334c6fd85b466dd0071ba555da450}{}\label{Camera_8h_a795334c6fd85b466dd0071ba555da450}
+
+
+read camera data from stream 
+

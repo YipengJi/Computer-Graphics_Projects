@@ -1,0 +1,107 @@
+\hypertarget{glmath_8cpp}{}\section{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/glmath.cpp File Reference}
+\label{glmath_8cpp}\index{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/glmath.\+cpp@{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+5/src/glmath.\+cpp}}
+{\ttfamily \#include \char`\"{}glmath.\+h\char`\"{}}\\*
+Include dependency graph for glmath.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmat3}{mat3} \hyperlink{glmath_8cpp_aee9b77151906be62ccaceb17c454e038}{operator$\ast$} (const \hyperlink{classmat3}{mat3} \&m0, const \hyperlink{classmat3}{mat3} \&m1)
+\begin{DoxyCompactList}\small\item\em return matrix product m0$\ast$m1 \end{DoxyCompactList}\item 
+\hyperlink{classmat3}{mat3} \hyperlink{glmath_8cpp_a5ef0b4740283a5c525f1a8e0d0343068}{transpose} (const \hyperlink{classmat3}{mat3} \&m)
+\begin{DoxyCompactList}\small\item\em return transposed matrix \end{DoxyCompactList}\item 
+\hyperlink{classmat3}{mat3} \hyperlink{glmath_8cpp_ae665e2778b01a006f14207e05280e343}{inverse} (const \hyperlink{classmat3}{mat3} \&m)
+\begin{DoxyCompactList}\small\item\em return inverse of 3x3 matrix \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{glmath_8cpp_a85d71885cc6797f2553701eb01c52851}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classmat3}{mat3} \&m)
+\begin{DoxyCompactList}\small\item\em print matrix to output stream \end{DoxyCompactList}\item 
+\hyperlink{classvec4}{vec4} \hyperlink{glmath_8cpp_a95f8518be9e64ad566dd8442b2884d4b}{operator$\ast$} (const \hyperlink{classmat4}{mat4} \&m, const \hyperlink{classvec4}{vec4} \&v0)
+\begin{DoxyCompactList}\small\item\em return matrix-\/vector product m$\ast$v \end{DoxyCompactList}\item 
+\hyperlink{classmat4}{mat4} \hyperlink{glmath_8cpp_a2e7b6ede225dc12ac74069ab9eb60a52}{operator$\ast$} (const \hyperlink{classmat4}{mat4} \&m0, const \hyperlink{classmat4}{mat4} \&m1)
+\begin{DoxyCompactList}\small\item\em return matrix product m0$\ast$m1 \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{glmath_8cpp_ac079e857a3c74a1b974e4f4619e16adf}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classmat4}{mat4} \&m)
+\begin{DoxyCompactList}\small\item\em print matrix to output stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{glmath.\+cpp@{glmath.\+cpp}!inverse@{inverse}}
+\index{inverse@{inverse}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{inverse(const mat3 \&m)}{inverse(const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} inverse (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_ae665e2778b01a006f14207e05280e343}{}\label{glmath_8cpp_ae665e2778b01a006f14207e05280e343}
+
+
+return inverse of 3x3 matrix 
+
+\index{glmath.\+cpp@{glmath.\+cpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const mat3 \&m0, const mat3 \&m1)}{operator*(const mat3 &m0, const mat3 &m1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m0, }
+\item[{const {\bf mat3} \&}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_aee9b77151906be62ccaceb17c454e038}{}\label{glmath_8cpp_aee9b77151906be62ccaceb17c454e038}
+
+
+return matrix product m0$\ast$m1 
+
+\index{glmath.\+cpp@{glmath.\+cpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const mat4 \&m, const vec4 \&v0)}{operator*(const mat4 &m, const vec4 &v0)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat4} \&}]{m, }
+\item[{const {\bf vec4} \&}]{v0}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_a95f8518be9e64ad566dd8442b2884d4b}{}\label{glmath_8cpp_a95f8518be9e64ad566dd8442b2884d4b}
+
+
+return matrix-\/vector product m$\ast$v 
+
+\index{glmath.\+cpp@{glmath.\+cpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const mat4 \&m0, const mat4 \&m1)}{operator*(const mat4 &m0, const mat4 &m1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat4} \&}]{m0, }
+\item[{const {\bf mat4} \&}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_a2e7b6ede225dc12ac74069ab9eb60a52}{}\label{glmath_8cpp_a2e7b6ede225dc12ac74069ab9eb60a52}
+
+
+return matrix product m0$\ast$m1 
+
+\index{glmath.\+cpp@{glmath.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const mat3 \&m)}{operator<<(std::ostream &os, const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_a85d71885cc6797f2553701eb01c52851}{}\label{glmath_8cpp_a85d71885cc6797f2553701eb01c52851}
+
+
+print matrix to output stream 
+
+\index{glmath.\+cpp@{glmath.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const mat4 \&m)}{operator<<(std::ostream &os, const mat4 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf mat4} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_ac079e857a3c74a1b974e4f4619e16adf}{}\label{glmath_8cpp_ac079e857a3c74a1b974e4f4619e16adf}
+
+
+print matrix to output stream 
+
+\index{glmath.\+cpp@{glmath.\+cpp}!transpose@{transpose}}
+\index{transpose@{transpose}!glmath.\+cpp@{glmath.\+cpp}}
+\subsubsection[{\texorpdfstring{transpose(const mat3 \&m)}{transpose(const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3} transpose (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{glmath_8cpp_a5ef0b4740283a5c525f1a8e0d0343068}{}\label{glmath_8cpp_a5ef0b4740283a5c525f1a8e0d0343068}
+
+
+return transposed matrix 
+

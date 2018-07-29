@@ -1,0 +1,36 @@
+\hypertarget{SolveQuadratic_8h}{}\section{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+3/src/\+Solve\+Quadratic.h File Reference}
+\label{SolveQuadratic_8h}\index{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+3/src/\+Solve\+Quadratic.\+h@{/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+3/src/\+Solve\+Quadratic.\+h}}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$array$>$}\\*
+Include dependency graph for Solve\+Quadratic.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{SolveQuadratic_8h_a019e16c4c818ad33bbaed94fee0ec01e}{solve\+Quadratic} (double a, double b, double c, std\+::array$<$ double, 2 $>$ \&solns)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Solve\+Quadratic.\+h@{Solve\+Quadratic.\+h}!solve\+Quadratic@{solve\+Quadratic}}
+\index{solve\+Quadratic@{solve\+Quadratic}!Solve\+Quadratic.\+h@{Solve\+Quadratic.\+h}}
+\subsubsection[{\texorpdfstring{solve\+Quadratic(double a, double b, double c, std\+::array$<$ double, 2 $>$ \&solns)}{solveQuadratic(double a, double b, double c, std::array< double, 2 > &solns)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t solve\+Quadratic (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{std\+::array$<$ double, 2 $>$ \&}]{solns}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{SolveQuadratic_8h_a019e16c4c818ad33bbaed94fee0ec01e}{}\label{SolveQuadratic_8h_a019e16c4c818ad33bbaed94fee0ec01e}
+Numerically robust solution to (possibly degenerate) quadratic equations. Avoids catastrophic cancellation and handles equations that have degenerated to become linear or constant. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a,b,c} & coefficients of ax$^\wedge$2 + bx + c == 0 \\
+\hline
+\mbox{\tt out}  & {\em solns} & array holding between 0 and 2 solutions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of solutions found 
+\end{DoxyReturn}

@@ -1,0 +1,10 @@
+{
+	"name": "crossout",
+	"stochastic": false,
+	"initial": "F+F+F+F",
+	"angle_deg": 90,
+	"num_iters": 4,
+	"rules": {
+		"F": "F-FF+F+FF-F"
+	}
+}

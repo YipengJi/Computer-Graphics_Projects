@@ -1,0 +1,10 @@
+{
+	"name": "hexerode",
+	"stochastic": false,
+	"initial": "-F+F+F+F+F+F",
+	"angle_deg": 60,
+	"num_iters": 4,
+	"rules": {
+		"F": "F-F++F-F"
+	}
+}

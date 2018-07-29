@@ -1,0 +1,194 @@
+\hypertarget{classShader}{}\section{Shader Class Reference}
+\label{classShader}\index{Shader@{Shader}}
+
+
+shader class for easy handling of the shader  
+
+
+
+
+{\ttfamily \#include $<$shader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classShader_a0d654ebaca4e0555197c0724c6d30610}{Shader} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classShader_aff01df87e8a102f270b5b135a295e59d}{$\sim$\+Shader} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+bool \hyperlink{classShader_abfbc28b370cbf38e58be42cde30ca5b6}{load} (const char $\ast$vfile, const char $\ast$ffile, const char $\ast$gfile=N\+U\+LL)
+\item 
+void \hyperlink{classShader_a134f0273210077a563ef60e85d7d7e76}{cleanup} ()
+\begin{DoxyCompactList}\small\item\em deletes all shader and frees G\+PU shader capacities \end{DoxyCompactList}\item 
+void \hyperlink{classShader_a870fa9f13d69e558815d6fd351a469dc}{use} ()
+\begin{DoxyCompactList}\small\item\em enable/bind this shader program \end{DoxyCompactList}\item 
+void \hyperlink{classShader_ad8368fcacdb176733217c6a15f3ad543}{disable} ()
+\begin{DoxyCompactList}\small\item\em disable/unbind this shader program \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classShader_a01fbc6fc938e196cd89b0f1ad24ef29b}{set\+\_\+uniform} (const char $\ast$name, const T \&value, bool optional=false)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lint \hyperlink{classShader_a8a092f71dea9d820d1c1e566e757b72e}{load\+\_\+and\+\_\+compile} (const char $\ast$filename, G\+Lenum type)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lint \hyperlink{classShader_a60ee8c3fab7e88c16e10ab1c9645b3bf}{pid\+\_\+}
+\begin{DoxyCompactList}\small\item\em id of the linked shader program \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{classShader_a82849da0db25a51821c30c344ef15b19}{vid\+\_\+}
+\begin{DoxyCompactList}\small\item\em id of the vertex shader \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{classShader_ad4a72d8f8b1b1545330d3e03bcb77b68}{fid\+\_\+}
+\begin{DoxyCompactList}\small\item\em id of the fragmend shader \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{classShader_ab2ee206d6a62bc218e1f6f1c0a424cdf}{gid\+\_\+}
+\begin{DoxyCompactList}\small\item\em id of the geometry shader \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+shader class for easy handling of the shader 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{Shader()}{Shader()}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+::\+Shader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_a0d654ebaca4e0555197c0724c6d30610}{}\label{classShader_a0d654ebaca4e0555197c0724c6d30610}
+
+
+default constructor 
+
+\index{Shader@{Shader}!````~Shader@{$\sim$\+Shader}}
+\index{````~Shader@{$\sim$\+Shader}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{$\sim$\+Shader()}{~Shader()}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+::$\sim$\+Shader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_aff01df87e8a102f270b5b135a295e59d}{}\label{classShader_aff01df87e8a102f270b5b135a295e59d}
+
+
+default destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{Shader@{Shader}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{cleanup()}{cleanup()}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+::cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_a134f0273210077a563ef60e85d7d7e76}{}\label{classShader_a134f0273210077a563ef60e85d7d7e76}
+
+
+deletes all shader and frees G\+PU shader capacities 
+
+\index{Shader@{Shader}!disable@{disable}}
+\index{disable@{disable}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{disable()}{disable()}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+::disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_ad8368fcacdb176733217c6a15f3ad543}{}\label{classShader_ad8368fcacdb176733217c6a15f3ad543}
+
+
+disable/unbind this shader program 
+
+\index{Shader@{Shader}!load@{load}}
+\index{load@{load}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{load(const char $\ast$vfile, const char $\ast$ffile, const char $\ast$gfile=\+N\+U\+L\+L)}{load(const char *vfile, const char *ffile, const char *gfile=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Shader\+::load (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{vfile, }
+\item[{const char $\ast$}]{ffile, }
+\item[{const char $\ast$}]{gfile = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_abfbc28b370cbf38e58be42cde30ca5b6}{}\label{classShader_abfbc28b370cbf38e58be42cde30ca5b6}
+load (from file), compile, and link vertex and fragment shader, optionially also a geometry shader 
+\begin{DoxyParams}{Parameters}
+{\em vfile} & string with the adress to the vertex shader \\
+\hline
+{\em ffile} & string with the adress to the fragment shader \\
+\hline
+{\em gfile} & optional string with the adress to the geometry shader \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!load\+\_\+and\+\_\+compile@{load\+\_\+and\+\_\+compile}}
+\index{load\+\_\+and\+\_\+compile@{load\+\_\+and\+\_\+compile}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{load\+\_\+and\+\_\+compile(const char $\ast$filename, G\+Lenum type)}{load_and_compile(const char *filename, GLenum type)}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+::load\+\_\+and\+\_\+compile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{G\+Lenum}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShader_a8a092f71dea9d820d1c1e566e757b72e}{}\label{classShader_a8a092f71dea9d820d1c1e566e757b72e}
+loads a vertex/fragmend/geometry shader from a file and compiles it 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the location and name of the shader \\
+\hline
+{\em type} & the type of the shader (vertex, geometry, fragment) \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!set\+\_\+uniform@{set\+\_\+uniform}}
+\index{set\+\_\+uniform@{set\+\_\+uniform}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{set\+\_\+uniform(const char $\ast$name, const T \&value, bool optional=false)}{set_uniform(const char *name, const T &value, bool optional=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Shader\+::set\+\_\+uniform (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const T \&}]{value, }
+\item[{bool}]{optional = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_a01fbc6fc938e196cd89b0f1ad24ef29b}{}\label{classShader_a01fbc6fc938e196cd89b0f1ad24ef29b}
+Upload a typed value for a uniform by name 
+\begin{DoxyParams}{Parameters}
+{\em name} & string holding the uniform name \\
+\hline
+{\em value} & the value for the uniform \\
+\hline
+\end{DoxyParams}
+\index{Shader@{Shader}!use@{use}}
+\index{use@{use}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{use()}{use()}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+::use (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classShader_a870fa9f13d69e558815d6fd351a469dc}{}\label{classShader_a870fa9f13d69e558815d6fd351a469dc}
+
+
+enable/bind this shader program 
+
+
+
+\subsection{Member Data Documentation}
+\index{Shader@{Shader}!fid\+\_\+@{fid\+\_\+}}
+\index{fid\+\_\+@{fid\+\_\+}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{fid\+\_\+}{fid_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+::fid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShader_ad4a72d8f8b1b1545330d3e03bcb77b68}{}\label{classShader_ad4a72d8f8b1b1545330d3e03bcb77b68}
+
+
+id of the fragmend shader 
+
+\index{Shader@{Shader}!gid\+\_\+@{gid\+\_\+}}
+\index{gid\+\_\+@{gid\+\_\+}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{gid\+\_\+}{gid_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+::gid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShader_ab2ee206d6a62bc218e1f6f1c0a424cdf}{}\label{classShader_ab2ee206d6a62bc218e1f6f1c0a424cdf}
+
+
+id of the geometry shader 
+
+\index{Shader@{Shader}!pid\+\_\+@{pid\+\_\+}}
+\index{pid\+\_\+@{pid\+\_\+}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{pid\+\_\+}{pid_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+::pid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShader_a60ee8c3fab7e88c16e10ab1c9645b3bf}{}\label{classShader_a60ee8c3fab7e88c16e10ab1c9645b3bf}
+
+
+id of the linked shader program 
+
+\index{Shader@{Shader}!vid\+\_\+@{vid\+\_\+}}
+\index{vid\+\_\+@{vid\+\_\+}!Shader@{Shader}}
+\subsubsection[{\texorpdfstring{vid\+\_\+}{vid_}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+::vid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classShader_a82849da0db25a51821c30c344ef15b19}{}\label{classShader_a82849da0db25a51821c30c344ef15b19}
+
+
+id of the vertex shader 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{shader_8h}{shader.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{shader_8cpp}{shader.\+cpp}\end{DoxyCompactItemize}

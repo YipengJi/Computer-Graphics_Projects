@@ -1,0 +1,59 @@
+We are using a couple of C++11 features, so please ensure that you use an up-\/to-\/date compiler (G\+CC 4.\+7 or higher, Visual Studio 2012). \href{www.cmake.org}{\tt C\+Make} is used for setting up build environments.
+
+\subsection*{Building under Linux/mac\+OS }
+
+Inside the exercise\textquotesingle{}s top-\/level directory, execute the following commands\+: \begin{DoxyVerb}mkdir build
+cd build
+cmake ..
+make
+\end{DoxyVerb}
+
+
+The last command -- i.\+e. {\ttfamily make} -- compiles the application. Rerun it whenever you have added/changed code in order to recompile.
+
+To build a pretty documentation use\+: \begin{DoxyVerb}make doc
+\end{DoxyVerb}
+
+
+and open the {\ttfamily index.\+html} in the html folder with your favourite browser. To build the documentation, you must install Doxygen.
+
+\subsection*{Building with X\+Code (mac\+OS) }
+
+If you wish, you can use the C\+Make build system to generate an X\+Code project. Inside the exercise\textquotesingle{}s top-\/level directory, execute the following commands\+: \begin{DoxyVerb}mkdir xcode
+cd xcode
+cmake -G Xcode ..
+open RayTracing.xcodeproj
+\end{DoxyVerb}
+
+
+\subsection*{Building under Microsoft Windows (Visual Studio) }
+
+
+\begin{DoxyItemize}
+\item Start the C\+Make-\/\+G\+UI.
+\item Open the Ray\+Tracing top-\/level directory as source directory.
+\item Choose a build directory.
+\item Click on configure and select Visual Studio as generator.
+\item Click generate to create the Visual Studio project files.
+\item Open the Visual Studio solution file that is in the build directory you chose in C\+Make.
+\end{DoxyItemize}
+
+\subsection*{Running the \hyperlink{classRay}{Ray} Tracer }
+
+The program expects two command line arguments\+: an input scene ({\ttfamily $\ast$.sce}) and an output image ({\ttfamily $\ast$.tga}). To render the scene with the three spheres, while inside the {\ttfamily build} directory, type\+: \begin{DoxyVerb}./raytrace ../scenes/spheres/spheres.sce output.tga
+\end{DoxyVerb}
+
+
+If you have finished all exercise tasks, use \begin{DoxyVerb}./raytrace 0
+\end{DoxyVerb}
+
+
+to render all scenes at once.
+
+To set the command line parameters in M\+S\+VC or Xcode, please refer to the documentation of these programs (or use the command line...).
+
+\subsection*{Assignment 0\+: \char`\"{}\+Hello World\char`\"{} }
+
+Edit scenes/solid\+\_\+color/solid\+\_\+color.\+sce to produce the color of your choice and render it to an output file titled \char`\"{}solid\+\_\+color.\+tga\char`\"{}.
+
+Please also consider setting up a private Git\+Hub repository for your group to collaborate on the future raytracing assignments. 

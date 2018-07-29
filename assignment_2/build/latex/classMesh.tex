@@ -1,0 +1,232 @@
+\hypertarget{classMesh}{}\section{Mesh Class Reference}
+\label{classMesh}\index{Mesh@{Mesh}}
+
+
+{\ttfamily \#include $<$Mesh.\+h$>$}
+
+
+
+Inheritance diagram for Mesh\+:
+% FIG 0
+
+
+Collaboration diagram for Mesh\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMesh_1_1Triangle}{Triangle}
+\begin{DoxyCompactList}\small\item\em a triangle is specified by three indices and a normal \end{DoxyCompactList}\item 
+struct \hyperlink{structMesh_1_1Vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em a vertex consists of a position and a normal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classMesh_aa4144c3cad2e62df26ad90131e59aa6a}{Draw\+\_\+mode} \{ \hyperlink{classMesh_aa4144c3cad2e62df26ad90131e59aa6aae58e62c20878ec327ed6409c7852b871}{F\+L\+AT}, 
+\hyperlink{classMesh_aa4144c3cad2e62df26ad90131e59aa6aafc0cc7ddf5257c8d2a52d84573da372a}{P\+H\+O\+NG}
+ \}\begin{DoxyCompactList}\small\item\em This type is used to choose between flat shading and Phong shading. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMesh_a58ef6d7fa08a5b8eef0c9b97d6c55e0d}{Mesh} (std\+::istream \&is, const std\+::string \&scene\+Path)
+\item 
+virtual bool \hyperlink{classMesh_a3d982c37d43eb5d3929b2de2b263d662}{intersect} (const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override
+\item 
+bool \hyperlink{classMesh_a77532d1e9aee1671d4ea38be1ed0d464}{read} (const std\+::string \&\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em Read mesh from an O\+FF file. \end{DoxyCompactList}\item 
+void \hyperlink{classMesh_a4e9bedfc415b7135c9587f63535fcb6d}{compute\+\_\+normals} ()
+\begin{DoxyCompactList}\small\item\em Compute normal vectors for triangles and vertices. \end{DoxyCompactList}\item 
+void \hyperlink{classMesh_a303c102fd254ea32b366591aa00f6e8e}{compute\+\_\+bounding\+\_\+box} ()
+\begin{DoxyCompactList}\small\item\em Compute the axis-\/aligned bounding box, store minimum and maximum point in bb\+\_\+min\+\_\+ and bb\+\_\+max\+\_\+. \end{DoxyCompactList}\item 
+bool \hyperlink{classMesh_a5839749bb09a6bf09c56056016cc11b2}{intersect\+\_\+bounding\+\_\+box} (const \hyperlink{classRay}{Ray} \&\+\_\+ray) const 
+\begin{DoxyCompactList}\small\item\em Does {\ttfamily \+\_\+ray} intersect the bounding box of the mesh? \end{DoxyCompactList}\item 
+bool \hyperlink{classMesh_a9be7264791ff3de7dbf99f8548fb7725}{intersect\+\_\+triangle} (const \hyperlink{structMesh_1_1Triangle}{Triangle} \&\+\_\+triangle, const \hyperlink{classRay}{Ray} \&\+\_\+ray, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+point, \hyperlink{classvec3}{vec3} \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMesh_aa4144c3cad2e62df26ad90131e59aa6a}{Draw\+\_\+mode} \hyperlink{classMesh_a00bc30acf9fbbf37a6626aefeeae40ab}{draw\+\_\+mode\+\_\+}
+\begin{DoxyCompactList}\small\item\em Does this mesh use flat or Phong shading? \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structMesh_1_1Vertex}{Vertex} $>$ \hyperlink{classMesh_a986edf1ab1d37e517ff8adc928519528}{vertices\+\_\+}
+\begin{DoxyCompactList}\small\item\em Array of vertices. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structMesh_1_1Triangle}{Triangle} $>$ \hyperlink{classMesh_a13455b3ace274f1d3d36ee45c7a3988d}{triangles\+\_\+}
+\begin{DoxyCompactList}\small\item\em Array of triangles. \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classMesh_a92a3f0d35d2508cae425862f4d302943}{bb\+\_\+min\+\_\+}
+\begin{DoxyCompactList}\small\item\em Minimum point of the bounding box. \end{DoxyCompactList}\item 
+\hyperlink{classvec3}{vec3} \hyperlink{classMesh_acb17b74d4630a25eb2586a5d2c89975d}{bb\+\_\+max\+\_\+}
+\begin{DoxyCompactList}\small\item\em Maximum point of the bounding box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents a simple triangle mesh, stored as an indexed face set, i.\+e., as an array of vertices and an array of triangles. 
+
+\subsection{Member Enumeration Documentation}
+\index{Mesh@{Mesh}!Draw\+\_\+mode@{Draw\+\_\+mode}}
+\index{Draw\+\_\+mode@{Draw\+\_\+mode}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{Draw\+\_\+mode}{Draw_mode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Mesh\+::\+Draw\+\_\+mode}}\hypertarget{classMesh_aa4144c3cad2e62df26ad90131e59aa6a}{}\label{classMesh_aa4144c3cad2e62df26ad90131e59aa6a}
+
+
+This type is used to choose between flat shading and Phong shading. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\+L\+AT@{F\+L\+AT}!Mesh@{Mesh}}\index{Mesh@{Mesh}!F\+L\+AT@{F\+L\+AT}}\item[{\em 
+F\+L\+AT\hypertarget{classMesh_aa4144c3cad2e62df26ad90131e59aa6aae58e62c20878ec327ed6409c7852b871}{}\label{classMesh_aa4144c3cad2e62df26ad90131e59aa6aae58e62c20878ec327ed6409c7852b871}
+}]\index{P\+H\+O\+NG@{P\+H\+O\+NG}!Mesh@{Mesh}}\index{Mesh@{Mesh}!P\+H\+O\+NG@{P\+H\+O\+NG}}\item[{\em 
+P\+H\+O\+NG\hypertarget{classMesh_aa4144c3cad2e62df26ad90131e59aa6aafc0cc7ddf5257c8d2a52d84573da372a}{}\label{classMesh_aa4144c3cad2e62df26ad90131e59aa6aafc0cc7ddf5257c8d2a52d84573da372a}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{Mesh(std\+::istream \&is, const std\+::string \&scene\+Path)}{Mesh(std::istream &is, const std::string &scenePath)}}]{\setlength{\rightskip}{0pt plus 5cm}Mesh\+::\+Mesh (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{const std\+::string \&}]{scene\+Path}
+\end{DoxyParamCaption}
+)}\hypertarget{classMesh_a58ef6d7fa08a5b8eef0c9b97d6c55e0d}{}\label{classMesh_a58ef6d7fa08a5b8eef0c9b97d6c55e0d}
+Construct a mesh by parsing its path and properties from an input stream. The mesh path read from the file is relative to the scene file\textquotesingle{}s path \char`\"{}scene\+Path\char`\"{}. 
+
+\subsection{Member Function Documentation}
+\index{Mesh@{Mesh}!compute\+\_\+bounding\+\_\+box@{compute\+\_\+bounding\+\_\+box}}
+\index{compute\+\_\+bounding\+\_\+box@{compute\+\_\+bounding\+\_\+box}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{compute\+\_\+bounding\+\_\+box()}{compute_bounding_box()}}]{\setlength{\rightskip}{0pt plus 5cm}void Mesh\+::compute\+\_\+bounding\+\_\+box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMesh_a303c102fd254ea32b366591aa00f6e8e}{}\label{classMesh_a303c102fd254ea32b366591aa00f6e8e}
+
+
+Compute the axis-\/aligned bounding box, store minimum and maximum point in bb\+\_\+min\+\_\+ and bb\+\_\+max\+\_\+. 
+
+\index{Mesh@{Mesh}!compute\+\_\+normals@{compute\+\_\+normals}}
+\index{compute\+\_\+normals@{compute\+\_\+normals}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{compute\+\_\+normals()}{compute_normals()}}]{\setlength{\rightskip}{0pt plus 5cm}void Mesh\+::compute\+\_\+normals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMesh_a4e9bedfc415b7135c9587f63535fcb6d}{}\label{classMesh_a4e9bedfc415b7135c9587f63535fcb6d}
+
+
+Compute normal vectors for triangles and vertices. 
+
+\index{Mesh@{Mesh}!intersect@{intersect}}
+\index{intersect@{intersect}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{intersect(const Ray \&\+\_\+ray, vec3 \&\+\_\+intersection\+\_\+point, vec3 \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const override}{intersect(const Ray &_ray, vec3 &_intersection_point, vec3 &_intersection_normal, double &_intersection_t) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool Mesh\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+normal, }
+\item[{double \&}]{\+\_\+intersection\+\_\+t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classMesh_a3d982c37d43eb5d3929b2de2b263d662}{}\label{classMesh_a3d982c37d43eb5d3929b2de2b263d662}
+Intersect mesh with ray (calls ray-\/triangle intersection) If {\ttfamily \+\_\+ray} intersects a face of the mesh, it provides the following results\+: 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+ray} & the ray to intersect the mesh with \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+point} & the point of intersection \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+normal} & the surface normal at intersection point \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+t} & ray parameter at the intersection point \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object}.
+
+\index{Mesh@{Mesh}!intersect\+\_\+bounding\+\_\+box@{intersect\+\_\+bounding\+\_\+box}}
+\index{intersect\+\_\+bounding\+\_\+box@{intersect\+\_\+bounding\+\_\+box}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{intersect\+\_\+bounding\+\_\+box(const Ray \&\+\_\+ray) const }{intersect_bounding_box(const Ray &_ray) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Mesh\+::intersect\+\_\+bounding\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{\+\_\+ray}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMesh_a5839749bb09a6bf09c56056016cc11b2}{}\label{classMesh_a5839749bb09a6bf09c56056016cc11b2}
+
+
+Does {\ttfamily \+\_\+ray} intersect the bounding box of the mesh? 
+
+\index{Mesh@{Mesh}!intersect\+\_\+triangle@{intersect\+\_\+triangle}}
+\index{intersect\+\_\+triangle@{intersect\+\_\+triangle}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{intersect\+\_\+triangle(const Triangle \&\+\_\+triangle, const Ray \&\+\_\+ray, vec3 \&\+\_\+intersection\+\_\+point, vec3 \&\+\_\+intersection\+\_\+normal, double \&\+\_\+intersection\+\_\+t) const }{intersect_triangle(const Triangle &_triangle, const Ray &_ray, vec3 &_intersection_point, vec3 &_intersection_normal, double &_intersection_t) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Mesh\+::intersect\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Triangle} \&}]{\+\_\+triangle, }
+\item[{const {\bf Ray} \&}]{\+\_\+ray, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+point, }
+\item[{{\bf vec3} \&}]{\+\_\+intersection\+\_\+normal, }
+\item[{double \&}]{\+\_\+intersection\+\_\+t}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMesh_a9be7264791ff3de7dbf99f8548fb7725}{}\label{classMesh_a9be7264791ff3de7dbf99f8548fb7725}
+Intersect a triangle with a ray. Return whether there is an intersection. If there is an intersection, store intersection data. This function overrides \hyperlink{structObject_ac6549d30793a9b3da070234bf10c7e91}{Object\+::intersect()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+triangle} & the triangle to be intersected \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+ray} & the ray to intersect the triangle with \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+point} & the point of intersection \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+normal} & the surface normal at intersection point \\
+\hline
+\mbox{\tt out}  & {\em \+\_\+intersection\+\_\+t} & ray parameter at the intersection point \\
+\hline
+\end{DoxyParams}
+\index{Mesh@{Mesh}!read@{read}}
+\index{read@{read}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{read(const std\+::string \&\+\_\+filename)}{read(const std::string &_filename)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Mesh\+::read (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classMesh_a77532d1e9aee1671d4ea38be1ed0d464}{}\label{classMesh_a77532d1e9aee1671d4ea38be1ed0d464}
+
+
+Read mesh from an O\+FF file. 
+
+
+
+\subsection{Member Data Documentation}
+\index{Mesh@{Mesh}!bb\+\_\+max\+\_\+@{bb\+\_\+max\+\_\+}}
+\index{bb\+\_\+max\+\_\+@{bb\+\_\+max\+\_\+}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{bb\+\_\+max\+\_\+}{bb_max_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Mesh\+::bb\+\_\+max\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMesh_acb17b74d4630a25eb2586a5d2c89975d}{}\label{classMesh_acb17b74d4630a25eb2586a5d2c89975d}
+
+
+Maximum point of the bounding box. 
+
+\index{Mesh@{Mesh}!bb\+\_\+min\+\_\+@{bb\+\_\+min\+\_\+}}
+\index{bb\+\_\+min\+\_\+@{bb\+\_\+min\+\_\+}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{bb\+\_\+min\+\_\+}{bb_min_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} Mesh\+::bb\+\_\+min\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMesh_a92a3f0d35d2508cae425862f4d302943}{}\label{classMesh_a92a3f0d35d2508cae425862f4d302943}
+
+
+Minimum point of the bounding box. 
+
+\index{Mesh@{Mesh}!draw\+\_\+mode\+\_\+@{draw\+\_\+mode\+\_\+}}
+\index{draw\+\_\+mode\+\_\+@{draw\+\_\+mode\+\_\+}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{draw\+\_\+mode\+\_\+}{draw_mode_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+\_\+mode} Mesh\+::draw\+\_\+mode\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMesh_a00bc30acf9fbbf37a6626aefeeae40ab}{}\label{classMesh_a00bc30acf9fbbf37a6626aefeeae40ab}
+
+
+Does this mesh use flat or Phong shading? 
+
+\index{Mesh@{Mesh}!triangles\+\_\+@{triangles\+\_\+}}
+\index{triangles\+\_\+@{triangles\+\_\+}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{triangles\+\_\+}{triangles_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Triangle}$>$ Mesh\+::triangles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMesh_a13455b3ace274f1d3d36ee45c7a3988d}{}\label{classMesh_a13455b3ace274f1d3d36ee45c7a3988d}
+
+
+Array of triangles. 
+
+\index{Mesh@{Mesh}!vertices\+\_\+@{vertices\+\_\+}}
+\index{vertices\+\_\+@{vertices\+\_\+}!Mesh@{Mesh}}
+\subsubsection[{\texorpdfstring{vertices\+\_\+}{vertices_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Vertex}$>$ Mesh\+::vertices\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMesh_a986edf1ab1d37e517ff8adc928519528}{}\label{classMesh_a986edf1ab1d37e517ff8adc928519528}
+
+
+Array of vertices. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+2/src/\hyperlink{Mesh_8h}{Mesh.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+2/src/\hyperlink{Mesh_8cpp}{Mesh.\+cpp}\end{DoxyCompactItemize}

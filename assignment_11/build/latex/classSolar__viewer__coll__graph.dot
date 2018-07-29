@@ -1,0 +1,38 @@
+digraph "Solar_viewer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Solar_viewer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="GLFW_window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGLFW__window.html",tooltip="Simple GLFW window. "];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instance__" ];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" solid_color_shader\l_\nearth_shader_\nphong_shader_\nsun_shader_\ncolor_shader_" ];
+  Node3 [label="Shader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShader.html",tooltip="shader class for easy handling of the shader "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ship_path_renderer\l_\nship_path_cp_renderer_" ];
+  Node4 [label="Path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPath.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mercury_\nmars_\nvenus_\nsun_\nmoon_\nplanet_to\l_look_at_\nstars_" ];
+  Node5 [label="Planet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPlanet.html",tooltip="default class for the planet "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pos_" ];
+  Node6 [label="vec4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classvec4.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tex_" ];
+  Node7 [label="Texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTexture.html",tooltip="class that handles texture io and GPU upload "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sunglow_" ];
+  Node8 [label="Billboard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBillboard.html"];
+  Node7 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tex_" ];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" earth_" ];
+  Node9 [label="Earth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEarth.html",tooltip="earth is a special planet, because we need access to more textures "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" normal_\ngloss_\nnight_\ncloud_" ];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ship_path_" ];
+  Node10 [label="PiecewiseBezier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPiecewiseBezier.html"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ship_path_frame_" ];
+  Node11 [label="Frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFrame.html"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" left\nup\nt" ];
+  Node12 [label="vec3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classvec3.html"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ship_" ];
+  Node13 [label="Ship",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShip.html"];
+  Node6 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" direction_\npos_" ];
+  Node7 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tex_" ];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" unit_sphere_" ];
+  Node14 [label="Sphere",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSphere.html",tooltip="class that creates a sphere with a desired tessellation degree and renders it "];
+}

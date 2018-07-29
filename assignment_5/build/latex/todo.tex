@@ -1,0 +1,26 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000004}%
+\hypertarget{todo__todo000004}{}%
+Member \hyperlink{classSolar__viewer_af6b468fb543b9c9ed466fe1687f1aff8}{Solar\+\_\+viewer\+:\+:draw\+\_\+scene} (\hyperlink{classmat4}{mat4} \&\+\_\+projection, \hyperlink{classmat4}{mat4} \&\+\_\+view)]Render the star background, the spaceship, and the rest of the celestial bodies. For now, everything should be rendered with the color\+\_\+shader\+\_\+, which expects uniforms \char`\"{}modelview\+\_\+projection\+\_\+matrix\char`\"{}, \char`\"{}tex\char`\"{} and \char`\"{}grayscale\char`\"{} and a single bound texture. 
+\item[\label{todo__todo000001}%
+\hypertarget{todo__todo000001}{}%
+Member \hyperlink{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}{Solar\+\_\+viewer\+:\+:keyboard} (int key, int scancode, int action, int mods)]Implement the ability to change the viewer\textquotesingle{}s distance to the celestial body.
+\begin{DoxyItemize}
+\item key 9 should increase and key 8 should decrease the {\ttfamily dist\+\_\+factor\+\_\+}
+\item 2.\+5 $<$ {\ttfamily dist\+\_\+factor\+\_\+} $<$ 20.\+0  
+\end{DoxyItemize}
+\item[\label{todo__todo000003}%
+\hypertarget{todo__todo000003}{}%
+Member \hyperlink{classSolar__viewer_ab0c48ceb8d58aefee8c5528c9efa6412}{Solar\+\_\+viewer\+:\+:paint} ()]Implement navigation through the solar system.
+\begin{DoxyItemize}
+\item Allow camera rotation by modifying the view matrix. {\ttfamily x\+\_\+angle\+\_\+} and {\ttfamily y\+\_\+angle} hold the necessary information and are updated by key presses (see {\ttfamily \hyperlink{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}{Solar\+\_\+viewer\+::keyboard}(...)}).
+\item Position the camera at distance {\ttfamily dist\+\_\+factor\+\_\+} from the planet\textquotesingle{}s center (in units of planet radii). This distance should be controlled by keys 8 and 9.
+\item When keys {\ttfamily 1} to {\ttfamily 6} are pressed, the camera should move to look at the corresponding celestial body (this functionality is already provided, see {\ttfamily \hyperlink{classSolar__viewer_aaf4e3bd2fd0dea72ffafe050a3c2ef7f}{Solar\+\_\+viewer\+::keyboard}(...)}).
+\item Pointer {\ttfamily planet\+\_\+to\+\_\+look\+\_\+at\+\_\+} stores the current body to view.
+\item When you are in spaceship mode (member in\+\_\+ship\+\_\+), the camera should hover slightly behind and above the ship and rotate along with it (so that when the ship moves and turns it always remains stationary in view while the solar system moves and spins around it). 
+\end{DoxyItemize}
+\item[\label{todo__todo000002}%
+\hypertarget{todo__todo000002}{}%
+Member \hyperlink{classSolar__viewer_ab86b680afd2e29e8ead0ae9bdb2cef48}{Solar\+\_\+viewer\+:\+:update\+\_\+body\+\_\+positions} ()]Update the position of the planets based on their distance to their orbit\textquotesingle{}s center and their angular displacement around the orbit. Planets should follow a circular orbit in the x-\/z plane, moving in a clockwise direction around the positive y axis. \char`\"{}angle\+\_\+orbit\+\_\+ = 0\char`\"{} should correspond to a position on the x axis. Note\+: planets will orbit around the sun, which is always positioned at the origin, but the moon orbits around the earth! Only visualize mercury, venus, earth, mars, and earth\textquotesingle{}s moon. Do not explicitly place the space ship, it\textquotesingle{}s position is fixed for now. 
+\end{DoxyRefList}

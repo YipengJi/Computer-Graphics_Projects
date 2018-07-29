@@ -1,0 +1,244 @@
+\hypertarget{classmat4}{}\section{mat4 Class Reference}
+\label{classmat4}\index{mat4@{mat4}}
+
+
+{\ttfamily \#include $<$glmath.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmat4_acf3f0c37ff5c16e8fb1bfdde2bf87a0f}{mat4} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classmat4_a5efcc4068d4350693982154b0decadc5}{mat4} (float s)
+\begin{DoxyCompactList}\small\item\em construct matrix where all values are s \end{DoxyCompactList}\item 
+\hyperlink{classmat4_ae56ac11e52c3ff8e1757815c7897769e}{mat4} (const \hyperlink{classmat3}{mat3} \&m)
+\item 
+float \& \hyperlink{classmat4_a4fd514a46e9cd9e8713456fd5be85e54}{operator()} (const int i, const int j)
+\begin{DoxyCompactList}\small\item\em read/write access to element (i,j) \end{DoxyCompactList}\item 
+float \hyperlink{classmat4_ade8b8e621a1c42c0d16a898a011414d6}{operator()} (const int i, const int j) const 
+\begin{DoxyCompactList}\small\item\em read access to element (i,j) \end{DoxyCompactList}\item 
+const float $\ast$ \hyperlink{classmat4_ae20da4790967e26646d42b4f99a271bb}{data} () const 
+\begin{DoxyCompactList}\small\item\em pointer to data (for passing it to Open\+GL) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_af4dd10f9a4c0515cb66d3d7a92315360}{identity} ()
+\begin{DoxyCompactList}\small\item\em return identity matrix \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_a1bd4dba30f944942b922dc765a0f2b49}{frustum} (float left, float right, float bottom, float top, float near, float far)
+\begin{DoxyCompactList}\small\item\em return frustum matrix \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_a531453b6a6c5cf8df9057ee2624c217a}{perspective} (float fovy, float aspect, float near, float far)
+\begin{DoxyCompactList}\small\item\em return matrix for perspective projection (special case of frustum matrix) \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_a43fd28c811abea786299cbf0551b2254}{look\+\_\+at} (const \hyperlink{classvec3}{vec3} \&eye, const \hyperlink{classvec3}{vec3} \&center, const \hyperlink{classvec3}{vec3} \&up)
+\begin{DoxyCompactList}\small\item\em return look-\/at camera matrix \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_aaa01f2d513fd6ff553c8b8409c5db648}{translate} (const \hyperlink{classvec3}{vec3} \&t)
+\begin{DoxyCompactList}\small\item\em return translation matrix \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_a634346eae7a482a482a26e6b9759078d}{scale} (float factor)
+\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_aaa2347aa6162f402adefa37129762a23}{rotate\+\_\+x} (float angle)
+\begin{DoxyCompactList}\small\item\em return matrix for rotation around x-\/axis \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_a86e9d4783b801df80360b45fd95e30f9}{rotate\+\_\+y} (float angle)
+\begin{DoxyCompactList}\small\item\em return matrix for rotation around y-\/axis \end{DoxyCompactList}\item 
+static \hyperlink{classmat4}{mat4} \hyperlink{classmat4_ae913dccbd1067705b3292a5e554819aa}{rotate\+\_\+z} (float angle)
+\begin{DoxyCompactList}\small\item\em return matrix for rotation around z-\/axis \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classmat4_a9da15ef9e016637fcba240f8156b8586}{data\+\_\+} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em the data is stored as an array of 16 values \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a simple 4x4 matrix. \begin{DoxySeeAlso}{See also}
+\hyperlink{glmath_8h}{glmath.\+h} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{mat4@{mat4}!mat4@{mat4}}
+\index{mat4@{mat4}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{mat4()}{mat4()}}]{\setlength{\rightskip}{0pt plus 5cm}mat4\+::mat4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat4_acf3f0c37ff5c16e8fb1bfdde2bf87a0f}{}\label{classmat4_acf3f0c37ff5c16e8fb1bfdde2bf87a0f}
+
+
+default constructor 
+
+\index{mat4@{mat4}!mat4@{mat4}}
+\index{mat4@{mat4}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{mat4(float s)}{mat4(float s)}}]{\setlength{\rightskip}{0pt plus 5cm}mat4\+::mat4 (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classmat4_a5efcc4068d4350693982154b0decadc5}{}\label{classmat4_a5efcc4068d4350693982154b0decadc5}
+
+
+construct matrix where all values are s 
+
+\index{mat4@{mat4}!mat4@{mat4}}
+\index{mat4@{mat4}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{mat4(const mat3 \&m)}{mat4(const mat3 &m)}}]{\setlength{\rightskip}{0pt plus 5cm}mat4\+::mat4 (
+\begin{DoxyParamCaption}
+\item[{const {\bf mat3} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classmat4_ae56ac11e52c3ff8e1757815c7897769e}{}\label{classmat4_ae56ac11e52c3ff8e1757815c7897769e}
+construct a matrix applying the same linear transformation as 3x3 matrix m but / operating on homogeneous coordinates. 
+
+\subsection{Member Function Documentation}
+\index{mat4@{mat4}!data@{data}}
+\index{data@{data}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}const float$\ast$ mat4\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat4_ae20da4790967e26646d42b4f99a271bb}{}\label{classmat4_ae20da4790967e26646d42b4f99a271bb}
+
+
+pointer to data (for passing it to Open\+GL) 
+
+\index{mat4@{mat4}!frustum@{frustum}}
+\index{frustum@{frustum}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{frustum(float left, float right, float bottom, float top, float near, float far)}{frustum(float left, float right, float bottom, float top, float near, float far)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::frustum (
+\begin{DoxyParamCaption}
+\item[{float}]{left, }
+\item[{float}]{right, }
+\item[{float}]{bottom, }
+\item[{float}]{top, }
+\item[{float}]{near, }
+\item[{float}]{far}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_a1bd4dba30f944942b922dc765a0f2b49}{}\label{classmat4_a1bd4dba30f944942b922dc765a0f2b49}
+
+
+return frustum matrix 
+
+\index{mat4@{mat4}!identity@{identity}}
+\index{identity@{identity}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{identity()}{identity()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_af4dd10f9a4c0515cb66d3d7a92315360}{}\label{classmat4_af4dd10f9a4c0515cb66d3d7a92315360}
+
+
+return identity matrix 
+
+\index{mat4@{mat4}!look\+\_\+at@{look\+\_\+at}}
+\index{look\+\_\+at@{look\+\_\+at}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{look\+\_\+at(const vec3 \&eye, const vec3 \&center, const vec3 \&up)}{look_at(const vec3 &eye, const vec3 &center, const vec3 &up)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::look\+\_\+at (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{eye, }
+\item[{const {\bf vec3} \&}]{center, }
+\item[{const {\bf vec3} \&}]{up}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_a43fd28c811abea786299cbf0551b2254}{}\label{classmat4_a43fd28c811abea786299cbf0551b2254}
+
+
+return look-\/at camera matrix 
+
+\index{mat4@{mat4}!operator()@{operator()}}
+\index{operator()@{operator()}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{operator()(const int i, const int j)}{operator()(const int i, const int j)}}]{\setlength{\rightskip}{0pt plus 5cm}float\& mat4\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat4_a4fd514a46e9cd9e8713456fd5be85e54}{}\label{classmat4_a4fd514a46e9cd9e8713456fd5be85e54}
+
+
+read/write access to element (i,j) 
+
+\index{mat4@{mat4}!operator()@{operator()}}
+\index{operator()@{operator()}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{operator()(const int i, const int j) const }{operator()(const int i, const int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}float mat4\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmat4_ade8b8e621a1c42c0d16a898a011414d6}{}\label{classmat4_ade8b8e621a1c42c0d16a898a011414d6}
+
+
+read access to element (i,j) 
+
+\index{mat4@{mat4}!perspective@{perspective}}
+\index{perspective@{perspective}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{perspective(float fovy, float aspect, float near, float far)}{perspective(float fovy, float aspect, float near, float far)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::perspective (
+\begin{DoxyParamCaption}
+\item[{float}]{fovy, }
+\item[{float}]{aspect, }
+\item[{float}]{near, }
+\item[{float}]{far}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_a531453b6a6c5cf8df9057ee2624c217a}{}\label{classmat4_a531453b6a6c5cf8df9057ee2624c217a}
+
+
+return matrix for perspective projection (special case of frustum matrix) 
+
+\index{mat4@{mat4}!rotate\+\_\+x@{rotate\+\_\+x}}
+\index{rotate\+\_\+x@{rotate\+\_\+x}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+x(float angle)}{rotate_x(float angle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::rotate\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_aaa2347aa6162f402adefa37129762a23}{}\label{classmat4_aaa2347aa6162f402adefa37129762a23}
+
+
+return matrix for rotation around x-\/axis 
+
+\index{mat4@{mat4}!rotate\+\_\+y@{rotate\+\_\+y}}
+\index{rotate\+\_\+y@{rotate\+\_\+y}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+y(float angle)}{rotate_y(float angle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::rotate\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_a86e9d4783b801df80360b45fd95e30f9}{}\label{classmat4_a86e9d4783b801df80360b45fd95e30f9}
+
+
+return matrix for rotation around y-\/axis 
+
+\index{mat4@{mat4}!rotate\+\_\+z@{rotate\+\_\+z}}
+\index{rotate\+\_\+z@{rotate\+\_\+z}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+z(float angle)}{rotate_z(float angle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::rotate\+\_\+z (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_ae913dccbd1067705b3292a5e554819aa}{}\label{classmat4_ae913dccbd1067705b3292a5e554819aa}
+
+
+return matrix for rotation around z-\/axis 
+
+\index{mat4@{mat4}!scale@{scale}}
+\index{scale@{scale}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{scale(float factor)}{scale(float factor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::scale (
+\begin{DoxyParamCaption}
+\item[{float}]{factor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_a634346eae7a482a482a26e6b9759078d}{}\label{classmat4_a634346eae7a482a482a26e6b9759078d}
+\index{mat4@{mat4}!translate@{translate}}
+\index{translate@{translate}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{translate(const vec3 \&t)}{translate(const vec3 &t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat4} mat4\+::translate (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmat4_aaa01f2d513fd6ff553c8b8409c5db648}{}\label{classmat4_aaa01f2d513fd6ff553c8b8409c5db648}
+
+
+return translation matrix 
+
+
+
+\subsection{Member Data Documentation}
+\index{mat4@{mat4}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!mat4@{mat4}}
+\subsubsection[{\texorpdfstring{data\+\_\+}{data_}}]{\setlength{\rightskip}{0pt plus 5cm}float mat4\+::data\+\_\+\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classmat4_a9da15ef9e016637fcba240f8156b8586}{}\label{classmat4_a9da15ef9e016637fcba240f8156b8586}
+
+
+the data is stored as an array of 16 values 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{glmath_8h}{glmath.\+h}\item 
+/home/eason/\+Desktop/\+E\+P\+F\+L\+\_\+\+C\+G/assignment\+\_\+11/src/\hyperlink{glmath_8cpp}{glmath.\+cpp}\end{DoxyCompactItemize}
